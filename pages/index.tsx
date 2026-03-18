@@ -123,7 +123,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Acupuntura CDMX - Centro de Acupuntura QI",
-            "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=600&fit=crop&auto=format&q=80",
+            "image": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop&auto=format&q=80",
             "@id": "https://ais-pre-vr7ypgcxviqhnokkrbolo4-1875838885.us-east1.run.app",
             "url": "https://ais-pre-vr7ypgcxviqhnokkrbolo4-1875838885.us-east1.run.app",
             "telephone": "+525552520615",
@@ -242,7 +242,7 @@ export default function Home() {
             >
               <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm text-blue-900 px-4 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] border border-blue-200/50 shadow-sm">
                 <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></span>
-                Urban Modern CDMX
+                Acupuntura CDMX
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
                 Acupuntura en CDMX: <br />
@@ -296,8 +296,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-blue-200 rounded-[2.5rem] transform rotate-3 opacity-30 blur-sm"></div>
                 <div className="absolute inset-0 bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-100/50">
                   <Image
-                    src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=600&fit=crop&auto=format&q=80"
-                    alt="Tratamiento de acupuntura profesional"
+                    src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop&auto=format&q=80"
+                    alt="Tratamiento de ventosas profesional en ambiente zen"
                     fill
                     priority
                     className="object-cover"
