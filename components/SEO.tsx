@@ -4,7 +4,7 @@ import React from 'react';
 interface SEOProps {
   title: string;
   description: string;
-  keywords?: string;
+  keywords?: string | string[];
   image?: string;
   url?: string;
   type?: string;
@@ -18,7 +18,11 @@ export default function SEO({
   url = 'https://acupunturacdmx.com',
   type = 'website',
 }: SEOProps) {
-  const fullTitle = `${title} | Acupuntura CDMX`;
+  // If title is the default one, use it directly, otherwise use the template
+  const defaultTitle = 'Acupuntura CDMX | Especialistas en Acupuntura Médica';
+  const fullTitle = title === defaultTitle ? title : `${title} | Acupuntura CDMX`;
+
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   const medicalBusinessJsonLd = {
     '@context': 'https://schema.org',
@@ -28,12 +32,17 @@ export default function SEO({
     url: 'https://acupunturacdmx.com',
     logo: 'https://acupunturacdmx.com/logo.png',
     image: 'https://acupunturacdmx.com/hero-image.jpg',
-    description: 'Especialistas en acupuntura y medicina tradicional china para el alivio del dolor, estrés y bienestar integral en la Ciudad de México.',
+    description: 'Clínica de acupuntura profesional en Benito Juárez. Especialistas en parálisis facial, dolor crónico y salud femenina. Atención presencial en consultorio.',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Ciudad de México',
+      addressLocality: 'Benito Juárez',
       addressRegion: 'CDMX',
       addressCountry: 'MX',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '19.370421',
+      longitude: '-99.180421',
     },
     openingHoursSpecification: [
       {
@@ -58,8 +67,18 @@ export default function SEO({
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      {keywordsString && <meta name="keywords" content={keywordsString} />}
       <link rel="canonical" href={url} />
+      
+      <meta name="author" content="Acupuntura CDMX" />
+      <meta name="creator" content="Acupuntura CDMX" />
+      <meta name="publisher" content="Acupuntura CDMX" />
+      
+      <meta name="format-detection" content="telephone=yes, address=yes, email=no" />
+
+      {/* Robots */}
+      <meta name="robots" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
+      <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1" />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
@@ -68,6 +87,7 @@ export default function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Acupuntura CDMX" />
+      <meta property="og:locale" content="es_MX" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

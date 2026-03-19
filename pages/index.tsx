@@ -62,11 +62,18 @@ export default function Home() {
 
   const padecimientos = [
     {
-      categoria: "Fertilidad y Salud Femenina",
+      categoria: "Salud Femenina y Fertilidad",
       icono: Heart,
-      color: "bg-cyan-50 text-cyan-700",
-      descripcion: "Enfoque emocional y equilibrio natural para acompañar tu camino hacia la maternidad.",
-      sintomas: ["Regulación del ciclo", "Apoyo en procesos de FIV", "Equilibrio hormonal", "Reducción de ansiedad", "Salud uterina"]
+      color: "bg-rose-50 text-rose-700",
+      descripcion: "Equilibrio hormonal y apoyo en fertilidad en el corazón de la Benito Juárez.",
+      sintomas: ["Fertilidad", "Menopausia", "SOP", "Ciclo Menstrual"]
+    },
+    {
+      categoria: "Dolor Musculoesquelético",
+      icono: Activity,
+      color: "bg-blue-50 text-blue-700",
+      descripcion: "Alivio para esguinces y lesiones musculares sin fármacos ni imanes.",
+      sintomas: ["Esguinces", "Ciática", "Dolor Lumbar", "Nervio Facial"]
     },
     {
       categoria: "Estrés y Ansiedad",
@@ -74,13 +81,6 @@ export default function Home() {
       color: "bg-blue-50 text-blue-700",
       descripcion: "Paz mental y liberación de tensión. Encuentra la serenidad en medio del caos urbano.",
       sintomas: ["Ansiedad generalizada", "Insomnio", "Agotamiento mental", "Tensión muscular", "Irritabilidad"]
-    },
-    {
-      categoria: "Dolor Musculoesquelético",
-      icono: Activity,
-      color: "bg-sky-50 text-sky-700",
-      descripcion: "Resultados profundos sin procesos invasivos. Recupera tu movilidad y vive sin limitaciones.",
-      sintomas: ["Dolor lumbar y cervical", "Ciática", "Lesiones deportivas", "Contracturas crónicas", "Artritis"]
     }
   ];
 
@@ -110,9 +110,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
       <SEO 
-        title="Acupuntura en CDMX | Recupera tu Equilibrio Natural"
-        description="Especialistas en acupuntura en CDMX. Enfoque en fertilidad, estrés, ansiedad y dolor musculoesquelético. Recupera tu bienestar con medicina tradicional china."
-        keywords="acupuntura cdmx, fertilidad acupuntura, estres ansiedad cdmx, dolor espalda acupuntura, medicina tradicional china mexico"
+        title="Acupuntura CDMX | Especialistas en Acupuntura Médica"
+        description="Clínica de acupuntura profesional en Benito Juárez. Especialistas en parálisis facial, dolor crónico y salud femenina. Atención presencial en consultorio."
+        keywords={['acupuntura benito juarez', 'paralisis facial cdmx', 'acupuntura fertilidad', 'acupuntura cdmx']}
       />
 
       {/* JSON-LD for MedicalBusiness */}
@@ -130,15 +130,15 @@ export default function Home() {
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Ciudad de México",
-              "addressLocality": "CDMX",
-              "addressRegion": "Ciudad de México",
+              "addressLocality": "Benito Juárez",
+              "addressRegion": "CDMX",
               "postalCode": "00000",
               "addressCountry": "MX"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 19.4326,
-              "longitude": -99.1332
+              "latitude": "19.370421",
+              "longitude": "-99.180421"
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
@@ -244,12 +244,14 @@ export default function Home() {
                 <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></span>
                 Acupuntura CDMX
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight">
-                Acupuntura en CDMX: <br />
-                <span className="text-blue-600">Bienestar Urbano</span>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#2D2D2D] mb-6">
+                Especialistas en <span className="text-[#5A5A40]">Acupuntura CDMX</span>
               </h1>
-              <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-lg font-light">
-                Recupera tu equilibrio natural en el corazón de la ciudad. Medicina tradicional con un enfoque moderno y sofisticado.
+              <p className="text-lg text-[#4A4A4A] mb-8 font-light max-w-2xl">
+                Bienestar y alivio profesional en la alcaldía Benito Juárez. 
+                <span className="block font-medium text-[#5A5A40] mt-2 italic">
+                  *Atención presencial exclusiva en consultorio.
+                </span>
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -296,12 +298,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-blue-200 rounded-[2.5rem] transform rotate-3 opacity-30 blur-sm"></div>
                 <div className="absolute inset-0 bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-100/50">
                   <Image
-                    src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop&auto=format&q=80"
-                    alt="Tratamiento de ventosas profesional en ambiente zen"
+                    src="/hero-serenity.jpg"
+                    alt="Fachada principal de Acupuntura CDMX en Benito Juárez"
                     fill
                     priority
                     className="object-cover"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -568,6 +569,17 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a 
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-transform md:px-6 md:rounded-2xl"
+      >
+        <MessageCircle className="w-6 h-6" />
+        <span className="hidden md:inline font-medium">Agendar Cita en Consultorio</span>
+      </a>
     </div>
   );
 }

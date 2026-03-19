@@ -71,6 +71,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
       <SEO 
         title={post.title}
         description={post.metaDescription || post.excerpt}
+        keywords={post.keywords?.join(', ')}
         image={post.image}
         url={`https://acupunturacdmx.com/blog/${post.id}`}
         type="article"

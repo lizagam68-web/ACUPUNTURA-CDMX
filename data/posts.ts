@@ -13,8 +13,8 @@ export interface Post {
   author: string;
   references?: {
     title: string;
-    doi: string;
     url: string;
+    doi: string;
   }[];
 }
 
@@ -28,10 +28,6 @@ export const posts: Post[] = [
     content: `
       <p>El estrés crónico mantiene a tu cuerpo en alerta constante, elevando el cortisol. La evidencia científica sugiere que la acupuntura estimula el sistema nervioso parasimpático (el encargado del descanso), reduciendo la frecuencia cardíaca y disminuyendo las hormonas del estrés.</p>
       <p>Es una herramienta validada para pasar del modo 'lucha o huida' al modo 'descanso y reparación' de forma natural. Durante una sesión, se liberan endorfinas y encefalinas, los analgésicos y relajantes naturales del cuerpo.</p>
-      
-      <h3>Conclusiones de la Investigación</h3>
-      <p>Estudios clínicos controlados han demostrado que la acupuntura no solo reduce la percepción subjetiva del estrés, sino que produce cambios medibles en la variabilidad de la frecuencia cardíaca (HRV), lo que indica una regulación efectiva del sistema nervioso autónomo.</p>
-
       <h3>¿Cómo ayuda la acupuntura?</h3>
       <ul>
         <li>Reduce los niveles de cortisol y adrenalina.</li>
@@ -44,14 +40,7 @@ export const posts: Post[] = [
     category: "Salud Mental",
     date: "12 Feb 2024",
     dateISO: "2024-02-12",
-    author: "Equipo Acupuntura CDMX",
-    references: [
-      {
-        title: "Acupuncture for anxiety and depression in women: a clinical study",
-        doi: "10.1136/bmjopen-2017-018960",
-        url: "https://doi.org/10.1136/bmjopen-2017-018960"
-      }
-    ]
+    author: "Equipo Acupuntura CDMX"
   },
   {
     id: "equilibrio-hormonal-fertilidad",
@@ -79,70 +68,13 @@ export const posts: Post[] = [
     content: `
       <p>El alivio del dolor con acupuntura no es solo 'energético'; es bioquímico. Al insertar las agujas, se libera adenosina local (un potente analgésico natural) y se activan mecanismos antiinflamatorios.</p>
       <p>Además, 'cierra la puerta' a las señales de dolor en la médula espinal. Es una opción potente para tratar lumbalgias sin los efectos secundarios de los opioides o AINEs a largo plazo, permitiendo una recuperación funcional más rápida.</p>
-      
-      <h3>Evidencia en Guías Médicas</h3>
-      <p>Las guías de práctica clínica del American College of Physicians recomiendan la acupuntura como una de las intervenciones no farmacológicas de primera línea para el dolor lumbar crónico, basándose en su perfil de seguridad y eficacia superior al placebo.</p>
     `,
     image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=800&h=500&fit=crop&auto=format&q=80",
     imageAlt: "Aplicación de ventosas terapéuticas en espalda para tratamiento de dolor",
     category: "Manejo del Dolor",
     date: "01 Feb 2024",
     dateISO: "2024-02-01",
-    author: "Equipo Acupuntura CDMX",
-    references: [
-      {
-        title: "Acupuncture for Chronic Low Back Pain: A Randomized Trial",
-        doi: "10.1001/archinte.169.9.858",
-        url: "https://doi.org/10.1001/archinte.169.9.858"
-      }
-    ]
-  },
-  {
-    id: "acupuntura-paralisis-facial",
-    title: "Parálisis Facial y Acupuntura: Recuperación Acelerada",
-    excerpt: "La acupuntura es altamente efectiva para tratar la parálisis de Bell. Conoce cómo estimula la regeneración nerviosa y recupera la simetría facial.",
-    metaDescription: "Recuperación acelerada de parálisis facial (Bell) con acupuntura. Estimulación nerviosa y muscular para recuperar la simetría facial. Agenda tu valoración.",
-    keywords: ["acupuntura parálisis facial", "parálisis de bell tratamiento", "recuperación nervio facial", "rehabilitación facial cdmx", "terapia parálisis"],
-    content: `
-      <p>La parálisis facial, comúnmente conocida como Parálisis de Bell, ocurre cuando el nervio facial se inflama, causando debilidad o parálisis en un lado de la cara. En la Medicina Tradicional China (MTC), esto se diagnostica frecuentemente como un ataque de "Viento-Frío" o "Viento-Calor" que bloquea los meridianos de la cara, impidiendo el flujo de Qi y sangre.</p>
-      
-      <h3>¿Por qué la acupuntura es tan efectiva?</h3>
-      <p>Estudios clínicos han demostrado que la acupuntura puede acortar significativamente el tiempo de recuperación y mejorar el pronóstico final, especialmente cuando se inicia en las primeras etapas. La Organización Mundial de la Salud (OMS) reconoce la parálisis facial como una de las condiciones tratables eficazmente con acupuntura.</p>
-      
-      <h3>Conclusiones del Estudio Clínico</h3>
-      <p>La revisión de la evidencia clínica indica que la acupuntura, especialmente cuando se combina con el tratamiento convencional, mejora la tasa de curación y reduce las secuelas de la parálisis de Bell. El mecanismo principal implica la reducción del edema del nervio facial y la mejora de la conducción nerviosa.</p>
-
-      <h3>Mecanismos de Acción</h3>
-      <ul>
-        <li><strong>Mejora la microcirculación:</strong> Aumenta el flujo sanguíneo local, reduciendo la inflamación del nervio.</li>
-        <li><strong>Estimulación nerviosa:</strong> Reactiva la excitabilidad de las fibras nerviosas dañadas.</li>
-        <li><strong>Fortalecimiento muscular:</strong> Previene la atrofia muscular mientras el nervio se recupera.</li>
-      </ul>
-
-      <h3>Puntos Clave de Tratamiento</h3>
-      <p>El tratamiento suele incluir puntos locales en la cara y distales en las manos o pies. Algunos puntos comunes son:</p>
-      <ul>
-        <li><strong>Yangbai (GB14):</strong> En la frente, para elevar la ceja.</li>
-        <li><strong>Taiyang (EX-HN5):</strong> En las sienes, para relajar la tensión facial.</li>
-        <li><strong>Dicang (ST4) y Jiache (ST6):</strong> Cerca de la boca y mandíbula, para recuperar la sonrisa y la masticación.</li>
-        <li><strong>Hegu (LI4):</strong> En la mano, punto maestro para la cara y la boca.</li>
-      </ul>
-
-      <p>La combinación de acupuntura con moxibustión o electroacupuntura suele potenciar los resultados, logrando tasas de recuperación superiores al 90% en casos agudos.</p>
-    `,
-    image: "https://images.unsplash.com/photo-1579126038374-6064e9370f0f?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Tratamiento de acupuntura facial para recuperación de parálisis",
-    category: "Rehabilitación Neurológica",
-    date: "20 Feb 2024",
-    dateISO: "2024-02-20",
-    author: "Equipo Acupuntura CDMX",
-    references: [
-      {
-        title: "Acupuncture for Bell's palsy: A review of clinical evidence",
-        doi: "10.4103/CMAC.CMAC_25_21",
-        url: "https://doi.org/10.4103/CMAC.CMAC_25_21"
-      }
-    ]
+    author: "Equipo Acupuntura CDMX"
   },
   {
     id: "acupuntura-menopausia-alivio",
@@ -151,7 +83,7 @@ export const posts: Post[] = [
     metaDescription: "Alivio efectivo de síntomas de menopausia con acupuntura en CDMX. Tratamiento natural para bochornos, insomnio y ansiedad sin hormonas.",
     keywords: ["acupuntura menopausia", "tratamiento bochornos cdmx", "menopausia natural", "insomnio menopausia", "equilibrio hormonal"],
     content: `
-      <p>La menopausia no es una enfermedad, es una transición natural. Sin embargo, para muchas mujeres, los cambios hormonales traen consigo síntomas incómodos como bochornos, sudoración nocturna, insomnio y cambios de humor que afectan su calidad de vida.</p>
+      <p>La menopausia no es una enfermedad, es una transición natural. Sin embargo, para many mujeres, los cambios hormonales traen consigo síntomas incómodos como bochornos, sudoración nocturna, insomnio y cambios de humor que afectan su calidad de vida.</p>
       
       <h3>¿Cómo funciona la acupuntura en la menopausia?</h3>
       <p>Desde la perspectiva científica, la acupuntura ayuda a regular el eje Hipotálamo-Pituitaria-Ovario (HPO) y estimula la liberación de endorfinas y neurotransmisores que regulan la temperatura corporal y el estado de ánimo.</p>
@@ -226,34 +158,6 @@ export const posts: Post[] = [
     category: "Salud Respiratoria",
     date: "02 Mar 2024",
     dateISO: "2024-03-02",
-    author: "Equipo Acupuntura CDMX"
-  },
-  {
-    id: "ansiedad-medicina-tradicional-china",
-    title: "Ansiedad y MTC: Un Enfoque Integral",
-    excerpt: "Más allá de los síntomas: cómo la Medicina Tradicional China entiende y trata la ansiedad equilibrando el cuerpo y la mente.",
-    metaDescription: "Manejo de ansiedad y ataques de pánico con Medicina Tradicional China en CDMX. Tratamiento natural para calmar la mente y equilibrar las emociones.",
-    keywords: ["acupuntura ansiedad", "medicina china salud mental", "ataques de pánico tratamiento", "calmar la mente", "equilibrio emocional"],
-    content: `
-      <p>La ansiedad no está solo en tu cabeza; se manifiesta en todo tu cuerpo con palpitaciones, tensión muscular, problemas digestivos e insomnio. Para la Medicina Tradicional China (MTC), la ansiedad es un signo de que el "Shen" (Espíritu/Mente) no está anclado o nutrido correctamente, a menudo debido a un desequilibrio en el Corazón o el Hígado.</p>
-      
-      <h3>Conexión Mente-Cuerpo</h3>
-      <p>A diferencia de enfoques que solo tratan los síntomas mentales, la MTC busca la raíz física del desequilibrio emocional. Por ejemplo, el estancamiento de la energía del Hígado (común por estrés reprimido) puede generar irritabilidad y tensión, mientras que una deficiencia en el Corazón puede causar palpitaciones e inquietud.</p>
-      
-      <h3>Herramientas de la MTC para la calma:</h3>
-      <ul>
-        <li><strong>Acupuntura:</strong> Puntos específicos como Yintang (entrecejo) y Shenmen (oreja) tienen un efecto sedante inmediato sobre el sistema nervioso central.</li>
-        <li><strong>Fitoterapia:</strong> Fórmulas herbales adaptógenas que nutren el sistema nervioso sin causar somnolencia.</li>
-        <li><strong>Estilo de vida:</strong> Recomendaciones de alimentación y ejercicios de respiración (Qi Gong) para mantener el equilibrio diario.</li>
-      </ul>
-
-      <p>Recuperar la calma mental es un proceso de reconexión con tu cuerpo. La MTC te ofrece un camino suave y profundo hacia la tranquilidad.</p>
-    `,
-    image: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Persona meditando en un ambiente tranquilo al amanecer",
-    category: "Salud Mental",
-    date: "05 Mar 2024",
-    dateISO: "2024-03-05",
     author: "Equipo Acupuntura CDMX"
   }
 ];
