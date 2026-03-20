@@ -115,6 +115,8 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
             src={post.image} 
             alt={post.imageAlt}
             fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 1024px"
             className="object-cover"
             referrerPolicy="no-referrer"
           />
@@ -192,6 +194,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                       src={relatedPost.image} 
                       alt={relatedPost.imageAlt}
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       referrerPolicy="no-referrer"
                     />

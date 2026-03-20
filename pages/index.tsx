@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { MessageCircle, Phone, ArrowRight, CheckCircle2, Star, ChevronDown, ChevronUp, Heart, Wind, Sparkles, Brain, Activity, MapPin, Mail, Clock, Share2 } from 'lucide-react';
+import { MessageCircle, Phone, ArrowRight, CheckCircle2, CheckCircle, Star, ChevronDown, ChevronUp, Heart, Wind, Sparkles, Brain, Activity, MapPin, Mail, Clock, Share2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
@@ -113,6 +113,10 @@ export default function Home() {
         title="Acupuntura CDMX | Especialistas en Acupuntura Médica"
         description="Clínica de acupuntura profesional en Benito Juárez. Especialistas en parálisis facial, dolor crónico y salud femenina. Atención presencial en consultorio."
         keywords={['acupuntura benito juarez', 'paralisis facial cdmx', 'acupuntura fertilidad', 'acupuntura cdmx']}
+        ogTitle="Recupera tu Bienestar con Acupuntura Especializada en CDMX"
+        ogDescription="Tratamientos profesionales para parálisis facial, dolor y fertilidad. ¡Agenda tu cita hoy!"
+        twitterTitle="Acupuntura CDMX: Alta Especialidad Médica"
+        twitterDescription="Expertos en acupuntura clínica en Benito Juárez. Recuperación efectiva y bienestar integral."
       />
 
       {/* JSON-LD for MedicalBusiness */}
@@ -247,7 +251,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#2D2D2D] mb-6">
                 Especialistas en <span className="text-[#5A5A40]">Acupuntura CDMX</span>
               </h1>
-              <p className="text-lg text-[#4A4A4A] mb-8 font-light max-w-2xl">
+              <p className="text-lg text-[#4A4A4A] mb-8 font-light max-w-2xl introduccion-clínica">
                 Bienestar y alivio profesional en la alcaldía Benito Juárez. 
                 <span className="block font-medium text-[#5A5A40] mt-2 italic">
                   *Atención presencial exclusiva en consultorio.
@@ -302,6 +306,7 @@ export default function Home() {
                     alt="Fachada principal de Acupuntura CDMX en Benito Juárez"
                     fill
                     priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
@@ -321,6 +326,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Parálisis Facial Section */}
+      <section className="bg-white py-16 border-b border-[#F2F1E6]">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* Lado Imagen: Estética Japonesa/Clínica */}
+            <div className="w-full md:w-1/2 relative h-[400px] rounded-2xl overflow-hidden shadow-sm">
+              <Image 
+                src="/terapia-facial.jpg" 
+                alt="Tratamiento especializado de Nervio Facial en Acupuntura CDMX"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+
+            {/* Lado Contenido: Conversión Rápida */}
+            <div className="w-full md:w-1/2">
+              <span className="text-[#5A5A40] font-bold uppercase tracking-widest text-xs">Alta Especialidad</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2D2D2D] mt-4 mb-6 leading-tight">
+                Recuperación Especializada de <span className="text-[#5A5A40]">Parálisis Facial</span>
+              </h2>
+              <p className="text-[#4A4A4A] mb-8 leading-relaxed font-light resumen-tratamiento">
+                Sabemos que cada hora cuenta. En <strong>Acupuntura CDMX</strong> aplicamos protocolos avanzados para la regeneración del <strong>nervio facial</strong>, reduciendo secuelas y acelerando el retorno a tu vida normal.
+              </p>
+              
+              <ul className="space-y-3 mb-8 text-sm text-[#4A4A4A]">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#5A5A40]" /> Protocolos de reactivación muscular inmediata.
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#5A5A40]" /> Atención personalizada en la Alcaldía Benito Juárez.
+                </li>
+              </ul>
+
+              <a 
+                href={`https://wa.me/${phoneNumber}?text=Hola, necesito informes urgentes sobre el tratamiento de parálisis facial`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#5A5A40] text-white px-8 py-4 rounded-full font-medium hover:bg-[#4A4A30] transition-all shadow-lg"
+              >
+                Agendar Consulta Prioritaria
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Padecimientos Section */}
       <section id="padecimientos" className="py-10 md:py-12 bg-slate-50">
@@ -460,6 +511,7 @@ export default function Home() {
                   src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=1000&fit=crop&auto=format&q=80" 
                   alt="Naturaleza zen urbana moderna"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-[2s] group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
