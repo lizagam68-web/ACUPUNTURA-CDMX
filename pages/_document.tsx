@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <body className="font-sans antialiased text-[#333] bg-[#F3F4F6]">
         {/* Google Tag Manager (noscript) */}
         <noscript
           dangerouslySetInnerHTML={{

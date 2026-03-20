@@ -75,7 +75,7 @@ export default function Blog() {
       <SEO 
         title="Blog de Salud y Bienestar | Acupuntura Benito Juárez CDMX"
         description="Explora nuestro blog de salud y bienestar en la Alcaldía Benito Juárez. Artículos expertos sobre acupuntura y consejos naturales para una vida equilibrada en CDMX."
-        keywords="blog acupuntura benito juarez, consejos salud natural, medicina china artículos, bienestar integral méxico, guías acupuntura cdmx"
+        keywords={['blog acupuntura benito juarez', 'consejos salud natural', 'medicina china artículos', 'bienestar integral méxico', 'guías acupuntura cdmx']}
         url="https://acupunturacdmx.com/blog"
       />
 

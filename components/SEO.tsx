@@ -27,15 +27,17 @@ export default function SEO({
   twitterDescription,
 }: SEOProps) {
   // If title is the default one, use it directly, otherwise use the template
-  const defaultTitle = 'Acupuntura CDMX | Especialistas en Acupuntura Médica';
-  const fullTitle = title === defaultTitle ? title : `${title} | Acupuntura CDMX`;
+  const defaultTitle = 'Acupuntura CDMX | Especialistas en Acupuntura Médica y Regenerativa';
+  const defaultDescription = 'Clínica de acupuntura profesional en Benito Juárez, CDMX. Especialistas en parálisis facial, dolor crónico, esguinces y salud hormonal femenina. Consulta clínica presencial.';
+  const defaultKeywords = ['acupuntura benito juarez', 'paralisis facial cdmx', 'acupuntura dolor cronico cdmx', 'salud femenina benito juarez'];
+  const fullTitle = title === defaultTitle ? title : (title ? `${title} | Acupuntura CDMX` : defaultTitle);
 
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : (keywords || defaultKeywords.join(', '));
 
   const finalOgTitle = ogTitle || fullTitle;
-  const finalOgDescription = ogDescription || description;
+  const finalOgDescription = ogDescription || description || defaultDescription;
   const finalTwitterTitle = twitterTitle || fullTitle;
-  const finalTwitterDescription = twitterDescription || description;
+  const finalTwitterDescription = twitterDescription || description || defaultDescription;
 
   const medicalBusinessJsonLd = {
     '@context': 'https://schema.org',
@@ -43,21 +45,21 @@ export default function SEO({
     name: 'Acupuntura CDMX',
     alternateName: 'Clínica de Acupuntura y Medicina Tradicional China',
     url: 'https://acupunturacdmx.com',
-    logo: 'https://acupunturacdmx.com/logo.png',
-    image: 'https://acupunturacdmx.com/hero-image.jpg',
-    description: 'Clínica de acupuntura profesional en Benito Juárez. Especialistas en parálisis facial, dolor crónico y salud femenina. Atención presencial en consultorio.',
+    logo: 'https://acupunturacdmx.com/images/logo.svg',
+    image: 'https://acupunturacdmx.com/images/logo.svg',
+    description: description || defaultDescription,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Benito Juárez, Ciudad de México',
+      streetAddress: '[TU_CALLE_Y_NUMERO]',
       addressLocality: 'Benito Juárez',
       addressRegion: 'CDMX',
-      postalCode: '03100',
+      postalCode: '[CODIGO_POSTAL]',
       addressCountry: 'MX',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '19.370421',
-      longitude: '-99.180421',
+      latitude: '[LATITUD]',
+      longitude: '[LONGITUD]',
     },
     openingHoursSpecification: [
       {
@@ -65,17 +67,15 @@ export default function SEO({
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
         opens: '09:00',
         closes: '19:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '09:00',
-        closes: '15:00',
-      },
+      }
     ],
-    telephone: '+525552520615',
+    telephone: '+5255XXXXXXXX',
     priceRange: '$$',
-    medicalSpecialty: 'Acupuncture',
+    medicalSpecialty: [
+      'Acupuncture',
+      'PainManagement',
+      'RehabilitativeMedicine'
+    ],
     sameAs: [
       'https://facebook.com/acupunturacdmx',
       'https://instagram.com/acupunturacdmx'
@@ -86,22 +86,22 @@ export default function SEO({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Acupuntura CDMX",
-    "image": "https://acupunturacdmx.com/logo.png",
+    "image": "https://acupunturacdmx.com/images/logo.svg",
     "@id": "https://acupunturacdmx.com",
     "url": "https://acupunturacdmx.com",
-    "telephone": "+525552520615",
+    "telephone": "+5255XXXXXXXX",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Benito Juárez, Ciudad de México",
+      "streetAddress": "[TU_CALLE_Y_NUMERO]",
       "addressLocality": "Benito Juárez",
       "addressRegion": "CDMX",
-      "postalCode": "03100",
+      "postalCode": "[CODIGO_POSTAL]",
       "addressCountry": "MX"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 19.370421,
-      "longitude": -99.180421
+      "latitude": "[LATITUD]",
+      "longitude": "[LONGITUD]"
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -110,11 +110,7 @@ export default function SEO({
       ],
       "opens": "09:00",
       "closes": "19:00"
-    },
-    "sameAs": [
-      "https://facebook.com/acupunturacdmx",
-      "https://instagram.com/acupunturacdmx"
-    ]
+    }
   };
 
   const faqJsonLd = {
@@ -123,26 +119,18 @@ export default function SEO({
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "¿La acupuntura duele?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Las agujas son extremadamente finas. La mayoría de los pacientes sienten una ligera presión o hormigueo agradable, seguido de una relajación profunda."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "¿Qué servicios de acupuntura ofrecen en Benito Juárez?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ofrecemos acupuntura para parálisis facial, dolor crónico y salud femenina de lunes a viernes en nuestra clínica ubicada en la Alcaldía Benito Juárez."
+          "text": "Ofrecemos acupuntura médica para parálisis facial, dolor crónico, esguinces y salud hormonal femenina en nuestra clínica de la Benito Juárez."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Cuántas sesiones de acupuntura necesito?",
+        "name": "¿La acupuntura duele?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Depende del caso. Para dolor agudo puede haber alivio inmediato; condiciones crónicas suelen requerir de 6 a 10 sesiones personalizadas."
+          "text": "La acupuntura utiliza agujas extremadamente finas y generalmente es indolora. La mayoría de los pacientes experimentan una sensación de relajación profunda."
         }
       }
     ]
@@ -162,8 +150,8 @@ export default function SEO({
   return (
     <Head>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywordsString && <meta name="keywords" content={keywordsString} />}
+      <meta name="description" content={description || defaultDescription} />
+      <meta name="keywords" content={keywordsString} />
       <link rel="canonical" href={url} />
       
       <meta name="author" content="Acupuntura CDMX" />
@@ -179,7 +167,7 @@ export default function SEO({
       {/* Open Graph */}
       <meta property="og:title" content={finalOgTitle} />
       <meta property="og:description" content={finalOgDescription} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={image === 'https://acupunturacdmx.com/logo.png' ? 'https://acupunturacdmx.com/images/acupuntura-cdmx-og.jpg' : image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Acupuntura CDMX" />
@@ -189,7 +177,7 @@ export default function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalTwitterTitle} />
       <meta name="twitter:description" content={finalTwitterDescription} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={image === 'https://acupunturacdmx.com/logo.png' ? 'https://acupunturacdmx.com/images/acupuntura-cdmx-og.jpg' : image} />
 
       {/* JSON-LD */}
       <script

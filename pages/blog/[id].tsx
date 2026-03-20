@@ -58,7 +58,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
       "name": "Acupuntura CDMX",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://acupunturacdmx.com/logo.png"
+        "url": "https://acupunturacdmx.com/images/acupuntura-cdmx-logo-clinico.png"
       }
     },
     "datePublished": post.dateISO,

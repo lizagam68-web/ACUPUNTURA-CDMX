@@ -64,21 +64,21 @@ export default function Home() {
     {
       categoria: "Salud Femenina y Fertilidad",
       icono: Heart,
-      color: "bg-rose-50 text-rose-700",
+      color: "bg-[#5A5A40]/10 text-[#5A5A40]",
       descripcion: "Equilibrio hormonal y apoyo en fertilidad en el corazón de la Benito Juárez.",
       sintomas: ["Fertilidad", "Menopausia", "SOP", "Ciclo Menstrual"]
     },
     {
       categoria: "Dolor Musculoesquelético",
       icono: Activity,
-      color: "bg-blue-50 text-blue-700",
+      color: "bg-[#5A5A40]/10 text-[#5A5A40]",
       descripcion: "Alivio para esguinces y lesiones musculares sin fármacos ni imanes.",
       sintomas: ["Esguinces", "Ciática", "Dolor Lumbar", "Nervio Facial"]
     },
     {
       categoria: "Estrés y Ansiedad",
       icono: Brain,
-      color: "bg-blue-50 text-blue-700",
+      color: "bg-[#5A5A40]/10 text-[#5A5A40]",
       descripcion: "Paz mental y liberación de tensión. Encuentra la serenidad en medio del caos urbano.",
       sintomas: ["Ansiedad generalizada", "Insomnio", "Agotamiento mental", "Tensión muscular", "Irritabilidad"]
     }
@@ -110,75 +110,39 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-cyan-100 selection:text-cyan-900">
       <SEO 
-        title="Acupuntura CDMX | Especialistas en Acupuntura Médica"
-        description="Clínica de acupuntura profesional en Benito Juárez. Especialistas en parálisis facial, dolor crónico y salud femenina. Atención presencial en consultorio."
-        keywords={['acupuntura benito juarez', 'paralisis facial cdmx', 'acupuntura fertilidad', 'acupuntura cdmx']}
-        ogTitle="Recupera tu Bienestar con Acupuntura Especializada en CDMX"
-        ogDescription="Tratamientos profesionales para parálisis facial, dolor y fertilidad. ¡Agenda tu cita hoy!"
-        twitterTitle="Acupuntura CDMX: Alta Especialidad Médica"
-        twitterDescription="Expertos en acupuntura clínica en Benito Juárez. Recuperación efectiva y bienestar integral."
+        title="Especialistas en Acupuntura Médica y Regenerativa"
+        description="Clínica de acupuntura profesional en Benito Juárez, CDMX. Especialistas en parálisis facial, dolor crónico, esguinces y salud hormonal femenina."
+        keywords={['acupuntura benito juarez', 'paralisis facial cdmx', 'acupuntura dolor cronico cdmx', 'salud femenina benito juarez']}
+        ogTitle="Acupuntura CDMX | Recuperación Técnica y Bienestar"
+        ogDescription="Especialistas en parálisis facial y dolor crónico en Benito Juárez. Agenda tu consulta clínica presencial."
+        twitterTitle="Acupuntura CDMX: Especialistas en Medicina Regenerativa"
+        twitterDescription="Recuperación técnica y bienestar con acupuntura de especialidad en la Ciudad de México."
       />
 
-      {/* JSON-LD for MedicalBusiness */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Acupuntura CDMX - Centro de Acupuntura QI",
-            "image": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop&auto=format&q=80",
-            "@id": "https://ais-pre-vr7ypgcxviqhnokkrbolo4-1875838885.us-east1.run.app",
-            "url": "https://ais-pre-vr7ypgcxviqhnokkrbolo4-1875838885.us-east1.run.app",
-            "telephone": "+525552520615",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Ciudad de México",
-              "addressLocality": "Benito Juárez",
-              "addressRegion": "CDMX",
-              "postalCode": "00000",
-              "addressCountry": "MX"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "19.370421",
-              "longitude": "-99.180421"
-            },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday"
-              ],
-              "opens": "09:00",
-              "closes": "18:00"
-            },
-            "medicalSpecialty": "Acupuncture",
-            "priceRange": "$$"
-          })
-        }}
-      />
+      {/* Hero Section */}
 
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm tracking-tighter">A</span>
+              <div className="w-10 h-10 bg-[#FAF9F6] border border-[#5A5A40]/20 rounded-full flex items-center justify-center shadow-sm overflow-hidden p-1 relative">
+                <Image 
+                  src="/images/logo.svg" 
+                  alt="Acupuntura CDMX Logo" 
+                  fill
+                  className="object-contain p-1"
+                />
               </div>
-              <span className="font-bold text-slate-900 tracking-[0.1em] text-sm md:text-base uppercase">ACUPUNTURA CDMX</span>
+              <span className="font-bold text-[#2D2D2D] tracking-[0.1em] text-sm md:text-base uppercase">ACUPUNTURA CDMX</span>
             </div>
             
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-10">
-              <button onClick={() => scrollTo("inicio")} className="text-slate-600 hover:text-blue-600 transition-colors text-xs uppercase tracking-widest font-bold">Inicio</button>
-              <button onClick={() => scrollTo("padecimientos")} className="text-slate-600 hover:text-blue-600 transition-colors text-xs uppercase tracking-widest font-bold">Servicios</button>
-              <button onClick={() => scrollTo("beneficios")} className="text-slate-600 hover:text-blue-600 transition-colors text-xs uppercase tracking-widest font-bold">Filosofía</button>
-              <button onClick={() => scrollTo("faq")} className="text-slate-600 hover:text-blue-600 transition-colors text-xs uppercase tracking-widest font-bold">FAQ</button>
+              <button onClick={() => scrollTo("inicio")} className="text-slate-600 hover:text-[#5A5A40] transition-colors text-xs uppercase tracking-widest font-bold">Inicio</button>
+              <button onClick={() => scrollTo("padecimientos")} className="text-slate-600 hover:text-[#5A5A40] transition-colors text-xs uppercase tracking-widest font-bold">Servicios</button>
+              <button onClick={() => scrollTo("beneficios")} className="text-slate-600 hover:text-[#5A5A40] transition-colors text-xs uppercase tracking-widest font-bold">Filosofía</button>
+              <button onClick={() => scrollTo("faq")} className="text-slate-600 hover:text-[#5A5A40] transition-colors text-xs uppercase tracking-widest font-bold">FAQ</button>
             </div>
 
             <div className="flex items-center gap-4">
@@ -186,7 +150,7 @@ export default function Home() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold transition-all shadow-lg hover:scale-105 active:scale-95"
+                className="hidden sm:flex items-center gap-2 bg-[#5A5A40] hover:bg-[#4A4A30] text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold transition-all shadow-lg hover:scale-105 active:scale-95"
               >
                 <span>Agendar</span>
               </a>
@@ -224,7 +188,7 @@ export default function Home() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full text-center bg-stone-900 text-white py-4 rounded-full text-sm uppercase tracking-widest font-medium"
+                  className="w-full text-center bg-[#5A5A40] text-white py-4 rounded-full text-sm uppercase tracking-widest font-medium"
                 >
                   Agendar Cita
                 </a>
@@ -235,7 +199,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="pt-24 md:pt-32 pb-10 md:pb-14 bg-gradient-to-b from-blue-50 to-slate-50">
+      <section id="inicio" className="pt-24 md:pt-32 pb-10 md:pb-14 bg-gradient-to-b from-[#FAF9F6] to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div 
@@ -244,8 +208,8 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="space-y-6 md:space-y-8"
             >
-              <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm text-blue-900 px-4 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] border border-blue-200/50 shadow-sm">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm text-[#5A5A40] px-4 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] border border-[#5A5A40]/20 shadow-sm">
+                <span className="w-1.5 h-1.5 bg-[#5A5A40] rounded-full animate-pulse"></span>
                 Acupuntura CDMX
               </div>
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#2D2D2D] mb-6">
@@ -263,14 +227,14 @@ export default function Home() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1"
+                  className="inline-flex items-center justify-center gap-3 bg-[#5A5A40] hover:bg-[#4A4A30] text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-xl hover:shadow-[#5A5A40]/20 hover:-translate-y-1"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Agenda tu cita
                 </a>
                 <button
                   onClick={() => scrollTo("padecimientos")}
-                  className="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm text-slate-800 border border-slate-200 hover:bg-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-sm hover:shadow-md"
+                  className="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm text-[#5A5A40] border border-[#5A5A40]/20 hover:bg-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-sm hover:shadow-md"
                 >
                   Ver servicios
                 </button>
@@ -278,15 +242,15 @@ export default function Home() {
 
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center gap-2 text-slate-600">
-                  <CheckCircle2 className="w-5 h-5 text-stone-600" />
+                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40]" />
                   <span className="text-sm md:text-base font-medium">Terapia segura</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-600">
-                  <CheckCircle2 className="w-5 h-5 text-stone-600" />
+                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40]" />
                   <span className="text-sm md:text-base font-medium">Agujas estériles</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-600">
-                  <CheckCircle2 className="w-5 h-5 text-stone-600" />
+                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40]" />
                   <span className="text-sm md:text-base font-medium">Certificación</span>
                 </div>
               </div>
@@ -377,9 +341,9 @@ export default function Home() {
       <section id="padecimientos" className="py-10 md:py-12 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="text-blue-600 font-bold text-sm uppercase tracking-[0.3em]">Servicios</span>
+            <span className="text-[#5A5A40] font-bold text-sm uppercase tracking-[0.3em]">Servicios</span>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-2 mb-4">Especialidades Médicas</h2>
-            <div className="w-10 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            <div className="w-10 h-1 bg-[#5A5A40] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -471,10 +435,10 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-blue-600 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-6 block">Filosofía Milenaria</span>
+                <span className="text-[#5A5A40] font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] mb-6 block">Filosofía Milenaria</span>
                 <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1]">
                   Equilibrio de los <br />
-                  <span className="text-blue-600">5 Elementos</span>
+                  <span className="text-[#5A5A40]">5 Elementos</span>
                 </h2>
                 <p className="text-slate-600 font-light text-lg md:text-xl mb-12 leading-relaxed max-w-md">
                   La salud es el equilibrio dinámico entre las fuerzas fundamentales. En el corazón de la ciudad, restauramos tu vitalidad profunda.
@@ -530,7 +494,7 @@ export default function Home() {
       <section id="faq" className="py-8 md:py-10 bg-[#FAF9F6]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <span className="text-stone-700 font-medium text-sm uppercase tracking-[0.3em]">Claridad</span>
+            <span className="text-[#5A5A40] font-medium text-sm uppercase tracking-[0.3em]">Claridad</span>
             <h2 className="text-3xl md:text-5xl font-light text-slate-900 mt-2">Preguntas frecuentes</h2>
           </div>
 
@@ -541,9 +505,9 @@ export default function Home() {
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full flex items-center justify-between py-6 text-left transition-colors group"
                 >
-                  <span className="text-xl md:text-2xl font-bold text-slate-900 pr-8 group-hover:text-blue-600 transition-colors">{item.pregunta}</span>
+                  <span className="text-xl md:text-2xl font-bold text-slate-900 pr-8 group-hover:text-[#5A5A40] transition-colors">{item.pregunta}</span>
                   {openFaq === idx ? (
-                    <ChevronUp className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                    <ChevronUp className="w-6 h-6 text-[#5A5A40] flex-shrink-0" />
                   ) : (
                     <ChevronDown className="w-6 h-6 text-slate-300 flex-shrink-0" />
                   )}
@@ -569,55 +533,45 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 pb-24 md:pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <div className="space-y-6">
-              <div className="flex items-center gap-3 text-white mb-6">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="font-bold text-base">A</span>
-                </div>
-                <span className="font-bold tracking-[0.1em] text-sm uppercase">ACUPUNTURA CDMX</span>
-              </div>
-              <p className="text-base leading-relaxed font-light tracking-wide max-w-xs text-slate-400">
-                Equilibrio y bienestar con tratamientos personalizados de acupuntura en un entorno urbano moderno y sofisticado.
+      <footer className="bg-[#F9F8F3] text-[#4A4A4A] py-12 border-t border-[#E5E2D1]">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+            
+            {/* Columna de Propósito */}
+            <div className="max-w-lg">
+              <h3 className="text-2xl font-bold text-[#2D2D2D] mb-4 tracking-tight">Acupuntura CDMX</h3>
+              <p className="text-sm leading-relaxed font-light text-[#333333]">
+                Entendemos tu deseo de sanar y tu búsqueda de alivio. Acompañamos tu proceso de 
+                recuperación para restaurar el <strong>orden natural</strong> y el equilibrio de tu cuerpo 
+                con la <strong>precisión técnica</strong> de la medicina japonesa. 
+              </p>
+              <p className="mt-4 text-xs uppercase tracking-widest text-[#5A5A40] font-semibold">
+                Un espacio de contención en la Benito Juárez.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-white text-sm uppercase tracking-[0.2em] font-bold mb-8">Especialidades</h3>
-              <ul className="space-y-4 text-base font-light">
-                <li><button onClick={() => scrollTo("padecimientos")} className="hover:text-blue-400 transition-colors">Fertilidad</button></li>
-                <li><button onClick={() => scrollTo("padecimientos")} className="hover:text-blue-400 transition-colors">Estrés y Ansiedad</button></li>
-                <li><button onClick={() => scrollTo("padecimientos")} className="hover:text-blue-400 transition-colors">Dolor Muscular</button></li>
+            {/* Columna de Especialidades (Filtro SEO) */}
+            <div className="text-sm">
+              <h4 className="font-bold mb-4 uppercase text-[10px] tracking-[0.2em]">Especialidades</h4>
+              <ul className="space-y-2 opacity-80">
+                <li>Recuperación del Nervio Facial</li>
+                <li>Salud Femenina y Hormonal</li>
+                <li>Clínica del Dolor Crónico</li>
+                <li>Acupuntura de Especialidad</li>
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-white text-sm uppercase tracking-[0.2em] font-bold mb-8">Navegación</h3>
-              <ul className="space-y-4 text-base font-light">
-                <li><button onClick={() => scrollTo("inicio")} className="hover:text-blue-400 transition-colors">Inicio</button></li>
-                <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link></li>
-                <li><Link href="/privacidad" className="hover:text-blue-400 transition-colors">Privacidad</Link></li>
-              </ul>
+            {/* Columna Legal/Cofepris (El Escudo) */}
+            <div className="max-w-[200px] text-[10px] italic opacity-60 leading-tight">
+              <p>Práctica clínica presencial. No realizamos biomagnetismo ni servicios a domicilio. 
+              Comprometidos con la ética y la seguridad técnica del paciente.</p>
             </div>
 
-            <div>
-              <h3 className="text-white text-sm uppercase tracking-[0.2em] font-bold mb-8">Contacto</h3>
-              <ul className="space-y-6 text-base font-light">
-                <li className="flex items-center gap-4">
-                  <Phone className="w-6 h-6 text-blue-500 flex-shrink-0" strokeWidth={1} />
-                  <a href={`tel:+${phoneNumber}`} className="hover:text-white transition-colors">+{phoneNumber}</a>
-                </li>
-                <li className="flex items-center gap-4">
-                  <MessageCircle className="w-6 h-6 text-blue-500 flex-shrink-0" strokeWidth={1} />
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp Directo</a>
-                </li>
-              </ul>
-            </div>
           </div>
-          <div className="border-t border-slate-800 pt-8 text-center text-xs font-bold tracking-[0.2em] text-slate-600 uppercase">
-            <p>© {new Date().getFullYear()} ACUPUNTURA CDMX. URBAN MODERN THERAPY.</p>
+          
+          <div className="mt-12 pt-6 border-t border-[#E5E2D1] flex justify-between text-[9px] uppercase tracking-widest opacity-50">
+            <span>© {new Date().getFullYear()} ACUPUNTURA CDMX</span>
+            <span>Ciudad de México, Alcaldía Benito Juárez</span>
           </div>
         </div>
       </footer>
