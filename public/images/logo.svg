@@ -1,26 +1,26 @@
 <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="800" fill="#FAF9F6"/>
+  <rect width="800" height="800" fill="#F0FFFF"/>
   
   <!-- Enso Circle (Stylized Brush Stroke) -->
   <path d="M400 150C261.929 150 150 261.929 150 400C150 538.071 261.929 650 400 650C538.071 650 650 538.071 650 400C650 330 620 260 570 210" 
-        stroke="#5A5A40" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
+        stroke="#00CED1" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" />
   
   <!-- Acupuncture Needles -->
   <g transform="translate(400, 400)">
     <!-- Needle 1 -->
-    <line x1="-30" y1="-120" x2="-30" y2="80" stroke="#5A5A40" stroke-width="2" />
-    <circle cx="-30" cy="-125" r="4" fill="#5A5A40" />
+    <line x1="-30" y1="-120" x2="-30" y2="80" stroke="#20B2AA" stroke-width="2" />
+    <circle cx="-30" cy="-125" r="4" fill="#20B2AA" />
     
     <!-- Needle 2 -->
-    <line x1="0" y1="-140" x2="0" y2="100" stroke="#5A5A40" stroke-width="2" />
-    <circle cx="0" cy="-145" r="4" fill="#5A5A40" />
+    <line x1="0" y1="-140" x2="0" y2="100" stroke="#20B2AA" stroke-width="2" />
+    <circle cx="0" cy="-145" r="4" fill="#20B2AA" />
     
     <!-- Needle 3 -->
-    <line x1="30" y1="-120" x2="30" y2="80" stroke="#5A5A40" stroke-width="2" />
-    <circle cx="30" cy="-125" r="4" fill="#5A5A40" />
+    <line x1="30" y1="-120" x2="30" y2="80" stroke="#20B2AA" stroke-width="2" />
+    <circle cx="30" cy="-125" r="4" fill="#20B2AA" />
   </g>
   
   <!-- Text -->
   <text x="400" y="720" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#2D2D2D" letter-spacing="0.05em">ACUPUNTURA CDMX</text>
-  <text x="400" y="770" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#5A5A40" letter-spacing="0.2em">ACUPUNTURA DE ESPECIALIDAD</text>
+  <text x="400" y="770" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#00CED1" letter-spacing="0.2em">ACUPUNTURA DE ESPECIALIDAD</text>
 </svg>

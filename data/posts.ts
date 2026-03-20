@@ -35,8 +35,8 @@ export const posts: Post[] = [
         <li>Alivia la tensión muscular asociada al estrés.</li>
       </ul>
     `,
-    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Mujer relajada recibiendo tratamiento de acupuntura facial en ambiente spa",
+    image: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=800&auto=format&fit=crop",
+    imageAlt: "Detalle artístico de agujas de acupuntura, simbolizando el alivio del estrés y la regulación del sistema nervioso.",
     category: "Salud Mental",
     date: "12 Feb 2024",
     dateISO: "2024-02-12",
@@ -52,8 +52,8 @@ export const posts: Post[] = [
       <p>Los desequilibrios menstruales y de fertilidad a menudo se deben a una comunicación deficiente entre el cerebro y los ovarios (eje HPO). Estudios indican que la acupuntura puede modular este eje, mejorando la circulación en la zona pélvica y favoreciendo la ovulación regular.</p>
       <p>Es un coadyuvante eficaz y seguro, utilizado cada vez más en clínicas de fertilidad integrativa para mejorar las tasas de éxito en tratamientos de reproducción asistida y para regular ciclos menstruales de forma natural.</p>
     `,
-    image: "https://images.unsplash.com/photo-1545147986-a9d6f2ab03b5?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Preparación de hierbas medicinales chinas tradicionales en mortero",
+    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop",
+    imageAlt: "Ambiente de bienestar y serenidad, representando el equilibrio hormonal y la fertilidad femenina.",
     category: "Salud Femenina",
     date: "08 Feb 2024",
     dateISO: "2024-02-08",
@@ -69,8 +69,8 @@ export const posts: Post[] = [
       <p>El alivio del dolor con acupuntura no es solo 'energético'; es bioquímico. Al insertar las agujas, se libera adenosina local (un potente analgésico natural) y se activan mecanismos antiinflamatorios.</p>
       <p>Además, 'cierra la puerta' a las señales de dolor en la médula espinal. Es una opción potente para tratar lumbalgias sin los efectos secundarios de los opioides o AINEs a largo plazo, permitiendo una recuperación funcional más rápida.</p>
     `,
-    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Aplicación de ventosas terapéuticas en espalda para tratamiento de dolor",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop",
+    imageAlt: "Representación de salud física y bienestar lumbar, enfocada en el alivio del dolor crónico.",
     category: "Manejo del Dolor",
     date: "01 Feb 2024",
     dateISO: "2024-02-01",
@@ -97,8 +97,8 @@ export const posts: Post[] = [
 
       <p>Es una excelente opción para mujeres que no pueden o prefieren no utilizar Terapia de Reemplazo Hormonal (TRH), ofreciendo un enfoque seguro y libre de efectos secundarios para recuperar tu bienestar.</p>
     `,
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Mujer madura sonriendo y disfrutando de un momento de tranquilidad al aire libre",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+    imageAlt: "Mujer en meditación profunda, simbolizando la paz y el equilibrio hormonal durante la menopausia.",
     category: "Salud Femenina",
     date: "25 Feb 2024",
     dateISO: "2024-02-25",
@@ -125,8 +125,8 @@ export const posts: Post[] = [
 
       <p>Recuperar tu salud digestiva es posible de forma natural, permitiéndote disfrutar de tus comidas y tu vida sin molestias constantes.</p>
     `,
-    image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Persona disfrutando de una comida saludable y equilibrada",
+    image: "https://images.unsplash.com/photo-1545208393-59607160ee6b?q=80&w=800&auto=format&fit=crop",
+    imageAlt: "Piedras Zen en equilibrio, simbolizando una digestión armoniosa y el bienestar del eje intestino-cerebro.",
     category: "Salud Digestiva",
     date: "28 Feb 2024",
     dateISO: "2024-02-28",
@@ -153,8 +153,8 @@ export const posts: Post[] = [
 
       <p>Respira profundo y fortalece tus defensas naturales con un tratamiento integral y personalizado.</p>
     `,
-    image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=800&h=500&fit=crop&auto=format&q=80",
-    imageAlt: "Mujer respirando aire fresco en un bosque",
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
+    imageAlt: "Consultorio clínico minimalista y limpio, simbolizando una respiración profunda y salud respiratoria.",
     category: "Salud Respiratoria",
     date: "02 Mar 2024",
     dateISO: "2024-03-02",

@@ -7,7 +7,7 @@ import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
 export default function SindromeMetabolicoBlog() {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] font-sans text-[#2D2D2D] selection:bg-[#E5E4D7]">
+    <div className="min-h-screen bg-[#F0FFFF] font-sans text-[#2D2D2D] selection:bg-[#AFEEEE]">
       <SEO 
         title="Acupuntura Metabólica en Benito Juárez CDMX | Salud Endocrina"
         description="Optimiza tu salud metabólica en la Alcaldía Benito Juárez. La acupuntura ayuda a regular la insulina y el cortisol de forma natural."
@@ -15,14 +15,14 @@ export default function SindromeMetabolicoBlog() {
       />
 
       {/* Navigation - Minimalist */}
-      <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#E5E4D7]">
+      <nav className="sticky top-0 z-50 bg-[#F0FFFF]/80 backdrop-blur-md border-b border-[#AFEEEE]">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span className="text-xs uppercase tracking-widest font-bold">Inicio</span>
           </Link>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#5A5A40] rounded-full flex items-center justify-center">
+            <div className="w-6 h-6 bg-[#00CED1] rounded-full flex items-center justify-center">
               <span className="text-white text-[10px] font-bold">QI</span>
             </div>
             <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Centro QI</span>
@@ -38,14 +38,14 @@ export default function SindromeMetabolicoBlog() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[#F2F1E6] rounded-full">
-            <HeartPulse className="w-3 h-3 text-[#5A5A40]" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#5A5A40]">Salud Metabólica & Vitalidad</span>
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[#E0FFFF] rounded-full">
+            <HeartPulse className="w-3 h-3 text-[#00CED1]" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#00CED1]">Salud Metabólica & Vitalidad</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-8">
-            Acupuntura Metabólica en <span className="text-[#5A5A40]">Benito Juárez</span>: Salud Endocrina
+            Acupuntura Metabólica en <span className="text-[#00CED1]">Benito Juárez</span>: Salud Endocrina
           </h1>
-          <div className="w-12 h-px bg-[#5A5A40]/30 mb-8"></div>
+          <div className="w-12 h-px bg-[#00CED1]/30 mb-8"></div>
         </motion.header>
 
         {/* Content Section */}
@@ -69,7 +69,7 @@ export default function SindromeMetabolicoBlog() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#F2F1E6] p-8 md:p-12 rounded-[2rem] border border-[#E5E4D7]"
+            className="bg-[#E0FFFF] p-8 md:p-12 rounded-[2rem] border border-[#AFEEEE]"
           >
             <h2 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight">
               Regulación Hormonal y Control del Cortisol mediante Medicina Tradicional China
@@ -82,7 +82,7 @@ export default function SindromeMetabolicoBlog() {
                 { title: "Apoyo en la salud cardiovascular", desc: "La reducción de la inflamación sistémica protege tus arterias y mejora la circulación general." }
               ].map((item, i) => (
                 <li key={i} className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#5A5A40] flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-[#00CED1] flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-base md:text-lg mb-1">{item.title}</h4>
                     <p className="text-sm md:text-base opacity-80">{item.desc}</p>
@@ -110,8 +110,8 @@ export default function SindromeMetabolicoBlog() {
           viewport={{ once: true }}
           className="mt-20 p-10 bg-[#2D2D2D] rounded-[2.5rem] text-white text-center relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A5A40]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
-          <Activity className="w-8 h-8 text-[#5A5A40] mx-auto mb-6" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#00CED1]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+          <Activity className="w-8 h-8 text-[#00CED1] mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Agenda tu evaluación metabólica hoy</h3>
           <p className="text-[#A0A0A0] mb-10 font-light max-w-md mx-auto">
             Descubre cómo la medicina milenaria puede transformar tu salud endocrina y devolverte la vitalidad que mereces.
@@ -119,7 +119,7 @@ export default function SindromeMetabolicoBlog() {
           <WhatsAppButton 
             href={WHATSAPP_LINKS.SALUD_METABOLICA} 
             label="Optimiza tu Salud Hoy" 
-            className="bg-[#FAF9F6] text-[#2D2D2D] hover:bg-[#F2F1E6]"
+            className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
           <p className="text-sm text-[#A0A0A0] mt-6 italic">
             *Por seguridad de nuestros pacientes, realizamos acompañamiento metabólico; no atendemos crisis diabéticas o urgencias endocrinas.
@@ -127,7 +127,7 @@ export default function SindromeMetabolicoBlog() {
         </motion.div>
 
         {/* Legal Disclaimer */}
-        <footer className="mt-16 pt-8 border-t border-[#E5E4D7]">
+        <footer className="mt-16 pt-8 border-t border-[#AFEEEE]">
           <p className="text-xs text-[#A0A0A0] leading-relaxed text-center italic">
             Esta información tiene un carácter meramente informativo. Para obtener asesoramiento o diagnóstico médicos, consulta a un profesional.
           </p>
@@ -135,7 +135,7 @@ export default function SindromeMetabolicoBlog() {
       </main>
 
       {/* Footer - Minimalist */}
-      <footer className="py-12 border-t border-[#E5E4D7] text-center">
+      <footer className="py-12 border-t border-[#AFEEEE] text-center">
         <p className="text-[10px] uppercase tracking-[0.4em] text-[#A0A0A0]">
           © {new Date().getFullYear()} Centro de Acupuntura QI · CDMX
         </p>

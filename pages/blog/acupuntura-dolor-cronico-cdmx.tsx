@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Activity, Sparkles, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
@@ -7,25 +8,25 @@ import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
 export default function DolorCronicoBlog() {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] font-sans text-[#2D2D2D] selection:bg-[#E5E4D7]">
+    <div className="min-h-screen bg-[#FAF9F6] font-sans text-[#2D2D2D] selection:bg-[#AFEEEE]">
       <SEO 
-        title="Alivio para Esguinces y Dolor Lumbar en Benito Juárez CDMX | Centro QI"
+        title="Alivio para Esguinces y Dolor Lumbar en Benito Juárez CDMX | Acupuntura CDMX"
         description="Expertos en el tratamiento de esguinces y dolor lumbar en la Alcaldía Benito Juárez. Recupera tu movilidad con atención especializada."
-        keywords="esguinces benito juarez cdmx, dolor lumbar benito juarez, acupuntura esguinces cdmx, tratamiento dolor lumbar natural, centro qi benito juarez"
+        keywords="esguinces benito juarez cdmx, dolor lumbar benito juarez, acupuntura esguinces cdmx, tratamiento dolor lumbar natural, acupuntura cdmx benito juarez"
       />
 
       {/* Navigation - Minimalist */}
-      <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#E5E4D7]">
+      <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#AFEEEE]">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span className="text-xs uppercase tracking-widest font-bold">Inicio</span>
           </Link>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#5A5A40] rounded-full flex items-center justify-center">
+            <div className="w-6 h-6 bg-[#00CED1] rounded-full flex items-center justify-center">
               <span className="text-white text-[10px] font-bold">QI</span>
             </div>
-            <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Centro QI</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Acupuntura CDMX</span>
           </div>
         </div>
       </nav>
@@ -38,14 +39,25 @@ export default function DolorCronicoBlog() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[#F2F1E6] rounded-full">
-            <ShieldCheck className="w-3 h-3 text-[#5A5A40]" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#5A5A40]">Alivio Especializado</span>
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[#E0FFFF] rounded-full">
+            <ShieldCheck className="w-3 h-3 text-[#00CED1]" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#00CED1]">Alivio Especializado</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-            Alivio para <span className="text-[#5A5A40]">Esguinces</span> y Ciática en Benito Juárez
+            Alivio para <span className="text-[#00CED1]">Esguinces</span> y Ciática en Benito Juárez
           </h1>
-          <div className="w-12 h-px bg-[#5A5A40]/30 mb-8"></div>
+          <div className="w-12 h-px bg-[#00CED1]/30 mb-8"></div>
+          
+          <div className="relative aspect-[21/9] w-full rounded-[2rem] overflow-hidden mb-12 shadow-sm border border-[#AFEEEE]/20">
+            <Image 
+              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" 
+              alt="Representación de salud física y bienestar lumbar, enfocada en el alivio del dolor crónico."
+              fill
+              className="object-cover"
+              priority
+              referrerPolicy="no-referrer"
+            />
+          </div>
         </motion.header>
 
         {/* Content Section */}
@@ -57,7 +69,7 @@ export default function DolorCronicoBlog() {
             transition={{ delay: 0.2 }}
           >
             <p>
-              El dolor crónico no es solo una sensación física persistente; es una carga que limita tu libertad y agota tu energía vital. En el <strong>Centro de Acupuntura QI</strong>, abordamos el dolor desde una perspectiva neurofisiológica y energética, ofreciendo una alternativa potente para quienes buscan reducir su dependencia de analgésicos químicos.
+              El dolor crónico no es solo una sensación física persistente; es una carga que limita tu libertad y agota tu energía vital. En <strong>Acupuntura CDMX</strong>, abordamos el dolor desde una perspectiva neurofisiológica y energética, ofreciendo una alternativa potente para quienes buscan reducir su dependencia de analgésicos químicos.
             </p>
             <p className="mt-6">
               La ciencia moderna explica la eficacia de la acupuntura a través de la <strong>liberación de endorfinas y encefalinas</strong>, los analgésicos naturales más poderosos del cuerpo humano. Además, se basa en la <strong>Teoría de la Compuerta</strong> (Gate Control Theory), donde la estimulación de fibras nerviosas específicas bloquea las señales de dolor antes de que lleguen al cerebro, proporcionando un alivio profundo y duradero.
@@ -69,7 +81,7 @@ export default function DolorCronicoBlog() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#F2F1E6] p-8 md:p-12 rounded-[2rem] border border-[#E5E4D7]"
+            className="bg-[#E0FFFF] p-8 md:p-12 rounded-[2rem] border border-[#AFEEEE]"
           >
             <h2 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight">
               Especialistas en Esguinces y Lesiones Musculares
@@ -82,7 +94,7 @@ export default function DolorCronicoBlog() {
                 { title: "Mejora en la calidad de vida", desc: "Al eliminar el dolor persistente, recuperas el sueño, el ánimo y tu capacidad de disfrutar el día a día." }
               ].map((item, i) => (
                 <li key={i} className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#5A5A40] flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-[#00CED1] flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-base md:text-lg mb-1">{item.title}</h4>
                     <p className="text-sm md:text-base opacity-80">{item.desc}</p>
@@ -92,7 +104,7 @@ export default function DolorCronicoBlog() {
             </ul>
 
             {/* Nueva sección de Especialización Médica */}
-            <div className="grid md:grid-cols-2 gap-12 mt-16 pt-12 border-t border-[#5A5A40]/10">
+            <div className="grid md:grid-cols-2 gap-12 mt-16 pt-12 border-t border-[#00CED1]/10">
               <div>
                 <h3 className="text-2xl font-bold mb-6 tracking-tight">Especialización Médica</h3>
                 <p className="text-[#4A4A4A] leading-relaxed mb-6 font-light text-base md:text-lg">
@@ -109,7 +121,7 @@ export default function DolorCronicoBlog() {
             </div>
           </motion.section>
 
-          <div className="mt-8 p-4 border-l-4 border-[#5A5A40] bg-[#F2F1E6]">
+          <div className="mt-8 p-4 border-l-4 border-[#00CED1] bg-[#E0FFFF]">
             <p className="text-sm font-bold">Aviso de Seguridad:</p>
             <p className="text-sm">Especializados en recuperación de lesiones y esguinces. Fracturas y traumatismos mayores requieren atención en urgencias hospitalarias.</p>
           </div>
@@ -132,8 +144,8 @@ export default function DolorCronicoBlog() {
           viewport={{ once: true }}
           className="mt-20 p-10 bg-[#2D2D2D] rounded-[2.5rem] text-white text-center relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A5A40]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
-          <Activity className="w-8 h-8 text-[#5A5A40] mx-auto mb-6" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#00CED1]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+          <Activity className="w-8 h-8 text-[#00CED1] mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Agenda tu sesión de alivio hoy</h3>
           <p className="text-[#A0A0A0] mb-10 font-light max-w-md mx-auto">
             No permitas que el dolor defina tu vida. Descubre el poder de la sanación natural en manos expertas.
@@ -141,15 +153,25 @@ export default function DolorCronicoBlog() {
           <WhatsAppButton 
             href={WHATSAPP_LINKS.DOLOR_CRONICO} 
             label="Recuperar mi Bienestar" 
-            className="bg-[#FAF9F6] text-[#2D2D2D] hover:bg-[#F2F1E6]"
+            className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
         </motion.div>
       </main>
 
       {/* Footer - Minimalist */}
-      <footer className="py-12 border-t border-[#E5E4D7] text-center">
+      <footer className="py-16 border-t border-[#AFEEEE] text-center bg-[#FAF9F6]">
+        <div className="flex justify-center mb-6">
+          <div className="w-10 h-10 bg-white border border-[#00CED1]/20 rounded-full flex items-center justify-center shadow-sm overflow-hidden p-1 relative">
+            <Image 
+              src="/images/logo.svg" 
+              alt="Acupuntura CDMX Logo" 
+              fill
+              className="object-contain p-1"
+            />
+          </div>
+        </div>
         <p className="text-[10px] uppercase tracking-[0.4em] text-[#A0A0A0]">
-          © {new Date().getFullYear()} Centro de Acupuntura QI · CDMX
+          © {new Date().getFullYear()} Acupuntura CDMX · Ciudad de México
         </p>
       </footer>
 

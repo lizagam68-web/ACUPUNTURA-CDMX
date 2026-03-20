@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Sparkles, Baby } from 'lucide-react';
 import Link from 'next/link';
@@ -7,25 +8,25 @@ import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
 export default function FertilidadBlog() {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] font-sans text-[#2D2D2D] selection:bg-[#E5E4D7]">
+    <div className="min-h-screen bg-[#FAF9F6] font-sans text-[#2D2D2D] selection:bg-[#AFEEEE]">
       <SEO 
-        title="Acupuntura para la Fertilidad en Benito Juárez CDMX | Centro QI"
+        title="Acupuntura para la Fertilidad en Benito Juárez CDMX | Acupuntura CDMX"
         description="Acompañamiento natural para tu fertilidad en la Alcaldía Benito Juárez. Equilibra tu cuerpo y mente para la concepción con expertos en acupuntura."
-        keywords="acupuntura fertilidad benito juarez, concepción natural cdmx, apoyo FIV acupuntura, equilibrio hormonal femenino, fertilidad natural benito juarez, centro qi fertilidad"
+        keywords="acupuntura fertilidad benito juarez, concepción natural cdmx, apoyo FIV acupuntura, equilibrio hormonal femenino, fertilidad natural benito juarez, acupuntura cdmx fertilidad"
       />
 
       {/* Navigation - Minimalist */}
-      <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#E5E4D7]">
+      <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#AFEEEE]">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span className="text-xs uppercase tracking-widest font-bold">Inicio</span>
           </Link>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#5A5A40] rounded-full flex items-center justify-center">
-              <span className="text-white text-[10px] font-bold">QI</span>
+            <div className="w-6 h-6 bg-[#00CED1] rounded-full flex items-center justify-center">
+              <span className="text-white text-[10px] font-bold">A</span>
             </div>
-            <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Centro QI</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Acupuntura CDMX</span>
           </div>
         </div>
       </nav>
@@ -38,14 +39,25 @@ export default function FertilidadBlog() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[#F2F1E6] rounded-full">
-            <Baby className="w-3 h-3 text-[#5A5A40]" />
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#5A5A40]">Salud Reproductiva Integral</span>
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[#E0FFFF] rounded-full">
+            <Baby className="w-3 h-3 text-[#00CED1]" />
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#00CED1]">Salud Reproductiva Integral</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-8">
-            Acupuntura para la Fertilidad en <span className="text-[#5A5A40]">Benito Juárez</span>: Equilibra tu Cuerpo
+            Acupuntura para la Fertilidad en <span className="text-[#00CED1]">Benito Juárez</span>: Equilibra tu Cuerpo
           </h1>
-          <div className="w-12 h-px bg-[#5A5A40]/30 mb-8"></div>
+          <div className="w-12 h-px bg-[#00CED1]/30 mb-8"></div>
+          
+          <div className="relative aspect-[21/9] w-full rounded-[2rem] overflow-hidden mb-12 shadow-sm border border-[#AFEEEE]/20">
+            <Image 
+              src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop" 
+              alt="Ambiente de bienestar y serenidad, representando el equilibrio hormonal y la fertilidad femenina."
+              fill
+              className="object-cover"
+              priority
+              referrerPolicy="no-referrer"
+            />
+          </div>
         </motion.header>
 
         {/* Content Section */}
@@ -57,7 +69,7 @@ export default function FertilidadBlog() {
             transition={{ delay: 0.2 }}
           >
             <p>
-              El camino hacia la maternidad es un proceso sagrado que requiere armonía física y emocional. En el <strong>Centro de Acupuntura QI</strong>, entendemos que la fertilidad no es solo una cuestión biológica, sino un estado de equilibrio integral. La acupuntura ofrece un enfoque natural y efectivo para preparar tu cuerpo y mente para recibir una nueva vida.
+              El camino hacia la maternidad es un proceso sagrado que requiere armonía física y emocional. En <strong>Acupuntura CDMX</strong>, entendemos que la fertilidad no es solo una cuestión biológica, sino un estado de equilibrio integral. La acupuntura ofrece un enfoque natural y efectivo para preparar tu cuerpo y mente para recibir una nueva vida.
             </p>
             <p className="mt-6">
               A través de la estimulación de puntos específicos, la acupuntura logra mejorar significativamente el <strong>flujo sanguíneo hacia el útero y los ovarios</strong>, optimizando el entorno para la implantación. Además, actúa regulando el complejo <strong>eje hormonal Hipotálamo-Hipófisis-Ovario</strong>, lo que favorece ciclos menstruales más regulares y una ovulación de mejor calidad.
@@ -69,7 +81,7 @@ export default function FertilidadBlog() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-[#F2F1E6] p-8 md:p-12 rounded-[2rem] border border-[#E5E4D7]"
+            className="bg-[#E0FFFF] p-8 md:p-12 rounded-[2rem] border border-[#AFEEEE]"
           >
             <h2 className="text-2xl md:text-3xl font-bold mb-8 tracking-tight">
               Acompañamiento en Procesos de FIV y Concepción Natural
@@ -82,7 +94,7 @@ export default function FertilidadBlog() {
                 { title: "Apoyo emocional", desc: "Brindamos un espacio de contención y serenidad durante las etapas más desafiantes del proceso." }
               ].map((item, i) => (
                 <li key={i} className="flex gap-4">
-                  <CheckCircle2 className="w-6 h-6 text-[#5A5A40] flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-[#00CED1] flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-base md:text-lg mb-1">{item.title}</h4>
                     <p className="text-sm md:text-base opacity-80">{item.desc}</p>
@@ -110,8 +122,8 @@ export default function FertilidadBlog() {
           viewport={{ once: true }}
           className="mt-20 p-10 bg-[#2D2D2D] rounded-[2.5rem] text-white text-center relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#5A5A40]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
-          <Sparkles className="w-8 h-8 text-[#5A5A40] mx-auto mb-6" />
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#00CED1]/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+          <Sparkles className="w-8 h-8 text-[#00CED1] mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Inicia tu camino hacia la maternidad</h3>
           <p className="text-[#A0A0A0] mb-10 font-light max-w-md mx-auto">
             Estamos aquí para acompañarte con profesionalismo y calidez en cada paso de este hermoso viaje.
@@ -119,7 +131,7 @@ export default function FertilidadBlog() {
           <WhatsAppButton 
             href={WHATSAPP_LINKS.FERTILIDAD} 
             label="Agenda tu Consulta de Fertilidad" 
-            className="bg-[#FAF9F6] text-[#2D2D2D] hover:bg-[#F2F1E6]"
+            className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
           <p className="text-sm text-[#A0A0A0] mt-6 italic">
             *Por seguridad de nuestras pacientes, realizamos acompañamiento en fertilidad; no realizamos procedimientos quirúrgicos ni diagnósticos de urgencia.
@@ -128,9 +140,19 @@ export default function FertilidadBlog() {
       </main>
 
       {/* Footer - Minimalist */}
-      <footer className="py-12 border-t border-[#E5E4D7] text-center">
+      <footer className="py-16 border-t border-[#AFEEEE] text-center bg-[#FAF9F6]">
+        <div className="flex justify-center mb-6">
+          <div className="w-10 h-10 bg-white border border-[#00CED1]/20 rounded-full flex items-center justify-center shadow-sm overflow-hidden p-1 relative">
+            <Image 
+              src="/images/logo.svg" 
+              alt="Acupuntura CDMX Logo" 
+              fill
+              className="object-contain p-1"
+            />
+          </div>
+        </div>
         <p className="text-[10px] uppercase tracking-[0.4em] text-[#A0A0A0]">
-          © {new Date().getFullYear()} Centro de Acupuntura QI · CDMX
+          © {new Date().getFullYear()} Acupuntura CDMX · Ciudad de México
         </p>
       </footer>
 

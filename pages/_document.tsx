@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="es">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
       </Head>
       <body className="font-sans antialiased text-[#333] bg-[#F3F4F6]">
         {/* Google Tag Manager (noscript) */}

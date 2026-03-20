@@ -14,7 +14,7 @@ export const WHATSAPP_LINKS = {
 };
 
 /**
- * Componente de Botón Estilizado (Verde Oliva #5A5A40)
+ * Componente de Botón Estilizado (Aqua/Turquesa #00CED1)
  * Incluye seguridad rel="noopener noreferrer"
  */
 interface WhatsAppButtonProps {
@@ -29,7 +29,7 @@ export const WhatsAppButton = ({ href, label = "Agendar Cita", className = "" }:
       href={href}
       target="_blank" 
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-3 bg-[#5A5A40] text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#4A4A30] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 ${className}`}
+      className={`inline-flex items-center gap-3 bg-[#00CED1] text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#20B2AA] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 ${className}`}
     >
       <MessageCircle className="w-5 h-5" />
       {label}

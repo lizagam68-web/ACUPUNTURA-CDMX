@@ -18,7 +18,7 @@ export default function SEO({
   title,
   description,
   keywords,
-  image = 'https://acupunturacdmx.com/logo.png',
+  image = 'https://acupunturacdmx.com/images/logo.svg',
   url = 'https://acupunturacdmx.com',
   type = 'website',
   ogTitle,
@@ -167,7 +167,7 @@ export default function SEO({
       {/* Open Graph */}
       <meta property="og:title" content={finalOgTitle} />
       <meta property="og:description" content={finalOgDescription} />
-      <meta property="og:image" content={image === 'https://acupunturacdmx.com/logo.png' ? 'https://acupunturacdmx.com/images/acupuntura-cdmx-og.jpg' : image} />
+      <meta property="og:image" content={image === 'https://acupunturacdmx.com/images/logo.svg' ? 'https://acupunturacdmx.com/images/logo.svg' : image} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Acupuntura CDMX" />
@@ -177,7 +177,7 @@ export default function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalTwitterTitle} />
       <meta name="twitter:description" content={finalTwitterDescription} />
-      <meta name="twitter:image" content={image === 'https://acupunturacdmx.com/logo.png' ? 'https://acupunturacdmx.com/images/acupuntura-cdmx-og.jpg' : image} />
+      <meta name="twitter:image" content={image === 'https://acupunturacdmx.com/images/logo.svg' ? 'https://acupunturacdmx.com/images/logo.svg' : image} />
 
       {/* JSON-LD */}
       <script
