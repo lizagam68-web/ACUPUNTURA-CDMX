@@ -23,7 +23,7 @@ const FloatingCTA = () => {
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-20 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl transition-all hover:shadow-[#25D366]/40 group md:bottom-8"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl transition-all hover:shadow-[#25D366]/40 group md:bottom-8 md:right-8"
         aria-label="Contactar por WhatsApp"
       >
         <MessageCircle className="w-6 h-6 md:w-7 md:h-7" fill="currentColor" />
@@ -31,20 +31,6 @@ const FloatingCTA = () => {
           ¿Dudas? Escríbenos
         </span>
       </motion.a>
-
-      {/* Mobile Bottom Banner CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-white/80 backdrop-blur-md border-t border-cyan-100 md:hidden">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleClick}
-          className="flex items-center justify-center gap-3 bg-cyan-950 text-white w-full py-4 rounded-xl font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-transform"
-        >
-          <Calendar className="w-5 h-5" />
-          Agendar Cita Ahora
-        </a>
-      </div>
     </>
   );
 };

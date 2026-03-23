@@ -174,19 +174,6 @@ export default function DolorCronicoBlog() {
           © {new Date().getFullYear()} Acupuntura CDMX · Ciudad de México
         </p>
       </footer>
-
-      {/* Floating CTA for Mobile */}
-      <motion.div 
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        className="fixed bottom-8 right-8 z-50 md:hidden"
-      >
-        <WhatsAppButton 
-          href={WHATSAPP_LINKS.DOLOR_CRONICO} 
-          label="" 
-          className="w-14 h-14 p-0 justify-center"
-        />
-      </motion.div>
     </div>
   );
 }

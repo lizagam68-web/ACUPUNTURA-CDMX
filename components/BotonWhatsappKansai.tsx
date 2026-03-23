@@ -3,16 +3,14 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 
+import { trackConversion } from '@/utils/analytics';
+
 const BotonWhatsappKansai = () => {
   
   const registrarVentaYContactar = () => {
-    // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-11004313271/NfInCOvXyIkYEPfNq_4p',
-      });
-      console.log("Señal de éxito enviada: Paciente de especialidad detectado.");
-    }
+    // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads y GA4
+    trackConversion();
+    console.log("Señal de éxito enviada: Paciente de especialidad detectado.");
 
     // 2. LA ACCIÓN: Abrimos el chat con mensaje de alta precisión
     const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";

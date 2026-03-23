@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { trackConversion } from '@/utils/analytics';
 
 /**
  * Enlaces de WhatsApp con mensajes predefinidos para el Centro de Acupuntura QI
@@ -29,6 +30,7 @@ export const WhatsAppButton = ({ href, label = "Agendar Cita", className = "" }:
       href={href}
       target="_blank" 
       rel="noopener noreferrer"
+      onClick={() => trackConversion()}
       className={`inline-flex items-center gap-3 bg-[#00CED1] text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#20B2AA] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 ${className}`}
     >
       <MessageCircle className="w-5 h-5" />

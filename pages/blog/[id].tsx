@@ -16,9 +16,7 @@ interface BlogPostProps {
 
 export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
   const router = useRouter();
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hola,%20leí%20su%20artículo%20sobre%20${post?.title}%20y%20quiero%20agendar%20cita`;
-
+  
   if (router.isFallback) {
     return <div className="min-h-screen flex items-center justify-center">Cargando...</div>;
   }
@@ -103,7 +101,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
           <h1 className="text-3xl md:text-5xl font-bold text-[#2D2D2D] mb-6 leading-tight">
             {post.title}
           </h1>
-          <div className="flex items-center justify-center gap-6 text-[#A0A0A0] text-sm">
+          <div className="flex items-center justify-center gap-6 text-slate-500 text-sm">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               {post.date}
@@ -124,7 +122,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
         </div>
 
         <div 
-          className="prose prose-lg mx-auto prose-headings:text-[#2D2D2D] prose-p:text-[#4A4A4A] prose-p:leading-relaxed prose-a:text-[#00CED1] hover:prose-a:text-[#008B8B] prose-img:rounded-xl prose-li:text-[#4A4A4A]"
+          className="prose prose-lg mx-auto prose-headings:text-[#2D2D2D] prose-p:text-slate-700 prose-p:leading-relaxed prose-a:text-[#00CED1] hover:prose-a:text-[#008B8B] prose-img:rounded-xl prose-li:text-slate-700"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
@@ -155,7 +153,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
         <div className="mt-16 pt-8 border-t border-[#AFEEEE]/30 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="font-bold text-[#2D2D2D] mb-2">¿Te identificas con este artículo?</h3>
-            <p className="text-[#4A4A4A] text-sm">Agenda una valoración para tratar tu caso específico.</p>
+            <p className="text-slate-600 text-sm">Agenda una valoración para tratar tu caso específico.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
             <button
@@ -200,7 +198,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                   <div className="p-6">
                     <div className="text-xs font-bold text-[#00CED1] mb-2 uppercase tracking-wider">{relatedPost.category}</div>
                     <h3 className="font-bold text-[#2D2D2D] mb-2 group-hover:text-[#00CED1] transition-colors line-clamp-2">{relatedPost.title}</h3>
-                    <p className="text-[#4A4A4A] text-sm line-clamp-2 mb-4">{relatedPost.excerpt}</p>
+                    <p className="text-slate-600 text-sm line-clamp-2 mb-4">{relatedPost.excerpt}</p>
                     <span className="text-[#00CED1] text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
                       Leer más <ArrowRight className="w-4 h-4" />
                     </span>
@@ -224,7 +222,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
               />
             </div>
           </div>
-          <p className="text-[#A0A0A0] text-sm tracking-widest uppercase text-[10px]">© {new Date().getFullYear()} Acupuntura CDMX. Todos los derechos reservados.</p>
+          <p className="text-slate-500 text-sm tracking-widest uppercase text-[10px]">© {new Date().getFullYear()} Acupuntura CDMX. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>

@@ -17,9 +17,6 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hola,%20leí%20su%20blog%20y%20quiero%20agendar%20cita`;
-
   // Sync state with URL on mount
   useEffect(() => {
     if (q) setSearchTerm(q as string);
@@ -149,7 +146,7 @@ export default function Blog() {
               <div className="flex-1 overflow-y-auto p-6 space-y-10">
                 {/* Main Site Navigation in Blog */}
                 <div className="space-y-4">
-                  <h3 className="text-xs font-bold text-[#A0A0A0] uppercase tracking-[0.2em] mb-4">Navegación</h3>
+                  <h3 className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-4">Navegación</h3>
                   <div className="grid grid-cols-1 gap-4">
                     <Link href="/" className="text-2xl font-bold text-[#2D2D2D] hover:text-[#00CED1] transition-colors">Inicio</Link>
                     <Link href="/#padecimientos" className="text-2xl font-bold text-[#2D2D2D] hover:text-[#00CED1] transition-colors">Servicios</Link>
@@ -159,7 +156,7 @@ export default function Blog() {
 
                 {/* Search in Mobile Menu */}
                 <div className="space-y-4">
-                  <h3 className="text-xs font-bold text-[#A0A0A0] uppercase tracking-[0.2em]">Buscar</h3>
+                  <h3 className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">Buscar</h3>
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#00CED1] w-5 h-5" />
                     <input 
@@ -167,12 +164,12 @@ export default function Blog() {
                       placeholder="¿Qué estás buscando?"
                       value={searchTerm}
                       onChange={(e) => updateFilters(e.target.value, selectedCategory)}
-                      className="w-full bg-[#FAF9F6] border border-[#AFEEEE]/50 rounded-xl py-4 pl-10 pr-4 text-[#2D2D2D] placeholder-[#A0A0A0] focus:outline-none focus:ring-2 focus:ring-[#00CED1]/30 transition-all text-lg"
+                      className="w-full bg-[#FAF9F6] border border-[#AFEEEE]/50 rounded-xl py-4 pl-10 pr-4 text-[#2D2D2D] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00CED1]/30 transition-all text-lg"
                     />
                     {searchTerm && (
                       <button 
                         onClick={() => updateFilters('', selectedCategory)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#A0A0A0] hover:text-[#00CED1]"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-[#00CED1]"
                       >
                         <X className="w-4 h-4" />
                       </button>
@@ -182,7 +179,7 @@ export default function Blog() {
                 
                 {/* Categories in Mobile Menu */}
                 <div className="space-y-4">
-                  <h3 className="text-xs font-bold text-[#A0A0A0] uppercase tracking-[0.2em]">Categorías</h3>
+                  <h3 className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">Categorías</h3>
                   <div className="flex flex-col gap-3">
                     <button
                       onClick={() => {
@@ -342,7 +339,7 @@ export default function Blog() {
                     </div>
                   </div>
                   <div className="p-8 flex-1 flex flex-col relative">
-                    <div className="flex items-center gap-3 text-[#A0A0A0] text-xs font-bold mb-4 uppercase tracking-wider">
+                    <div className="flex items-center gap-3 text-slate-500 text-xs font-bold mb-4 uppercase tracking-wider">
                       <span className="flex items-center gap-1.5">
                         <BookOpen className="w-3.5 h-3.5 text-[#00CED1]" />
                         {post.date}
@@ -353,7 +350,7 @@ export default function Blog() {
                       {post.title}
                     </h3>
                     
-                    <p className="text-[#4A4A4A] text-lg leading-relaxed mb-8 flex-1 line-clamp-3 font-light">
+                    <p className="text-slate-700 text-lg leading-relaxed mb-8 flex-1 line-clamp-3 font-light">
                       {post.excerpt}
                     </p>
                     
@@ -433,7 +430,7 @@ export default function Blog() {
               />
             </div>
           </div>
-          <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-[#A0A0A0]">© {new Date().getFullYear()} Acupuntura CDMX. Todos los derechos reservados.</p>
+          <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-slate-500">© {new Date().getFullYear()} Acupuntura CDMX. Todos los derechos reservados.</p>
           <Link href="/" className="text-[#00CED1] hover:text-[#008B8B] transition-colors text-xs font-bold uppercase tracking-widest">Volver a la página principal</Link>
         </div>
       </footer>

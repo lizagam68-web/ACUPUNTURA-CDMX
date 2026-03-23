@@ -4,13 +4,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Radio, Zap, Shield, ArrowUpRight, Activity, Cpu } from 'lucide-react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { trackConversion } from '@/utils/analytics';
 
-const trackConversion = () => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'conversion', { 
-      'send_to': 'AW-11004313271/NfInCOvXyIkYEPfNq_4p' 
-    });
-  }
+const trackConversionLocal = () => {
+  // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads y GA4
+  trackConversion();
+  
   // Link de WhatsApp limpio y profesional
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
   window.open(`https://wa.me/${phoneNumber}?text=Deseo%20iniciar%20el%20protocolo%20de%20especialidad.`, "_blank");
@@ -32,7 +32,7 @@ export default function CleanTechPage() {
             <span className="font-black tracking-tighter text-xl italic uppercase">QI.TECH</span>
           </div>
           <button 
-            onClick={trackConversion}
+            onClick={trackConversionLocal}
             className="text-[10px] font-black uppercase tracking-[0.2em] border-b-2 border-[#00f2ff] pb-1 hover:opacity-50 transition-all"
           >
             SISTEMA DE CITAS
@@ -41,7 +41,7 @@ export default function CleanTechPage() {
       </header>
 
       {/* 2. HERO: IMPACTO VISUAL LUMINOSO */}
-      <section className="pt-48 pb-32 px-6 relative overflow-hidden">
+      <section className="relative pt-48 pb-32 px-6 overflow-hidden">
         {/* Luz de fondo sutil */}
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,#00f2ff10,transparent_50%)] pointer-events-none" />
         
@@ -67,7 +67,7 @@ export default function CleanTechPage() {
               </p>
               
               <button 
-                onClick={trackConversion}
+                onClick={trackConversionLocal}
                 className="bg-[#050505] text-white px-12 py-6 rounded-2xl text-xs font-black tracking-[0.2em] uppercase flex items-center gap-4 hover:bg-[#00f2ff] hover:text-black transition-all duration-500 shadow-2xl"
               >
                 INICIAR PROTOCOLO <ArrowUpRight size={18} />
@@ -117,10 +117,13 @@ export default function CleanTechPage() {
       </section>
 
       {/* 4. FOOTER: MINIMALISMO ABSOLUTO */}
-      <footer className="py-20 border-t border-black/5 text-center">
+      <footer className="py-20 border-t border-black/5 text-center flex flex-col items-center gap-4">
         <div className="text-[9px] font-black tracking-[0.5em] opacity-30 uppercase">
           CENTRO DE ACUPUNTURA QI | BENITO JUÁREZ CDMX
         </div>
+        <Link href="/privacidad" className="text-[10px] font-bold uppercase tracking-widest text-black/40 hover:text-[#00f2ff] transition-colors">
+          Aviso de Privacidad
+        </Link>
       </footer>
 
     </div>

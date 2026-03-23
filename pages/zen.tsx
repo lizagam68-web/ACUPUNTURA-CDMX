@@ -4,11 +4,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Leaf, MapPin, ArrowRight, Shield } from 'lucide-react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { trackConversion } from '@/utils/analytics';
 
-const trackConversion = () => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'conversion', { 'send_to': 'AW-11004313271/NfInCOvXyIkYEPfNq_4p' });
-  }
+const trackConversionLocal = () => {
+  // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads y GA4
+  trackConversion();
+  
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
   window.open(`https://wa.me/${phoneNumber}?text=Deseo%20iniciar%20un%20protocolo%20de%20especialidad.`, "_blank");
 };
@@ -28,7 +30,7 @@ export default function ZenSanctuary() {
             <span className="font-serif italic text-2xl tracking-tighter">Qi Clinic</span>
             <span className="text-[8px] tracking-[0.4em] uppercase opacity-40">Especialidad Técnica</span>
           </div>
-          <button onClick={trackConversion} className="group flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
+          <button onClick={trackConversionLocal} className="group flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest">
             <span className="w-8 h-[1px] bg-current group-hover:w-12 transition-all" /> 
             Agendar Protocolo
           </button>
@@ -57,7 +59,7 @@ export default function ZenSanctuary() {
             </div>
 
             <button 
-              onClick={trackConversion}
+              onClick={trackConversionLocal}
               className="relative group bg-[#1C1C1C] text-[#FDFCF9] px-16 py-8 rounded-full overflow-hidden transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)]"
             >
               <div className="absolute inset-0 bg-[#5A726C] translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -105,8 +107,11 @@ export default function ZenSanctuary() {
         </div>
       </section>
 
-      <footer className="p-20 text-center opacity-20">
-        <p className="text-[8px] font-bold uppercase tracking-[1em]">Centro de Acupuntura QI | Orden · Dirección · Contención</p>
+      <footer className="p-20 text-center flex flex-col items-center gap-6">
+        <p className="text-[8px] font-bold uppercase tracking-[1em] opacity-20">Centro de Acupuntura QI | Orden · Dirección · Contención</p>
+        <Link href="/privacidad" className="text-[10px] font-bold uppercase tracking-widest text-[#1C1C1C]/40 hover:text-[#5A726C] transition-colors">
+          Aviso de Privacidad
+        </Link>
       </footer>
 
     </div>
