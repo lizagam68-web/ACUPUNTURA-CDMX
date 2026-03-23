@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import BotonWhatsappClinico from '@/components/BotonWhatsappClinico';
+import BotonWhatsappKansai from '@/components/BotonWhatsappKansai';
 import { trackConversion } from '@/utils/analytics';
 
 export default function Home() {
@@ -262,7 +263,7 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <BotonWhatsappClinico />
+                <BotonWhatsappKansai />
                 <button
                   onClick={() => scrollTo("padecimientos")}
                   className="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm text-[#00CED1] border border-[#00CED1]/20 hover:bg-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-sm hover:shadow-md"
