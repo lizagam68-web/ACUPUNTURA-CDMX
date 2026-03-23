@@ -1,32 +1,41 @@
 'use client';
 
 import React from 'react';
-import { MessageCircle } from 'lucide-react'; // Icono limpio
-import { handleGlobalCTA } from '@/utils/analytics';
 
+// 1. Aquí definimos que el botón puede recibir 'message'
 interface BotonWhatsappClinicoProps {
-  label?: string;
-  servicio?: string;
+  label: string;
+  message?: string; // El signo '?' significa que es opcional
   className?: string;
 }
 
-const BotonWhatsappClinico = ({ 
-  label = "Agenda tu cita para primer consulta", 
-  servicio = "Acupuntura de Especialidad",
-  className = ""
-}: BotonWhatsappClinicoProps) => {
+const BotonWhatsappClinico: React.FC<BotonWhatsappClinicoProps> = ({ 
+  label, 
+  message = "Hola, deseo agendar una cita", // Mensaje por defecto
+  className 
+}) => {
   
-  const registrarConversionYContactar = () => {
-    handleGlobalCTA(servicio);
+  const handleWhatsAppClick = () => {
+    // Tu número centralizado: 525552520615
+    const phone = "525552520615";
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Rastreo de Google Ads (Para mantener tu punto verde 🟢)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
+      });
+    }
+
+    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
   };
 
   return (
-    <button
-      onClick={registrarConversionYContactar}
-      className={`flex items-center justify-center gap-2 bg-[#00CED1] hover:bg-[#008B8B] text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-xl hover:shadow-[#00CED1]/20 hover:-translate-y-1 ${className}`}
+    <button 
+      onClick={handleWhatsAppClick}
+      className={`bg-[#1B3A4B] text-white rounded-full font-bold transition-all hover:bg-[#2ABFBF] ${className}`}
     >
-      <MessageCircle size={20} />
-      <span>{label}</span>
+      {label}
     </button>
   );
 };
