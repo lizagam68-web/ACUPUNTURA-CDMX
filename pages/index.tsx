@@ -111,35 +111,42 @@ export default function Home() {
         </button>
       </nav>
 
-      {/* HERO: REFRACCIÓN Y LUZ ORGANICA */}
-      <section className="relative pt-64 pb-40 px-6">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[80vh] bg-[radial-gradient(circle_at_50%_20%,#5A726C08,transparent_60%)] pointer-events-none" />
-        
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }}>
-            <div className="inline-flex items-center gap-3 mb-12 opacity-40">
-              <Cpu size={14} strokeWidth={1.5} />
-              <span className="text-[9px] font-bold uppercase tracking-[0.5em]">Acupuntura de Especialidad · Benito Juárez</span>
-            </div>
+      {/* HERO 2026: SEDA Y CRISTAL */}
+      <section className="relative pt-64 pb-40 px-6 bg-[#FDFCF9]">
+        {/* Luz de Refracción (Elimina lo opaco) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_10%,#5A726C15,transparent_60%)] pointer-events-none" />
 
-            <h1 className="text-7xl md:text-[110px] font-black leading-[0.85] tracking-tighter mb-12 text-reveal uppercase">
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }}>
+            
+            <div className="inline-flex items-center gap-3 mb-10 px-6 py-2 glass-refraction rounded-full shadow-sm">
+              <div className="w-1.5 h-1.5 bg-[#00f2ff] rounded-full animate-pulse" />
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black/30">
+                Dirección Técnica Especializada
+              </span>
+            </div>
+            
+            <h1 className="text-6xl md:text-[120px] font-black leading-[0.85] tracking-tighter mb-12 uppercase text-[#1a1a1a]">
               Precisión <br />
-              <span className="font-serif italic font-light lowercase text-[0.85em] tracking-normal">Clínica Humana.</span>
+              <span className="font-serif italic font-light lowercase text-[0.85em] opacity-80" style={{ WebkitTextStroke: '0.8px #1a1a1a', color: 'transparent' }}>
+                Clínica Humana.
+              </span>
             </h1>
 
-            <div className="max-w-2xl mx-auto mb-20">
-              <p className="text-xl md:text-3xl font-light leading-relaxed text-[#1a1a1a]/60 italic">
-                “Bajo <span className="text-[#5A726C] font-normal">dirección técnica especializada</span>, diseñamos un escape mental y sanación profunda dentro del estándar clínico más alto.”
-              </p>
-            </div>
+            <p className="max-w-2xl mx-auto text-xl md:text-3xl font-light leading-relaxed text-black/50 italic mb-16">
+              “Transformamos la alta complejidad en un 
+              <span className="text-black font-medium"> escape mental y restauración profunda </span> 
+              con rigor clínico en la Benito Juárez.”
+            </p>
 
+            {/* Botón con efecto de 'Jade Pulido' */}
             <button 
               onClick={trackConversion}
-              className="relative group bg-[#1a1a1a] text-[#FDFCF9] px-16 py-8 rounded-2xl overflow-hidden transition-all duration-1000 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.2)]"
+              className="group relative bg-[#1a1a1a] text-white px-16 py-8 rounded-2xl overflow-hidden transition-all duration-1000 shadow-2xl hover:shadow-[#00f2ff]/20"
             >
               <div className="absolute inset-0 bg-[#5A726C] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700" />
-              <span className="relative z-10 flex items-center gap-4 text-xs font-bold tracking-[0.3em] uppercase">
-                Iniciar Restauración <ArrowUpRight size={18} className="text-[#FDFCF9]" />
+              <span className="relative z-10 flex items-center gap-4 text-xs font-black tracking-[0.3em] uppercase">
+                Iniciar Protocolo de Cita <ArrowUpRight size={18} className="text-[#00f2ff]" />
               </span>
             </button>
           </motion.div>
