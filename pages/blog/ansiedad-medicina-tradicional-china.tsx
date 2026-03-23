@@ -5,9 +5,10 @@ import { ArrowLeft, CheckCircle2, Sparkles, Brain } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '@/components/SEO';
-import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton'; // Solo importamos el botón
 
-const WHATSAPP_LINK_ANSIEDAD = "https://wa.me/525552520615?text=Hola%20Liz,%20me%20interesa%20el%20tratamiento%20de%20acupuntura%20para%20regular%20el%20estrés%20y%20la%20ansiedad.";
+// Definimos el link aquí mismo para evitar que Next.js se pierda
+const WHATSAPP_LINK_DIRECTO = "https://wa.me/525552520615?text=Hola%20Liz,%20me%20interesa%20el%20tratamiento%20de%20acupuntura%20para%20regular%20el%20estrés%20y%20la%20ansiedad.";
 
 export default function AnsiedadBlog() {
   return (
@@ -168,7 +169,7 @@ export default function AnsiedadBlog() {
             Permítete un espacio de silencio y sanación. Tu mente y tu cuerpo te lo agradecerán.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINK_ANSIEDAD} 
+            link={WHATSAPP_LINK_DIRECTO} 
             label="Recupera tu Calma Ahora" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />

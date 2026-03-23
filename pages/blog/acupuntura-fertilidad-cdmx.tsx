@@ -5,9 +5,10 @@ import { ArrowLeft, CheckCircle2, Sparkles, Baby } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '@/components/SEO';
-import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton'; // Solo importamos el botón
 
-const WHATSAPP_LINK_FERTILIDAD = "https://wa.me/525552520615?text=Hola%20Liz,%20leí%20sobre%20el%20equilibrio%20del%20eje%20hormonal%20y%20me%20gustaría%20agendar%20una%20valoración%20para%20fertilidad.";
+// Definimos el link aquí mismo para evitar que Next.js se pierda
+const WHATSAPP_LINK_DIRECTO = "https://wa.me/525552520615?text=Hola%20Liz,%20leí%20sobre%20el%20equilibrio%20del%20eje%20hormonal%20y%20me%20gustaría%20agendar%20una%20valoración%20para%20fertilidad.";
 
 export default function FertilidadBlog() {
   return (
@@ -168,7 +169,7 @@ export default function FertilidadBlog() {
             Estamos aquí para acompañarte con profesionalismo y calidez en cada paso de este hermoso viaje.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINK_FERTILIDAD} 
+            link={WHATSAPP_LINK_DIRECTO} 
             label="Agenda tu Consulta de Fertilidad" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />

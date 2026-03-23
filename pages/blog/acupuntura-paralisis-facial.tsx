@@ -4,9 +4,10 @@ import { ArrowLeft, CheckCircle2, Wind, Sparkles, ShieldCheck } from 'lucide-rea
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '@/components/SEO';
-import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton'; // Solo importamos el botón
 
-const WHATSAPP_LINK_PARALISIS = "https://wa.me/525552520615?text=Hola%20Liz,%20necesito%20una%20cita%20urgente%20por%20un%20tema%20de%20Parálisis%20Facial.%20Vi%20tu%20artículo.";
+// Definimos el link aquí mismo para evitar que Next.js se pierda
+const WHATSAPP_LINK_DIRECTO = "https://wa.me/525552520615?text=Hola%20Liz,%20necesito%20una%20cita%20urgente%20por%20un%20tema%20de%20Parálisis%20Facial.%20Vi%20tu%20artículo.";
 
 export default function ParalisisFacialBlog() {
   return (
@@ -167,7 +168,7 @@ export default function ParalisisFacialBlog() {
           </div>
 
           <WhatsAppButton 
-            link={WHATSAPP_LINK_PARALISIS} 
+            link={WHATSAPP_LINK_DIRECTO} 
             label="Agenda tu Alivio Prioritario" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
