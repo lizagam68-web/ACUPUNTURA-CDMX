@@ -53,6 +53,23 @@ export default function BiologyPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleRestauracionClick = () => {
+    // 1. Disparo de Conversión (Sin errores de dedo)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
+      });
+      console.log("Sensor de neurofisiología activado: Conversión enviada.");
+    }
+
+    // 2. Redirección Humana (Mensaje para el ejecutivo)
+    const mensaje = encodeURIComponent(
+      "Hola, deseo iniciar mi proceso de restauración en Acupuntura CDMX (Benito Juárez). Busco recuperar mi equilibrio y claridad mental."
+    );
+    
+    window.open(`https://wa.me/5215500000000?text=${mensaje}`, "_blank");
+  };
+
   return (
     <div className="min-h-screen font-sans selection:bg-[#2ABFBF]/20">
       <Head>
@@ -291,7 +308,13 @@ export default function BiologyPage() {
           {[
             { n: '01', h3: 'Parálisis Facial', h4: '"Restauración del VII Par Craneal"', p: 'Electroacupuntura de precisión en los 43 puntos motores del nervio facial. Reactivación progresiva y documentada de la función neuromuscular. Protocolo de precisión, resultados medibles.' },
             { n: '02', h3: 'Clínica del Dolor', h4: '"Eliminación de Interferencias Físicas"', p: 'Protocolo rápido para lesiones agudas, dolor crónico, cervicalgia y lumbalgia. La persona moderna que sufre no rinde. Resolución clínica sin dependencia de fármacos.' },
-            { n: '03', h3: 'Equilibrio Neural', h4: '"Contención del Sistema Nervioso"', p: 'El escape mental técnico que la persona moderna de la Benito Juárez necesita. Regulación del eje cortisol-sueño, neuromodulación del estrés y restauración de la claridad ejecutiva.' }
+            {
+              n: '03', 
+              h3: 'Equilibrio Neural', 
+              h4: '"Contención del Sistema Nervioso"', 
+              p: 'El escape mental técnico que la persona moderna de la Benito Juárez necesita. Regulación del eje cortisol-sueño, neuromodulación del estrés y restauración de la claridad ejecutiva.',
+              onClick: handleRestauracionClick
+            }
           ].map((card, i) => (
             <Reveal key={i} delay={i * 0.1}>
               <div className="bg-white p-[50px_40px] rounded-[15px] border border-[#eee] transition-all duration-400 relative overflow-hidden group hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(27,58,75,0.05)] hover:border-[#2ABFBF] before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[3px] before:bg-gradient-to-r before:from-[#2ABFBF] before:to-[#5DD0D0] before:scale-x-0 before:origin-left before:transition-transform before:duration-400 hover:before:scale-x-100">
@@ -299,7 +322,10 @@ export default function BiologyPage() {
                 <h3 className="text-[22px] font-black mb-2 uppercase text-[#1B3A4B]">{card.h3}</h3>
                 <h4 className="font-serif italic text-[19px] text-[#2ABFBF] mb-[18px]">{card.h4}</h4>
                 <p className="text-[14px] text-slate-700 leading-[1.8]">{card.p}</p>
-                <button onClick={trackConversion} className="inline-flex items-center gap-2 mt-7 text-[10px] font-black tracking-[0.2em] uppercase text-[#2ABFBF] no-underline transition-[gap] duration-200 hover:gap-3.5">
+                <button 
+                  onClick={card.onClick || trackConversion} 
+                  className="inline-flex items-center gap-2 mt-7 text-[10px] font-black tracking-[0.2em] uppercase text-[#2ABFBF] no-underline transition-[gap] duration-200 hover:gap-3.5"
+                >
                   Ver Protocolo <ArrowRight size={14} />
                 </button>
               </div>
