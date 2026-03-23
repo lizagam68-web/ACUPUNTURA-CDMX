@@ -4,6 +4,8 @@ import { MessageCircle, Phone, ArrowRight, CheckCircle2, CheckCircle, Star, Chev
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
+import BotonWhatsappClinico from '@/components/BotonWhatsappClinico';
+import { trackConversion } from '@/utils/analytics';
 
 export default function Home() {
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
@@ -149,14 +151,10 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-4">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:flex items-center gap-2 bg-[#00CED1] hover:bg-[#008B8B] text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-bold transition-all shadow-lg hover:scale-105 active:scale-95"
-              >
-                <span>Agendar</span>
-              </a>
+              <BotonWhatsappClinico 
+                label="Agendar" 
+                className="hidden sm:flex px-6 py-2.5 text-xs" 
+              />
               
             {/* Mobile Menu Toggle */}
             <button 
@@ -211,15 +209,10 @@ export default function Home() {
                     transition={{ delay: 0.5 }}
                     className="space-y-6"
                   >
-                    <a
-                      href={whatsappUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-3 bg-[#00CED1] text-white py-5 rounded-2xl text-lg font-bold shadow-xl shadow-[#00CED1]/20 active:scale-95 transition-transform"
-                    >
-                      <MessageCircle className="w-6 h-6" />
-                      Agendar Cita
-                    </a>
+                    <BotonWhatsappClinico 
+                      label="Agendar Cita" 
+                      className="w-full py-5 text-lg" 
+                    />
                     
                     <div className="space-y-4 text-[#4A4A4A]">
                       <p className="text-sm font-medium uppercase tracking-widest text-[#5A5A40]">Contacto</p>
@@ -269,15 +262,7 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-[#00CED1] hover:bg-[#008B8B] text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-xl hover:shadow-[#00CED1]/20 hover:-translate-y-1"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Agenda tu cita
-                </a>
+                <BotonWhatsappClinico />
                 <button
                   onClick={() => scrollTo("padecimientos")}
                   className="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm text-[#00CED1] border border-[#00CED1]/20 hover:bg-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-sm hover:shadow-md"
@@ -385,14 +370,11 @@ export default function Home() {
                 </li>
               </ul>
 
-              <a 
-                href={`https://wa.me/${phoneNumber}?text=Hola, necesito informes urgentes sobre el tratamiento de parálisis facial`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#00CED1] text-white px-8 py-4 rounded-full font-medium hover:bg-[#008B8B] transition-all shadow-lg"
-              >
-                Agendar Consulta Prioritaria
-              </a>
+              <BotonWhatsappClinico 
+                label="Agendar Consulta Prioritaria" 
+                message="Hola, necesito informes urgentes sobre el tratamiento de parálisis facial"
+                className="inline-flex"
+              />
             </motion.div>
           </div>
         </div>
@@ -415,7 +397,10 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                onClick={() => window.open(whatsappUrl, '_blank')}
+                onClick={() => {
+                  trackConversion();
+                  window.open(whatsappUrl, '_blank');
+                }}
                 className="group flex flex-col h-full bg-white p-8 rounded-2xl border border-[#AFEEEE]/30 transition-all hover:shadow-2xl hover:shadow-[#00CED1]/5 hover:-translate-y-1 cursor-pointer"
               >
                 <div className={`w-14 h-14 ${item.color} rounded-full flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 shadow-sm`}>
@@ -698,17 +683,6 @@ export default function Home() {
           </motion.button>
         )}
       </AnimatePresence>
-
-      {/* Floating WhatsApp Button */}
-      <a 
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-transform md:px-6 md:rounded-2xl"
-      >
-        <MessageCircle className="w-6 h-6" />
-        <span className="hidden md:inline font-medium">Agendar Cita en Consultorio</span>
-      </a>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { posts, Post } from '@/data/posts';
 import SEO from '@/components/SEO';
 import Head from 'next/head';
+import BotonWhatsappClinico from '@/components/BotonWhatsappClinico';
 
 interface BlogPostProps {
   post: Post;
@@ -164,15 +165,11 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
               <Share2 className="w-5 h-5" />
               Compartir
             </button>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#00CED1] hover:bg-[#008B8B] text-white px-6 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Agendar Cita
-            </a>
+            <BotonWhatsappClinico 
+              label="Agendar Cita" 
+              message={`Hola, leí su artículo sobre ${post?.title} y quiero agendar cita`}
+              className="px-6 py-3 text-sm sm:text-base"
+            />
           </div>
         </div>
       </article>

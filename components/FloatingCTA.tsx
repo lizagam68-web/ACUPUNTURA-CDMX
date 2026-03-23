@@ -1,10 +1,15 @@
 import React from 'react';
 import { MessageCircle, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { trackConversion } from '@/utils/analytics';
 
 const FloatingCTA = () => {
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hola,%20quiero%20agendar%20cita`;
+
+  const handleClick = () => {
+    trackConversion();
+  };
 
   return (
     <>
@@ -13,6 +18,7 @@ const FloatingCTA = () => {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleClick}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.1 }}
@@ -32,6 +38,7 @@ const FloatingCTA = () => {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           className="flex items-center justify-center gap-3 bg-cyan-950 text-white w-full py-4 rounded-xl font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-transform"
         >
           <Calendar className="w-5 h-5" />

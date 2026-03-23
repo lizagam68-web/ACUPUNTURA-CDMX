@@ -21,6 +21,23 @@ export default function App({ Component, pageProps }: AppProps) {
           })(window,document,'script','dataLayer','GTM-XXXXXXX');`,
         }}
       />
+      {/* Google Ads Global Tag */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-11004313271"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-ads-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11004313271');
+          `,
+        }}
+      />
       <Component {...pageProps} />
       <FloatingCTA />
     </div>
