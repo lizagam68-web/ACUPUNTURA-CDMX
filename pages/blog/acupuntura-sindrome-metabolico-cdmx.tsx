@@ -154,7 +154,7 @@ export default function SindromeMetabolicoBlog() {
             Descubre cómo la medicina milenaria puede transformar tu salud endocrina y devolverte la vitalidad que mereces.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINKS.SALUD_METABOLICA} 
+            link={WHATSAPP_LINKS.general} 
             label="Optimiza tu Salud Hoy" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />

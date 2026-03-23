@@ -166,7 +166,7 @@ export default function FertilidadBlog() {
             Estamos aquí para acompañarte con profesionalismo y calidez en cada paso de este hermoso viaje.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINKS.FERTILIDAD} 
+            link={WHATSAPP_LINKS.general} 
             label="Agenda tu Consulta de Fertilidad" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />

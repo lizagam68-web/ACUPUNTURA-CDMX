@@ -188,7 +188,7 @@ export default function DolorCronicoBlog() {
             No permitas que el dolor defina tu vida. Descubre el poder de la sanación natural en manos expertas.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINKS.DOLOR_CRONICO} 
+            link={WHATSAPP_LINKS.dolorCronico} 
             label="Recuperar mi Bienestar" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
