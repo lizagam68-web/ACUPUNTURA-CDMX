@@ -151,8 +151,8 @@ export default function BiologyPage() {
           <button 
             onClick={() => {
               trackConversion();
-              const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-              const mensaje = encodeURIComponent("Hola, quiero agendar mi consulta de valoración en Acupuntura CDMX");
+              const phoneNumber = "5215500000000";
+              const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
               window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
             }} 
             className="flex items-center gap-[7px] bg-[#2ABFBF] text-[#0F2535] px-[22px] py-[10px] rounded-full text-[11px] font-black uppercase no-underline transition-all hover:bg-[#5DD0D0] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(42,191,191,0.25)]"
@@ -184,8 +184,8 @@ export default function BiologyPage() {
             <button 
               onClick={() => {
                 trackConversion();
-                const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-                const mensaje = encodeURIComponent("Hola, quiero agendar mi consulta de valoración en Acupuntura CDMX");
+                const phoneNumber = "5215500000000";
+                const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
                 window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
               }} 
               className="group relative inline-flex items-center justify-center gap-3 bg-[#2ABFBF] text-[#0F2535] px-10 py-[22px] rounded-full font-black uppercase tracking-[0.12em] text-[14px] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(42,191,191,0.45)] hover:bg-[#5DD0D0] w-full sm:w-auto overflow-hidden"
@@ -441,8 +441,8 @@ export default function BiologyPage() {
           <button 
             onClick={() => {
               trackConversion();
-              const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-              const mensaje = encodeURIComponent("Hola, quiero agendar mi consulta de valoración en Acupuntura CDMX");
+              const phoneNumber = "5215500000000";
+              const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
               window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
             }} 
             className="inline-flex items-center gap-3 bg-[#25D366] text-white px-9 py-[18px] text-[13px] font-black tracking-[0.1em] uppercase no-underline rounded-full whitespace-nowrap transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(37,211,102,0.35)]"
@@ -483,8 +483,8 @@ export default function BiologyPage() {
               <li><button 
                 onClick={() => {
                   trackConversion();
-                  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-                  const mensaje = encodeURIComponent("Hola, quiero agendar mi consulta de valoración en Acupuntura CDMX");
+                  const phoneNumber = "5215500000000";
+                  const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
                   window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
                 }} 
                 className="text-[13px] text-white/60 no-underline transition-colors hover:text-[#5DD0D0] text-left"
@@ -500,7 +500,7 @@ export default function BiologyPage() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-2.5 text-[11px] text-white/40 tracking-[0.06em]">
           <span>2026 Acupuntura CDMX - Dirección Técnica Especializada - Benito Juárez</span>
-          <span>Protocolo de Acupuntura - ID: AW-11004313271</span>
+          <span>Protocolo de Acupuntura - ID: AW-985455568</span>
         </div>
       </footer>
     </div>

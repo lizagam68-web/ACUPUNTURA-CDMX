@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Wind, Sparkles, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
 import SEO from '@/components/SEO';
 import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
@@ -11,7 +12,44 @@ export default function ParalisisFacialBlog() {
       <SEO 
         title="Acupuntura para Nervio Facial en Benito Juárez | Centro QI"
         description="Especialistas en la recuperación del nervio facial en CDMX. Tratamiento avanzado para parálisis facial en ambiente controlado de consultorio."
+        keywords="acupuntura paralisis facial cdmx, tratamiento nervio facial benito juarez, recuperacion paralisis de bell cdmx, acupuntura facial benito juarez"
+        image="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200&auto=format&fit=crop"
+        url="https://acupunturacdmx.com/blog/acupuntura-paralisis-facial"
+        type="article"
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "Recupera el Movimiento de tu Rostro en Benito Juárez: Alivio Efectivo",
+              "description": "Especialistas en la recuperación del nervio facial en CDMX. Tratamiento avanzado para parálisis facial en ambiente controlado de consultorio.",
+              "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200&auto=format&fit=crop",
+              "author": {
+                "@type": "Organization",
+                "name": "Equipo Acupuntura CDMX",
+                "url": "https://acupunturacdmx.com"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Acupuntura CDMX",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://acupunturacdmx.com/images/logo.svg"
+                }
+              },
+              "datePublished": "2024-03-20",
+              "dateModified": "2024-03-20",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://acupunturacdmx.com/blog/acupuntura-paralisis-facial"
+              }
+            })
+          }}
+        />
+      </Head>
 
       {/* Navigation - Minimalist */}
       <nav className="sticky top-0 z-50 bg-[#F0FFFF]/80 backdrop-blur-md border-b border-[#AFEEEE]">

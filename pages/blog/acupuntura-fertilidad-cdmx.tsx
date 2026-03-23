@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Sparkles, Baby } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
 import SEO from '@/components/SEO';
 import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
@@ -13,7 +14,43 @@ export default function FertilidadBlog() {
         title="Acupuntura para la Fertilidad en Benito Juárez CDMX | Acupuntura CDMX"
         description="Acompañamiento natural para tu fertilidad en la Alcaldía Benito Juárez. Equilibra tu cuerpo y mente para la concepción con expertos en acupuntura."
         keywords="acupuntura fertilidad benito juarez, concepción natural cdmx, apoyo FIV acupuntura, equilibrio hormonal femenino, fertilidad natural benito juarez, acupuntura cdmx fertilidad"
+        image="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop"
+        url="https://acupunturacdmx.com/blog/acupuntura-fertilidad-cdmx"
+        type="article"
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "Acupuntura para la Fertilidad en Benito Juárez: Equilibra tu Cuerpo",
+              "description": "Acompañamiento natural para tu fertilidad en la Alcaldía Benito Juárez. Equilibra tu cuerpo y mente para la concepción con expertos en acupuntura.",
+              "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop",
+              "author": {
+                "@type": "Organization",
+                "name": "Equipo Acupuntura CDMX",
+                "url": "https://acupunturacdmx.com"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Acupuntura CDMX",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://acupunturacdmx.com/images/logo.svg"
+                }
+              },
+              "datePublished": "2024-03-20",
+              "dateModified": "2024-03-20",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://acupunturacdmx.com/blog/acupuntura-fertilidad-cdmx"
+              }
+            })
+          }}
+        />
+      </Head>
 
       {/* Navigation - Minimalist */}
       <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#AFEEEE]">

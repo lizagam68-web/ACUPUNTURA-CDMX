@@ -3,7 +3,7 @@
 import Script from 'next/script';
 
 export function GoogleTag() {
-  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.split('/')[0] || 'AW-11004313271';
+  const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.split('/')[0] || 'AW-985455568';
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (

@@ -46,6 +46,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
       "@id": `https://acupunturacdmx.com/blog/${post.id}`
     },
     "headline": post.title,
+    "description": post.metaDescription || post.excerpt,
     "image": [post.image],
     "author": {
       "@type": "Organization",
@@ -62,7 +63,9 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
     },
     "datePublished": post.dateISO,
     "dateModified": post.dateISO,
-    "description": post.metaDescription || post.excerpt,
+    "keywords": post.keywords?.join(', '),
+    "articleSection": post.category,
+    "articleBody": post.content.replace(/<[^>]*>?/gm, '').trim()
   };
 
   return (

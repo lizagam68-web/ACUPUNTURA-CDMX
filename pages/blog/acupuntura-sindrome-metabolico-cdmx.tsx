@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Activity, Sparkles, HeartPulse } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
 import SEO from '@/components/SEO';
 import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
@@ -12,7 +13,43 @@ export default function SindromeMetabolicoBlog() {
         title="Acupuntura Metabólica en Benito Juárez CDMX | Salud Endocrina"
         description="Optimiza tu salud metabólica en la Alcaldía Benito Juárez. La acupuntura ayuda a regular la insulina y el cortisol de forma natural."
         keywords="acupuntura metabólica benito juarez, síndrome metabólico tratamiento natural, regulación cortisol acupuntura, salud metabólica benito juarez, medicina china endocrina"
+        image="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1200&auto=format&fit=crop"
+        url="https://acupunturacdmx.com/blog/acupuntura-sindrome-metabolico-cdmx"
+        type="article"
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "Acupuntura Metabólica en Benito Juárez: Salud Endocrina",
+              "description": "Optimiza tu salud metabólica en la Alcaldía Benito Juárez. La acupuntura ayuda a regular la insulina y el cortisol de forma natural.",
+              "image": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1200&auto=format&fit=crop",
+              "author": {
+                "@type": "Organization",
+                "name": "Equipo Acupuntura CDMX",
+                "url": "https://acupunturacdmx.com"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Acupuntura CDMX",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://acupunturacdmx.com/images/logo.svg"
+                }
+              },
+              "datePublished": "2024-03-20",
+              "dateModified": "2024-03-20",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://acupunturacdmx.com/blog/acupuntura-sindrome-metabolico-cdmx"
+              }
+            })
+          }}
+        />
+      </Head>
 
       {/* Navigation - Minimalist */}
       <nav className="sticky top-0 z-50 bg-[#F0FFFF]/80 backdrop-blur-md border-b border-[#AFEEEE]">

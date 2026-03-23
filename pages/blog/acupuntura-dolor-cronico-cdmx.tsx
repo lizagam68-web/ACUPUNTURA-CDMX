@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Activity, Sparkles, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
 import SEO from '@/components/SEO';
 import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
@@ -13,7 +14,43 @@ export default function DolorCronicoBlog() {
         title="Alivio para Esguinces y Dolor Lumbar en Benito Juárez CDMX | Acupuntura CDMX"
         description="Expertos en el tratamiento de esguinces y dolor lumbar en la Alcaldía Benito Juárez. Recupera tu movilidad con atención especializada."
         keywords="esguinces benito juarez cdmx, dolor lumbar benito juarez, acupuntura esguinces cdmx, tratamiento dolor lumbar natural, acupuntura cdmx benito juarez"
+        image="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop"
+        url="https://acupunturacdmx.com/blog/acupuntura-dolor-cronico-cdmx"
+        type="article"
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "Alivio para Esguinces y Ciática en Benito Juárez",
+              "description": "Expertos en el tratamiento de esguinces y dolor lumbar en la Alcaldía Benito Juárez. Recupera tu movilidad con atención especializada.",
+              "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop",
+              "author": {
+                "@type": "Organization",
+                "name": "Equipo Acupuntura CDMX",
+                "url": "https://acupunturacdmx.com"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Acupuntura CDMX",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://acupunturacdmx.com/images/logo.svg"
+                }
+              },
+              "datePublished": "2024-03-20",
+              "dateModified": "2024-03-20",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://acupunturacdmx.com/blog/acupuntura-dolor-cronico-cdmx"
+              }
+            })
+          }}
+        />
+      </Head>
 
       {/* Navigation - Minimalist */}
       <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#AFEEEE]">

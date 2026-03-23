@@ -1,15 +1,8 @@
 export const trackConversion = () => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    // Google Ads Conversion
     (window as any).gtag('event', 'conversion', {
-      'send_to': process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || 'AW-11004313271/NfInCOvXyIkYEPfNq_4p', 
-      'event_callback': () => console.log("Señal de éxito enviada a Google Ads")
-    });
-
-    // GA4 Event: Click en WhatsApp
-    (window as any).gtag('event', 'whatsapp_click', {
-      'event_category': 'Engagement',
-      'event_label': 'WhatsApp Button Click'
+      'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
+      'event_callback': () => console.log("Conversión registrada con éxito.")
     });
   }
 };

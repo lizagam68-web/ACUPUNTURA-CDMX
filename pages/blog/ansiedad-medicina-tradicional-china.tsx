@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, Sparkles, Brain } from 'lucide-react';
 import Link from 'next/link';
+import Head from 'next/head';
 import SEO from '@/components/SEO';
 import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
 
@@ -13,7 +14,43 @@ export default function AnsiedadBlog() {
         title="Acupuntura para la Ansiedad en Benito Juárez CDMX | Acupuntura CDMX"
         description="Recupera tu calma mental en la Alcaldía Benito Juárez. La acupuntura regula tu sistema nervioso y reduce el estrés para un descanso reparador."
         keywords="ansiedad acupuntura benito juarez, tratamiento estrés natural méxico, insomnio acupuntura cdmx, calma mental natural, medicina tradicional china ansiedad"
+        image="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200&auto=format&fit=crop"
+        url="https://acupunturacdmx.com/blog/ansiedad-medicina-tradicional-china"
+        type="article"
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": "Acupuntura para la Ansiedad en Benito Juárez: Recupera tu Calma",
+              "description": "Recupera tu calma mental en la Alcaldía Benito Juárez. La acupuntura regula tu sistema nervioso y reduce el estrés para un descanso reparador.",
+              "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200&auto=format&fit=crop",
+              "author": {
+                "@type": "Organization",
+                "name": "Equipo Acupuntura CDMX",
+                "url": "https://acupunturacdmx.com"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Acupuntura CDMX",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://acupunturacdmx.com/images/logo.svg"
+                }
+              },
+              "datePublished": "2024-03-20",
+              "dateModified": "2024-03-20",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://acupunturacdmx.com/blog/ansiedad-medicina-tradicional-china"
+              }
+            })
+          }}
+        />
+      </Head>
 
       {/* Navigation - Minimalist */}
       <nav className="sticky top-0 z-50 bg-[#FAF9F6]/80 backdrop-blur-md border-b border-[#AFEEEE]">
