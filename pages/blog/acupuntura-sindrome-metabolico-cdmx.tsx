@@ -4,7 +4,9 @@ import { ArrowLeft, CheckCircle2, Activity, Sparkles, HeartPulse } from 'lucide-
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '@/components/SEO';
-import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+
+const WHATSAPP_LINK_METABOLICO = "https://wa.me/525552520615?text=Hola%20Liz,%20me%20interesa%20la%20evaluación%20metabólica%20y%20endocrina%20con%20acupuntura.";
 
 export default function SindromeMetabolicoBlog() {
   return (
@@ -154,7 +156,7 @@ export default function SindromeMetabolicoBlog() {
             Descubre cómo la medicina milenaria puede transformar tu salud endocrina y devolverte la vitalidad que mereces.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINKS.general} 
+            link={WHATSAPP_LINK_METABOLICO} 
             label="Optimiza tu Salud Hoy" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />

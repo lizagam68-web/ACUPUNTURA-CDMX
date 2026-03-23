@@ -1,11 +1,5 @@
 import React from 'react';
 
-// ESTA ES LA PARTE CRÍTICA QUE EL BLOG ESTÁ BUSCANDO
-export const WHATSAPP_LINKS = {
-  general: "https://wa.me/525552520615?text=Hola%20Liz,%20busco%20información%20sobre%20acupuntura.",
-  dolorCronico: "https://wa.me/525552520615?text=Hola%20Liz,%20leí%20tu%20artículo%20sobre%20Dolor%20Crónico%20y%20quiero%20agendar%20cita."
-};
-
 interface WhatsAppButtonProps {
   label?: string;
   link?: string;
@@ -14,7 +8,7 @@ interface WhatsAppButtonProps {
 
 export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
   label = "Agendar Cita", 
-  link = WHATSAPP_LINKS.general,
+  link = "https://wa.me/525552520615", // Tu número centralizado
   className 
 }) => {
   
