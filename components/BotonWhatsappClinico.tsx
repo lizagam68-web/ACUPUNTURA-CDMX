@@ -11,7 +11,7 @@ interface BotonWhatsappClinicoProps {
 }
 
 const BotonWhatsappClinico = ({ 
-  label = "Agendar Consulta Técnica", 
+  label = "Agenda tu cita para primer consulta", 
   message = "Hola, busco información sobre Acupuntura de Especialidad.",
   className = ""
 }: BotonWhatsappClinicoProps) => {

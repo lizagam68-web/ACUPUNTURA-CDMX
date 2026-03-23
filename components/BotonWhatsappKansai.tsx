@@ -26,7 +26,7 @@ const BotonWhatsappKansai = () => {
       className="flex items-center justify-center gap-2 bg-[#5A726C] text-white px-8 py-4 rounded-full hover:bg-[#4A5D58] transition-all shadow-lg font-semibold tracking-wide w-full sm:w-auto"
     >
       <MessageCircle size={22} />
-      <span>Agendar Consulta Técnica</span>
+      <span>Agenda tu cita para primer consulta</span>
     </button>
   );
 };
