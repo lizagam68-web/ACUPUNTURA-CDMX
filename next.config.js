@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
 
+const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' blob: data: https://www.googletagmanager.com https://www.google-analytics.com https://google.com https://google.com.mx https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com;
+    connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.com.mx;
+    frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://www.google.com;
+    upgrade-insecure-requests;
+`.replace(/\s{2,}/g, ' ').trim();
+
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -27,7 +38,7 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net; frame-src 'self' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net;"
+    value: cspHeader
   }
 ];
 
