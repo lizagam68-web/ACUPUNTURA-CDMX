@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { handleGlobalCTA } from '@/utils/analytics';
 
 const posts = [
   { title: "Dermatitis: La conexión piel-nervios", tag: "PNIE", desc: "Cómo la acupuntura reduce la inflamación neurogénica." },
@@ -15,7 +16,11 @@ export const BlogGrid = () => (
       <h3 className="font-serif italic text-3xl mb-12 text-[#1B3A4B]">Biblioteca de Especialidad</h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {posts.map((post, i) => (
-          <div key={i} className="p-8 border border-slate-100 rounded-2xl hover:border-[#2ABFBF] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer group">
+          <div 
+            key={i} 
+            onClick={() => handleGlobalCTA(`información sobre ${post.title}`)}
+            className="p-8 border border-slate-100 rounded-2xl hover:border-[#2ABFBF] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer group"
+          >
             <span className="text-[#2ABFBF] text-[10px] font-bold uppercase tracking-widest">{post.tag}</span>
             <h4 className="font-bold text-lg mt-3 group-hover:text-[#2ABFBF] transition-colors text-[#1B3A4B]">{post.title}</h4>
             <p className="text-sm text-[#6E8491] mt-4 leading-snug">{post.desc}</p>

@@ -12,7 +12,7 @@ import {
   ArrowUpRight,
   Sparkles
 } from 'lucide-react';
-import { trackConversion } from '@/utils/analytics';
+import { trackConversion, handleGlobalCTA } from '@/utils/analytics';
 import { DermatitisSection } from '@/components/DermatitisSection';
 import { BlogGrid } from '@/components/BlogGrid';
 
@@ -56,20 +56,7 @@ export default function BiologyPage() {
   }, []);
 
   const handleRestauracionClick = () => {
-    // 1. Disparo de Conversión (Sin errores de dedo)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
-      });
-      console.log("Sensor de neurofisiología activado: Conversión enviada.");
-    }
-
-    // 2. Redirección Humana (Mensaje para el ejecutivo)
-    const mensaje = encodeURIComponent(
-      "Hola, deseo iniciar mi proceso de restauración en Acupuntura CDMX (Benito Juárez). Busco recuperar mi equilibrio y claridad mental."
-    );
-    
-    window.open(`https://wa.me/5215500000000?text=${mensaje}`, "_blank");
+    handleGlobalCTA("sesión de restauración");
   };
 
   return (
@@ -168,12 +155,7 @@ export default function BiologyPage() {
             <li><a href="#cita" className="text-[11px] font-bold tracking-[0.1em] uppercase text-[#6E8491] no-underline transition-colors hover:text-[#2ABFBF]">Contacto</a></li>
           </ul>
           <button 
-            onClick={() => {
-              trackConversion();
-              const phoneNumber = "5215500000000";
-              const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
-              window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
-            }} 
+            onClick={() => handleGlobalCTA("sesión de valoración")} 
             className="flex items-center gap-[7px] bg-[#2ABFBF] text-[#0F2535] px-[22px] py-[10px] rounded-full text-[11px] font-black uppercase no-underline transition-all hover:bg-[#5DD0D0] hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(42,191,191,0.25)]"
           >
             <MessageCircle size={13} fill="currentColor" />
@@ -201,12 +183,7 @@ export default function BiologyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <button 
-              onClick={() => {
-                trackConversion();
-                const phoneNumber = "5215500000000";
-                const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
-                window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
-              }} 
+              onClick={() => handleGlobalCTA("sesión de valoración")} 
               className="group relative inline-flex items-center justify-center gap-3 bg-[#2ABFBF] text-[#0F2535] px-10 py-[22px] rounded-full font-black uppercase tracking-[0.12em] text-[14px] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(42,191,191,0.45)] hover:bg-[#5DD0D0] w-full sm:w-auto overflow-hidden"
             >
               <div className="absolute inset-0 rounded-full bg-[#2ABFBF] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
@@ -471,12 +448,7 @@ export default function BiologyPage() {
         <div className="relative z-[1] flex flex-col items-start md:items-end gap-3.5">
           <Reveal direction="right">
           <button 
-            onClick={() => {
-              trackConversion();
-              const phoneNumber = "5215500000000";
-              const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
-              window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
-            }} 
+            onClick={() => handleGlobalCTA("consulta de valoración técnica")} 
             className="inline-flex items-center gap-3 bg-[#25D366] text-white px-9 py-[18px] text-[13px] font-black tracking-[0.1em] uppercase no-underline rounded-full whitespace-nowrap transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(37,211,102,0.35)]"
           >
             <MessageCircle size={20} fill="currentColor" />
@@ -513,12 +485,7 @@ export default function BiologyPage() {
             <div className="text-[10px] font-bold tracking-[0.22em] uppercase text-white/75 mb-[18px]">Contacto</div>
             <ul className="list-none space-y-2.5">
               <li><button 
-                onClick={() => {
-                  trackConversion();
-                  const phoneNumber = "5215500000000";
-                  const mensaje = encodeURIComponent("Hola, deseo agendar una sesión de valoración en Acupuntura CDMX (Benito Juárez). Busco restaurar mi equilibrio y enfoque.");
-                  window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, "_blank");
-                }} 
+                onClick={() => handleGlobalCTA("valoración")} 
                 className="text-[13px] text-white/60 no-underline transition-colors hover:text-[#5DD0D0] text-left"
               >
                 WhatsApp directo

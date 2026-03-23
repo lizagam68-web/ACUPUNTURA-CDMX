@@ -24,3 +24,22 @@ export const trackAppointmentScheduled = () => {
     });
   }
 };
+
+const WHATSAPP_NUMBER = "525552520615"; // Tu número actualizado
+
+export const handleGlobalCTA = (servicio = "valoración") => {
+  // 1. Reportamos a Google Ads (Para mantener el punto verde que logramos)
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
+    });
+  }
+
+  // 2. Mensaje personalizado según el servicio
+  const mensaje = encodeURIComponent(
+    `Hola Liz, busco una ${servicio} en Acupuntura CDMX para recuperar mi equilibrio.`
+  );
+
+  // 3. Acción de apertura
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${mensaje}`, "_blank");
+};

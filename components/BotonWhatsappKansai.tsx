@@ -2,20 +2,12 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-
-import { trackConversion } from '@/utils/analytics';
+import { handleGlobalCTA } from '@/utils/analytics';
 
 const BotonWhatsappKansai = () => {
   
   const registrarVentaYContactar = () => {
-    // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads y GA4
-    trackConversion();
-    console.log("Señal de éxito enviada: Paciente de especialidad detectado.");
-
-    // 2. LA ACCIÓN: Abrimos el chat con mensaje de alta precisión
-    const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-    const mensaje = encodeURIComponent("Hola, vi tu anuncio de Acupuntura de Especialidad en la Benito Juárez y busco agendar una cita.");
-    window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, '_blank');
+    handleGlobalCTA("Acupuntura de Especialidad en la Benito Juárez");
   };
 
   return (

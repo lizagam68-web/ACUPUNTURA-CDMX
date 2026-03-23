@@ -2,28 +2,22 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react'; // Icono limpio
-import { trackConversion } from '@/utils/analytics';
+import { handleGlobalCTA } from '@/utils/analytics';
 
 interface BotonWhatsappClinicoProps {
   label?: string;
-  message?: string;
+  servicio?: string;
   className?: string;
 }
 
 const BotonWhatsappClinico = ({ 
   label = "Agenda tu cita para primer consulta", 
-  message = "Hola, busco información sobre Acupuntura de Especialidad.",
+  servicio = "Acupuntura de Especialidad",
   className = ""
 }: BotonWhatsappClinicoProps) => {
   
   const registrarConversionYContactar = () => {
-    // 1. EL SENSOR: Enviamos la señal a Google Ads
-    trackConversion();
-
-    // 2. LA ACCIÓN: Abrimos el chat con el paciente
-    const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+    handleGlobalCTA(servicio);
   };
 
   return (

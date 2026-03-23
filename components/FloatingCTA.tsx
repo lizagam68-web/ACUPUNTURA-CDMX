@@ -1,23 +1,18 @@
 import React from 'react';
-import { MessageCircle, Calendar } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { trackConversion } from '@/utils/analytics';
+import { handleGlobalCTA } from '@/utils/analytics';
 
 const FloatingCTA = () => {
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=Hola,%20quiero%20agendar%20cita`;
-
-  const handleClick = () => {
-    trackConversion();
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    handleGlobalCTA("valoración rápida");
   };
 
   return (
     <>
       {/* Floating WhatsApp Button */}
-      <motion.a
-        href={whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <motion.button
         onClick={handleClick}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -30,7 +25,7 @@ const FloatingCTA = () => {
         <span className="absolute right-full mr-4 bg-white text-slate-900 px-3 py-1.5 rounded-lg text-[10px] font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-100 uppercase tracking-widest hidden md:block">
           ¿Dudas? Escríbenos
         </span>
-      </motion.a>
+      </motion.button>
     </>
   );
 };

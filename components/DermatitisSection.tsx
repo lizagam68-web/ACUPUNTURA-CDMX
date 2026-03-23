@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { handleGlobalCTA } from '@/utils/analytics';
 
 const Reveal = ({ children, direction = 'up', delay = 0, className = '' }: { children: React.ReactNode, direction?: 'up' | 'left' | 'right', delay?: number, className?: string }) => {
   const variants = {
@@ -33,13 +34,7 @@ const Reveal = ({ children, direction = 'up', delay = 0, className = '' }: { chi
 
 export const DermatitisSection = () => {
   const handleContact = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
-      });
-    }
-    const mensaje = encodeURIComponent("Hola, deseo información sobre acupuntura para dermatitis atópica en Acupuntura CDMX.");
-    window.open(`https://wa.me/5215500000000?text=${mensaje}`, "_blank");
+    handleGlobalCTA("información sobre acupuntura para dermatitis atópica");
   };
 
   return (
