@@ -5,7 +5,10 @@ import { ArrowLeft, CheckCircle2, Activity, Sparkles, ShieldCheck } from 'lucide
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '@/components/SEO';
-import { WhatsAppButton, WHATSAPP_LINKS } from '@/components/WhatsAppButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+
+// Agregamos el enlace directamente aquí para que no haya errores
+const WHATSAPP_LINK_DOLOR = "https://wa.me/525552520615?text=Hola%20Liz,%20leí%20tu%20artículo%20sobre%20Dolor%20Crónico%20y%20quiero%20agendar%20cita.";
 
 export default function DolorCronicoBlog() {
   return (
@@ -188,7 +191,7 @@ export default function DolorCronicoBlog() {
             No permitas que el dolor defina tu vida. Descubre el poder de la sanación natural en manos expertas.
           </p>
           <WhatsAppButton 
-            link={WHATSAPP_LINKS.dolorCronico} 
+            link={WHATSAPP_LINK_DOLOR} 
             label="Recuperar mi Bienestar" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
