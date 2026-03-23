@@ -4,11 +4,11 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import FloatingCTA from '@/components/FloatingCTA';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${inter.variable} font-sans`}>
+    <div className={inter.className}>
       {/* Google Tag Manager */}
       <Script
         id="gtm-script"

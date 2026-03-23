@@ -16,7 +16,7 @@ const BotonWhatsappKansai = () => {
 
     // 2. LA ACCIÓN: Abrimos el chat con mensaje de alta precisión
     const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-    const mensaje = encodeURIComponent("Hola Liz, vi tu anuncio de Acupuntura de Especialidad en la Benito Juárez y busco agendar una cita.");
+    const mensaje = encodeURIComponent("Hola, vi tu anuncio de Acupuntura de Especialidad en la Benito Juárez y busco agendar una cita.");
     window.open(`https://wa.me/${phoneNumber}?text=${mensaje}`, '_blank');
   };
 

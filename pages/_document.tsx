@@ -2,11 +2,11 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="es">
+    <Html lang="es" className="scroll-smooth">
       <Head>
         <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
       </Head>
-      <body className="font-sans antialiased text-[#333] bg-[#F3F4F6]">
+      <body className="antialiased bg-[#F9F7F2] text-[#2D3748]">
         {/* Google Tag Manager (noscript) */}
         <noscript
           dangerouslySetInnerHTML={{

@@ -1,2 +1,28 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+:root {
+  --bg-silk: #FDFCF9;
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --accent-zen: #5A726C;
+}
+
+body {
+  background-color: var(--bg-silk);
+  background-image: url("https://www.transparenttextures.com/patterns/pinstripe-light.png"); /* Sutil textura táctil */
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+.glass-refraction {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(90, 114, 108, 0.05);
+}
+
+.text-reveal {
+  background: linear-gradient(to bottom, #1a1a1a 30%, rgba(26,26,26,0.4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
