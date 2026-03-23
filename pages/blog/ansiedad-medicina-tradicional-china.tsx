@@ -166,7 +166,7 @@ export default function AnsiedadBlog() {
             Permítete un espacio de silencio y sanación. Tu mente y tu cuerpo te lo agradecerán.
           </p>
           <WhatsAppButton 
-            href={WHATSAPP_LINKS.ANSIEDAD} 
+            link={WHATSAPP_LINKS.ANSIEDAD} 
             label="Recupera tu Calma Ahora" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />

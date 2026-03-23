@@ -165,7 +165,7 @@ export default function ParalisisFacialBlog() {
           </div>
 
           <WhatsAppButton 
-            href={WHATSAPP_LINKS.PARALISIS_FACIAL} 
+            link={WHATSAPP_LINKS.PARALISIS_FACIAL} 
             label="Agenda tu Alivio Prioritario" 
             className="bg-[#F0FFFF] text-[#2D2D2D] hover:bg-[#E0FFFF]"
           />
