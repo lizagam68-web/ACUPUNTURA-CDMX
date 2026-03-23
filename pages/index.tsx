@@ -13,6 +13,8 @@ import {
   Sparkles
 } from 'lucide-react';
 import { trackConversion } from '@/utils/analytics';
+import { DermatitisSection } from '@/components/DermatitisSection';
+import { BlogGrid } from '@/components/BlogGrid';
 
 const Reveal = ({ children, direction = 'up', delay = 0, className = '' }: { children: React.ReactNode, direction?: 'up' | 'left' | 'right', delay?: number, className?: string }) => {
   const variants = {
@@ -355,6 +357,8 @@ export default function BiologyPage() {
         </div>
       </section>
 
+      <DermatitisSection />
+
       {/* METODOLOGÍA */}
       <section id="metodo" className="bg-[#0F2535] px-[8%] py-[100px]">
         <Reveal>
@@ -454,6 +458,8 @@ export default function BiologyPage() {
           </div>
         </div>
       </section>
+
+      <BlogGrid />
 
       {/* CTA */}
       <section id="cita" className="bg-[#1B3A4B] px-[8%] py-[100px] relative overflow-hidden grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-12 before:content-[''] before:absolute before:top-[-160px] before:right-[5%] before:w-[460px] before:h-[460px] before:rounded-full before:border before:border-[#2ABFBF]/7 before:pointer-events-none">
