@@ -8,10 +8,9 @@ interface WhatsAppButtonProps {
 
 export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
   label = "Agendar Cita", 
-  link = "https://wa.me/525552520615", // Tu número centralizado
+  link = "https://wa.me/525552520615", 
   className 
 }) => {
-  
   const handleTracking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
@@ -22,10 +21,7 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   };
 
   return (
-    <button 
-      onClick={handleTracking}
-      className={`bg-[#1B3A4B] text-white px-6 py-3 rounded-full font-bold hover:bg-[#2ABFBF] transition-all ${className}`}
-    >
+    <button onClick={handleTracking} className={`bg-[#1B3A4B] text-white rounded-full font-bold ${className}`}>
       {label}
     </button>
   );
