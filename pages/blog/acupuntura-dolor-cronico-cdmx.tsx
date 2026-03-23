@@ -5,10 +5,10 @@ import { ArrowLeft, CheckCircle2, Activity, Sparkles, ShieldCheck } from 'lucide
 import Link from 'next/link';
 import Head from 'next/head';
 import SEO from '@/components/SEO';
-import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton'; // Solo importamos el botón
 
-// Agrega esto justo debajo de los imports para que la página tenga su propia dirección
-const LINK_WHATSAPP_LOCAL = "https://wa.me/525552520615?text=Hola%20Liz,%20leí%20tu%20artículo%20sobre%20Dolor%20Crónico%20y%20quiero%20agendar%20cita.";
+// Definimos el link aquí mismo para evitar que Next.js se pierda
+const WHATSAPP_LINK_DIRECTO = "https://wa.me/525552520615?text=Hola%20Liz,%20leí%20tu%20artículo%20sobre%20Dolor%20Crónico%20y%20quiero%20agendar%20cita.";
 
 export default function DolorCronicoBlog() {
   return (
@@ -192,7 +192,7 @@ export default function DolorCronicoBlog() {
           </p>
           <WhatsAppButton 
             label="Agendar Cita" 
-            link={LINK_WHATSAPP_LOCAL} 
+            link={WHATSAPP_LINK_DIRECTO} 
             className="px-6 py-3"
           />
         </motion.div>
