@@ -5,8 +5,8 @@ const cspHeader = `
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.com.mx;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src 'self' https://fonts.gstatic.com;
-    img-src 'self' blob: data: https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://google.com https://www.google.com https://google.com.mx https://www.google.com.mx;
-    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googleadservices.com https://googleads.g.doubleclick.net https://google.com https://www.google.com https://google.com.mx https://www.google.com.mx;
+    img-src 'self' blob: data: https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://google.com https://www.google.com https://google.com.mx https://www.google.com.mx https://region1.google-analytics.com;
+    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googleadservices.com https://googleads.g.doubleclick.net https://google.com https://www.google.com https://google.com.mx https://www.google.com.mx https://region1.google-analytics.com;
     frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://www.google.com https://www.google.com.mx;
     upgrade-insecure-requests;
 `.replace(/\s{2,}/g, ' ').trim();
