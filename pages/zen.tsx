@@ -8,11 +8,13 @@ import Link from 'next/link';
 import { trackConversion } from '@/utils/analytics';
 
 const trackConversionLocal = () => {
-  // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads y GA4
-  trackConversion();
-  
   const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
-  window.open(`https://wa.me/${phoneNumber}?text=Deseo%20iniciar%20un%20protocolo%20de%20especialidad.`, "_blank");
+  const url = `https://wa.me/${phoneNumber}?text=Deseo%20iniciar%20un%20protocolo%20de%20especialidad.`;
+
+  // 1. EL SENSOR: Enviamos la señal de éxito a Google Ads y GA4 con callback
+  trackConversion(() => {
+    window.open(url, "_blank");
+  });
 };
 
 export default function ZenSanctuary() {

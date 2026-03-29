@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { trackConversion } from '@/utils/analytics';
 
 // 1. Aquí definimos que el botón puede recibir 'message'
 interface BotonWhatsappClinicoProps {
@@ -17,17 +18,14 @@ const BotonWhatsappClinico: React.FC<BotonWhatsappClinicoProps> = ({
   
   const handleWhatsAppClick = () => {
     // Tu número centralizado: 525552520615
-    const phone = "525552520615";
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "525552520615";
     const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${phone}?text=${encodedMessage}`;
     
-    // Rastreo de Google Ads (Para mantener tu punto verde 🟢)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-985455568/4Y21CM2X24YcENC389UD',
-      });
-    }
-
-    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+    // Rastreo de Google Ads con callback
+    trackConversion(() => {
+      window.open(url, "_blank");
+    });
   };
 
   return (

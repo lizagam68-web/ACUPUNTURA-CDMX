@@ -285,14 +285,14 @@ export default function BiologyPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { n: '01', h3: 'Parálisis Facial', h4: '"Restauración del VII Par Craneal"', p: 'Electroacupuntura de precisión en los 43 puntos motores del nervio facial. Reactivación progresiva y documentada de la función neuromuscular. Protocolo de precisión, resultados medibles.' },
-            { n: '02', h3: 'Clínica del Dolor', h4: '"Eliminación de Interferencias Físicas"', p: 'Protocolo rápido para lesiones agudas, dolor crónico, cervicalgia y lumbalgia. La persona moderna que sufre no rinde. Resolución clínica sin dependencia de fármacos.' },
+            { n: '01', h3: 'Parálisis Facial', h4: '"Restauración del VII Par Craneal"', p: 'Electroacupuntura de precisión en los 43 puntos motores del nervio facial. Reactivación progresiva y documentada de la función neuromuscular. Protocolo de precisión, resultados medibles.', service: 'parálisis facial' },
+            { n: '02', h3: 'Clínica del Dolor', h4: '"Eliminación de Interferencias Físicas"', p: 'Protocolo rápido para lesiones agudas, dolor crónico, cervicalgia y lumbalgia. La persona moderna que sufre no rinde. Resolución clínica sin dependencia de fármacos.', service: 'clínica del dolor' },
             {
               n: '03', 
               h3: 'Equilibrio Neural', 
               h4: '"Contención del Sistema Nervioso"', 
               p: 'El escape mental técnico que la persona moderna de la Benito Juárez necesita. Regulación del eje cortisol-sueño, neuromodulación del estrés y restauración de la claridad ejecutiva.',
-              onClick: handleRestauracionClick
+              service: 'equilibrio neural'
             }
           ].map((card, i) => (
             <Reveal key={i} delay={i * 0.1}>
@@ -302,7 +302,7 @@ export default function BiologyPage() {
                 <h4 className="font-serif italic text-[19px] text-[#2ABFBF] mb-[18px]">{card.h4}</h4>
                 <p className="text-[14px] text-slate-700 leading-[1.8]">{card.p}</p>
                 <button 
-                  onClick={card.onClick || trackConversion} 
+                  onClick={() => handleGlobalCTA(card.service)} 
                   className="inline-flex items-center gap-2 mt-7 text-[10px] font-black tracking-[0.2em] uppercase text-[#2ABFBF] no-underline transition-[gap] duration-200 hover:gap-3.5"
                 >
                   Ver Protocolo <ArrowRight size={14} />

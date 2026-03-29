@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { trackConversion } from '@/utils/analytics';
 
 interface WhatsAppButtonProps {
   label?: string;
@@ -12,13 +13,10 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   className 
 }) => {
   const handleTracking = useCallback(() => {
-    // Mantengo tu rastreo de Google Ads 🟢
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID || 'AW-985455568/4Y21CM2X24YcENC389UD',
-      });
-    }
-    window.open(link, "_blank");
+    // Usamos la función centralizada que maneja el callback de Google Ads
+    trackConversion(() => {
+      window.open(link, "_blank");
+    });
   }, [link]);
 
   return (
