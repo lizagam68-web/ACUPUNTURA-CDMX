@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  /* Armonía Botánica & Índigo Sereno (Equilibrio Qi) */
+  --color-primary-50: #faf8f5;
+  --color-primary-100: #f2ece2;
+  --color-primary-200: #e5dbcb;
+  --color-primary-300: #cfbfab;
+  --color-primary-400: #93a8b0;
+  --color-primary-500: #4e6b77;
+  --color-primary-600: #2c4955;
+  --color-primary-700: #1e3943;
+  --color-primary-800: #18313a;
+  --color-primary-900: #12242b;
+  --color-primary-950: #0a151a;
+
+  /* Lino Orgánico y Neutros Cálidos */
+  --color-warm-50: #fdfcf9;
+  --color-warm-100: #faf8f5;
+  --color-warm-200: #f3efe7;
+  --color-warm-300: #e8e1d5;
+  --color-warm-400: #d6ccbe;
+
+  /* Ámbar Miel Tostado (Calidez, vitalidad y alivio sutil) */
+  --color-accent-50: #fdfaf6;
+  --color-accent-100: #faf1e5;
+  --color-accent-200: #f4e1cb;
+  --color-accent-300: #e8c6a3;
+  --color-accent-400: #d39f70;
+  --color-accent-500: #b86d36;
+  --color-accent-600: #a45e2c;
+  --color-accent-700: #874a21;
+
+  --color-brand-green: #18313a;
+  --color-brand-sage: #3e685f;
+  --color-brand-light: #faf8f5;
+  --color-brand-text: #142329;
+
+  --color-accent-amber: #b86d36;
+  --color-accent-green: #3e685f;
+
+  --font-serif: var(--font-noto-serif);
+  --font-sans: var(--font-manrope);
+}
+
+@layer base {
+  body {
+    @apply font-sans font-light leading-relaxed bg-[#faf8f5] text-[#142329] antialiased selection:bg-[#b86d36]/20 selection:text-[#18313a];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold tracking-tight text-[#18313a];
+  }
+
+  p {
+    @apply font-sans font-light leading-relaxed text-[#4a5e66];
+  }
+}
+
+.shadow-clinical {
+  box-shadow: 0 4px 14px -2px rgba(24, 49, 58, 0.06), 0 2px 6px -1px rgba(24, 49, 58, 0.03);
+}
+
+.shadow-warm {
+  box-shadow: 0 10px 25px -4px rgba(184, 109, 54, 0.12), 0 4px 10px -2px rgba(24, 49, 58, 0.04);
+}

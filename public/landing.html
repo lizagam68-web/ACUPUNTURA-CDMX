@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acupuntura Humana y Rehabilitación en CDMX | Centro de Acupuntura QI</title>
+  <meta name="description" content="Recupera tu movilidad y alivia el dolor crónico con el Protocolo Neuro-Qi de Acupuntura Humana y Rehabilitación. Atención profesional certificada en Benito Juárez, CDMX.">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBE0CWFMLV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VBE0CWFMLV');
+    gtag('config', 'AW-11004313271');
+    gtag('config', 'AW-985455568');
+
+    function gtag_report_conversion(url) {
+      var callbackCalled = false;
+      var callback = function () {
+        if (!callbackCalled && typeof(url) != 'undefined' && url) {
+          callbackCalled = true;
+          window.location = url;
+        }
+      };
+
+      try {
+        // Enviar conversión de Google Ads
+        gtag('event', 'conversion', {
+            'send_to': 'AW-985455568/xY8HCKXSrLUcENC389UD',
+            'value': 1.0,
+            'currency': 'MXN',
+            'event_callback': callback
+        });
+
+        // Evento clave para Google Analytics 4 (Lead cualificado)
+        gtag('event', 'generate_lead', {
+            'event_category': 'WhatsApp',
+            'event_label': 'Landing Page Clic WhatsApp',
+            'value': 1.0,
+            'currency': 'MXN'
+        });
+
+        gtag('event', 'contact', {
+            'method': 'WhatsApp'
+        });
+      } catch (err) {
+        console.error('Error enviando evento de conversión:', err);
+      }
+
+      // Tiempo de seguridad para redirigir si el callback tarda
+      if (typeof(url) != 'undefined' && url) {
+        setTimeout(callback, 400);
+      }
+      return false;
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       VARIABLES Y RESET (ARMONÍA BOTÁNICA & ÍNDIGO SERENO)
+       ========================================================================== */
+    :root {
+      --color-primary: #18313A;       /* Azul Índigo Botánico Profundo */
+      --color-primary-light: #2C4955; /* Índigo Medio Terapéutico */
+      --color-accent: #B86D36;        /* Ámbar Miel Tostado / Calidez y Vitalidad */
+      --color-accent-hover: #A45E2C;  /* Ámbar Profundo */
+      --color-bg: #FAF8F5;            /* Fondo Lino Marfil Cálido y Sereno */
+      --color-surface: #FFFFFF;       /* Blanco Puro para Tarjetas */
+      --color-surface-soft: #F4EFE7;  /* Lino Suave para Contenedores */
+      --color-surface-mint: #EEF5F3;  /* Jade Templado Muy Tenue */
+      --color-secondary: #3E685F;     /* Jade Templado Terapéutico */
+      --color-text-main: #142329;     /* Pizarra Índigo Profundo (Máximo contraste descansado) */
+      --color-text-muted: #4A5E66;    /* Gris Pizarra Templado para subtítulos */
+      --color-border: #E5DBCB;        /* Borde Lino Suave */
+      --color-border-subtle: #E8E1D5;
+      
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      
+      --shadow-soft: 0 4px 20px -2px rgba(24, 49, 58, 0.06);
+      --shadow-hover: 0 10px 30px -4px rgba(24, 49, 58, 0.11);
+      --shadow-elevated: 0 20px 40px -8px rgba(24, 49, 58, 0.14);
+
+      --container-max: 820px;
+      --mobile-bar-height: 74px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      line-height: 1.65;
+      background-color: var(--color-bg);
+      padding-bottom: calc(var(--mobile-bar-height) + 16px);
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+
+    /* Respeto estricto para usuarios con movimiento reducido */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Accesibilidad por teclado */
+    :focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       TIPOGRAFÍA FLUIDA
+       ========================================================================== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.18;
+      color: var(--color-primary);
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5.5vw, 3.25rem);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: 0.85rem;
+    }
+
+    h3 {
+      font-size: clamp(1.35rem, 2.8vw, 1.75rem);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: clamp(1rem, 1.8vw, 1.125rem);
+      color: var(--color-text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    p.lead {
+      font-size: clamp(1.125rem, 2.2vw, 1.35rem);
+      color: var(--color-text-main);
+      line-height: 1.55;
+    }
+
+    strong {
+      color: var(--color-text-main);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       LAYOUT Y CONTENEDORES
+       ========================================================================== */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    section {
+      padding-top: clamp(3rem, 7vw, 5rem);
+      padding-bottom: clamp(3rem, 7vw, 5rem);
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+
+    /* Elemento Tipográfico Puro: Ante-título / Kicker Editorial */
+    .editorial-kicker {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 0.75rem;
+    }
+
+    .editorial-kicker::before {
+      content: "— ";
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .editorial-kicker::after {
+      content: " —";
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* Elemento Tipográfico: Letra Capital / Capitular */
+    .drop-cap::first-letter {
+      font-family: var(--font-heading);
+      float: left;
+      font-size: 3.5rem;
+      line-height: 0.8;
+      padding-top: 4px;
+      padding-right: 12px;
+      padding-bottom: 2px;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* Elemento Tipográfico: Cita Editorial (Pull Quote) */
+    .pull-quote {
+      position: relative;
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.8vw, 1.6rem);
+      font-style: italic;
+      line-height: 1.45;
+      color: var(--color-primary);
+      border-left: 2px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      text-align: left;
+    }
+
+    .pull-quote-attribution {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      margin-top: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Elemento Tipográfico: Números de Índice a Gran Escala */
+    .numeral-display {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Elemento Tipográfico: Separador con Glifo Clásico */
+    .editorial-hairline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2.5rem 0;
+      color: var(--color-accent);
+      font-size: 0.85rem;
+    }
+
+    .editorial-hairline::before,
+    .editorial-hairline::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--color-border);
+    }
+
+    /* ==========================================================================
+       BOTONES Y ENLACES
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.95rem 1.65rem;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      line-height: 1.2;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-accent {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+    }
+
+    .btn-accent:hover {
+      background-color: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       HEADER FIJO
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(251, 249, 245, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.75rem 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--color-primary);
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-primary);
+      color: #FFF;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--color-primary);
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    .header-cta-desktop {
+      display: none;
+    }
+
+    @media (min-width: 680px) {
+      .header-cta-desktop {
+        display: inline-flex;
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ==========================================================================
+       SECCIÓN 1: HERO (PROMESA PRINCIPAL)
+       ========================================================================== */
+    .hero-section {
+      padding-top: clamp(2.5rem, 6vw, 4.5rem);
+      padding-bottom: clamp(3rem, 7vw, 5rem);
+      text-align: center;
+      background: linear-gradient(180deg, rgba(235, 242, 237, 0.5) 0%, rgba(251, 249, 245, 0) 100%);
+    }
+
+    .trust-credentials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      margin: 1.75rem auto;
+      max-width: 680px;
+      text-align: left;
+    }
+
+    @media (min-width: 580px) {
+      .trust-credentials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .cred-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .cred-icon {
+      color: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    .cred-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cred-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.04em;
+    }
+
+    .cred-value {
+      font-size: 0.9rem;
+      color: var(--color-text-main);
+      font-weight: 600;
+    }
+
+    .hero-cta-box {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .micro-guarantee {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 2: EL PROBLEMA (EMPATÍA Y REALIDAD)
+       ========================================================================== */
+    .problem-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (min-width: 650px) {
+      .problem-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .problem-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      position: relative;
+      border-left: 4px solid #A84A4A; /* Alerta sutil */
+    }
+
+    .problem-card h3 {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .problem-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .problem-summary-box {
+      margin-top: 2rem;
+      background: var(--color-surface-soft);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .problem-summary-box p {
+      margin-bottom: 0;
+      font-size: 1.05rem;
+      color: var(--color-text-main);
+    }
+
+    /* ==========================================================================
+       SECCIÓN 3: CÓMO LO RESUELVES (MECANISMO CON NOMBRE PROPIO)
+       ========================================================================== */
+    .mechanism-highlight {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+      margin-top: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mechanism-highlight::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(197, 168, 128, 0.25) 0%, rgba(27, 59, 43, 0) 70%);
+      pointer-events: none;
+    }
+
+    .mechanism-highlight h2,
+    .mechanism-highlight h3 {
+      color: #FFFFFF;
+    }
+
+    .mechanism-highlight p {
+      color: #E2E8E4;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 680px) {
+      .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pillar-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.25rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .pillar-num {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      color: var(--color-accent);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-item h4 {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      color: #D3DDD6;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 4: QUÉ INCLUYE LA SESIÓN
+       ========================================================================== */
+    .checklist-container {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .checklist-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .check-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--color-surface-mint);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .check-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .check-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 5: PRUEBA Y HONESTIDAD
+       ========================================================================== */
+    .proof-banner {
+      background: #FFFFFF;
+      border: 2px dashed #B86D36;
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      background-color: #FAF5EE;
+    }
+
+    .proof-tag {
+      display: inline-block;
+      background: #F4E1CB;
+      color: #874A21;
+      font-size: 0.825rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.75rem;
+    }
+
+    .proof-placeholder {
+      font-family: monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #A45E2C;
+      padding: 0.75rem 1rem;
+      background: #F4E1CB;
+      border-radius: var(--radius-sm);
+      display: block;
+      margin: 0.5rem auto;
+      max-width: 600px;
+    }
+
+    .verified-credentials-box {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .official-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 6: VALORACIÓN Y ATENCIÓN INTEGRAL
+       ========================================================================== */
+    .pricing-card-wrapper {
+      max-width: 580px;
+      margin: 2rem auto 0;
+    }
+
+    .pricing-card {
+      background: var(--color-surface);
+      border: 2px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 5vw, 2.75rem);
+      box-shadow: var(--shadow-elevated);
+      text-align: center;
+      position: relative;
+    }
+
+    .pricing-badge-popular {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.35rem 1.25rem;
+      border-radius: var(--radius-full);
+    }
+
+    .plan-title-block {
+      margin: 1.25rem 0 0.75rem;
+    }
+
+    .plan-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3.2vw, 1.95rem);
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+
+    .plan-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0;
+    }
+
+    .pricing-features-list {
+      text-align: left;
+      margin: 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.98rem;
+      color: var(--color-text-main);
+    }
+
+    /* ==========================================================================
+       SECCIÓN 7: GARANTÍA DE ÉTICA Y HONESTIDAD
+       ========================================================================== */
+    .guarantee-box {
+      background: var(--color-surface-mint);
+      border: 1px solid rgba(27, 59, 43, 0.2);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 4vw, 2.25rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .guarantee-shield-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--color-primary);
+    }
+
+    /* ==========================================================================
+       SECCIÓN 8: PREGUNTAS FRECUENTES (ACORDEÓN ACCESIBLE)
+       ========================================================================== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-item[open] {
+      border-color: var(--color-primary);
+    }
+
+    .faq-question {
+      padding: 1.15rem 1.25rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--color-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+      color: var(--color-accent);
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--color-text-muted);
+      font-size: 0.98rem;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==========================================================================
+       SECCIÓN 9: CIERRE CON UNA SOLA ACCIÓN
+       ========================================================================== */
+    .closing-section {
+      text-align: center;
+      padding-top: clamp(3rem, 7vw, 5rem);
+      padding-bottom: clamp(3rem, 7vw, 5rem);
+      background: linear-gradient(180deg, var(--color-bg) 0%, rgba(235, 242, 237, 0.7) 100%);
+    }
+
+    .closing-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2.5rem);
+      box-shadow: var(--shadow-soft);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       FOOTER Y LEGALES
+       ========================================================================== */
+    .site-footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: var(--color-text-muted);
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       BARRA FIJA EN CELULAR (STICKY BOTTOM CTA)
+       ========================================================================== */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid var(--color-border);
+      padding: 0.75rem 1rem;
+      z-index: 999;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .mobile-bar-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-bar-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.1;
+    }
+
+    .mobile-bar-sub {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-sticky-bar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ENCABEZADO FIJO
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#hero" class="header-brand" aria-label="Inicio Centro de Acupuntura QI">
+          <div class="brand-mark" aria-hidden="true">
+            <!-- Icono Flor de Loto / Energía SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C12 2 8 8 8 13C8 16.5 10 19 12 21C14 19 16 16.5 16 13C16 8 12 2 12 2Z"></path>
+              <path d="M8 13C8 13 4 14 2 17C4.5 18 7 17.5 9 16"></path>
+              <path d="M16 13C16 13 20 14 22 17C19.5 18 17 17.5 15 16"></path>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Centro de Acupuntura QI</span>
+            <span class="brand-sub">Especialista en Acupuntura · Cédula 15289838</span>
+          </div>
+        </a>
+
+        <!-- Botón de acción en escritorio -->
+        <a href="https://wa.me/525552520615?text=Hola,%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20valoraci%C3%B3n%20de%20acupuntura" 
+           class="btn btn-primary header-cta-desktop"
+           target="_blank" 
+           rel="noopener noreferrer">
+          <!-- Icono WhatsApp SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          Agendar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         1. PROMESA PRINCIPAL (HERO CON TIPOGRAFÍA EDITORIAL)
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <!-- Elemento tipográfico: Ante-título o Kicker -->
+        <span class="editorial-kicker">Práctica Universitaria · Cédula Federal 15289838</span>
+
+        <h1>Alivia el dolor persistente y recupera tu movilidad sin depender de fármacos</h1>
+
+        <p class="lead">
+          Tratamiento personalizado de <strong>Acupuntura Humana y Rehabilitación</strong> en Benito Juárez, CDMX. Diseñado para quienes sufren dolor de espalda, ciática o parálisis facial y necesitan resultados tangibles desde las primeras sesiones.
+        </p>
+
+        <!-- Bloque de credenciales oficiales con tipografía pura y separadores -->
+        <div style="margin: 2rem auto; max-width: 680px; padding: 1rem 1.25rem; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.9rem; color: var(--color-text-main);">
+          <div><strong style="color: var(--color-primary); font-family: var(--font-heading); font-size: 1.15rem; display: block;">UNEVE Licenciatura</strong> Formación Universitaria</div>
+          <span style="color: var(--color-border);" aria-hidden="true">|</span>
+          <div><strong style="color: var(--color-primary); font-family: var(--font-heading); font-size: 1.15rem; display: block;">DGP 15289838</strong> Cédula Profesional Oficial</div>
+          <span style="color: var(--color-border);" aria-hidden="true">|</span>
+          <div><strong style="color: var(--color-primary); font-family: var(--font-heading); font-size: 1.15rem; display: block;">COFEPRIS</strong> Registro 2609142002A00342</div>
+        </div>
+
+        <div class="hero-cta-box">
+          <a href="https://wa.me/525552520615?text=Hola,%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20valoraci%C3%B3n%20de%20acupuntura" 
+             class="btn btn-primary btn-full"
+             style="max-width: 440px;"
+             target="_blank" 
+             rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            Agendar mi sesión de valoración
+          </a>
+          <span class="micro-guarantee">
+            — Atención clínica directa por especialista certificada · Sin intermediarios —
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. EL PROBLEMA (EMPATÍA Y RITMO TIPOGRÁFICO)
+         ========================================================================== -->
+    <section id="problema">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">La Realidad que Vives a Diario</span>
+          <h2>Cuando el dolor o la inmovilidad dictan cómo vives tu día</h2>
+          <p>La mayoría de los pacientes llegan a consulta tras meses o años de intentar soluciones superficiales que solo postergan el problema.</p>
+        </div>
+
+        <div class="problem-cards-grid">
+          <div class="problem-card">
+            <span class="numeral-display">01</span>
+            <h3>El ciclo interminable de analgésicos</h3>
+            <p>Tomas pastillas para la lumbalgia o ciática, sientes alivio unas horas, pero el dolor regresa con la misma intensidad. Mientras tanto, tu estómago y tu energía pagan las consecuencias sin que la causa raíz se resuelva.</p>
+          </div>
+
+          <div class="problem-card">
+            <span class="numeral-display">02</span>
+            <h3>La angustia de la parálisis facial</h3>
+            <p>Mirarte al espejo y no poder sonreír o cerrar el ojo genera una enorme carga emocional. Te dicen "espera con calma", pero cada semana sin estimulación neuromuscular adecuada disminuye la velocidad de recuperación.</p>
+          </div>
+
+          <div class="problem-card">
+            <span class="numeral-display">03</span>
+            <h3>Rigidez que limita tu independencia</h3>
+            <p>Cosas cotidianas como levantarte de la cama, jugar con tus hijos, concentrarte en el trabajo o subir escaleras se convierten en una batalla constante contra la tensión muscular y los pinzamientos.</p>
+          </div>
+
+          <div class="problem-card">
+            <span class="numeral-display">04</span>
+            <h3>Consultas impersonales de 10 minutos</h3>
+            <p>La frustración de ser tratado como un número de expediente más, con recetas genéricas y sin que nadie se tome el tiempo de escuchar tu historia o evaluar tu cuerpo de manera integral.</p>
+          </div>
+        </div>
+
+        <!-- Cita editorial tipográfica destacada -->
+        <blockquote class="pull-quote">
+          «El cuerpo no genera dolor por capricho: es una señal de estancamiento, inflamación y desbalance que requiere ser desbloqueado con técnica y precisión anatómica.»
+          <span class="pull-quote-attribution">— Principio de Medicina Tradicional &amp; Enfoque Clínico Funcional</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. CÓMO LO RESUELVES (MECANISMO CON NOMBRE PROPIO)
+         ========================================================================== -->
+    <section id="mecanismo">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">Metodología Clínica Propia</span>
+          <h2>El Protocolo Neuro-Qi de Restauración Funcional</h2>
+          <p>Un método propio que une la ciencia de la neuroanatomía y la estimulación fascial con los principios de la Acupuntura Tradicional.</p>
+        </div>
+
+        <div class="mechanism-highlight" style="border: 1px solid var(--color-primary-light);">
+          <!-- Párrafo con letra capital editorial -->
+          <p class="lead drop-cap" style="color: #FFFFFF; font-weight: 500; margin-bottom: 2rem;">
+            A diferencia de los paliativos temporales, el Protocolo Neuro-Qi no enmascara el dolor: activa tus propios mecanismos biológicos de autorregulación, desinflamación y analgesia natural mediante estímulos neuromusculares precisos.
+          </p>
+
+          <div class="pillars-grid">
+            <div class="pillar-item">
+              <span class="numeral-display" style="color: var(--color-accent); font-size: 2.2rem;">01</span>
+              <h4>Diagnóstico Integral y Pulso</h4>
+              <p>Evaluación minuciosa de tu postura, lengua, pulso y canales energéticos para localizar el origen del bloqueo miofascial.</p>
+            </div>
+
+            <div class="pillar-item">
+              <span class="numeral-display" style="color: var(--color-accent); font-size: 2.2rem;">02</span>
+              <h4>Puntura Filiforme de Precisión</h4>
+              <p>Inserción de agujas microscópicas estériles en puntos clave que disparan endorfinas, reactivan nervios y oxigenan los tejidos afectados.</p>
+            </div>
+
+            <div class="pillar-item">
+              <span class="numeral-display" style="color: var(--color-accent); font-size: 2.2rem;">03</span>
+              <h4>Rehabilitación y Sellado Térmico</h4>
+              <p>Complementación con moxibustión suave o electroacupuntura de baja frecuencia para consolidar la relajación y evitar recaídas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. QUÉ INCLUYE LA SESIÓN (JERARQUÍA TIPOGRÁFICA LIMPIA)
+         ========================================================================== -->
+    <section id="incluye">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">Estructura de la Consulta</span>
+          <h2>¿Qué incluye tu sesión de valoración y tratamiento?</h2>
+          <p>Cada consulta está estructurada para darte tiempo, atención sin prisas y un plan de acción concreto.</p>
+        </div>
+
+        <div class="checklist-container">
+          <div class="checklist-items">
+            <div class="check-row">
+              <span class="numeral-display" style="font-size: 1.6rem; color: var(--color-accent); line-height: 1; min-width: 2.2rem; flex-shrink: 0;">01</span>
+              <div>
+                <span class="check-title">Valoración clínica y energética completa (45 - 60 minutos)</span>
+                <p class="check-desc">Revisión de tu historial, signos de pulso, inspección de lengua y pruebas de rango de movimiento.</p>
+              </div>
+            </div>
+
+            <div class="check-row">
+              <span class="numeral-display" style="font-size: 1.6rem; color: var(--color-accent); line-height: 1; min-width: 2.2rem; flex-shrink: 0;">02</span>
+              <div>
+                <span class="check-title">Sesión completa de acupuntura individualizada</span>
+                <p class="check-desc">Aplicación personalizada con material de uso único, sellado y desechable de grado quirúrgico.</p>
+              </div>
+            </div>
+
+            <div class="check-row">
+              <span class="numeral-display" style="font-size: 1.6rem; color: var(--color-accent); line-height: 1; min-width: 2.2rem; flex-shrink: 0;">03</span>
+              <div>
+                <span class="check-title">Terapia coadyuvante incluida según tu valoración</span>
+                <p class="check-desc">Moxibustión indirecta, ventosas de succión neumática o electroestimulación según lo requiera tu valoración.</p>
+              </div>
+            </div>
+
+            <div class="check-row">
+              <span class="numeral-display" style="font-size: 1.6rem; color: var(--color-accent); line-height: 1; min-width: 2.2rem; flex-shrink: 0;">04</span>
+              <div>
+                <span class="check-title">Plan de autocuidado y ergonomía para casa</span>
+                <p class="check-desc">Puntos de digitopuntura, recomendaciones térmicas y pautas sencillas para acelerar tu mejoría entre sesiones.</p>
+              </div>
+            </div>
+
+            <div class="check-row">
+              <span class="numeral-display" style="font-size: 1.6rem; color: var(--color-accent); line-height: 1; min-width: 2.2rem; flex-shrink: 0;">05</span>
+              <div>
+                <span class="check-title">Comunicación directa post-sesión por WhatsApp</span>
+                <p class="check-desc">Seguimiento de tu evolución en las 24-48 horas posteriores directamente por mensaje con tu especialista.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. PRUEBA Y EVIDENCIA
+         ========================================================================== -->
+    <section id="prueba">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">Respaldo Real y Verificable</span>
+          <h2>Pruebas y Evidencia</h2>
+          <p>Sin testimonios fabricados ni cifras inventadas. Esta es la evidencia real con la que cuentas hoy.</p>
+        </div>
+
+        <!-- Credenciales Oficiales Verificables Tipográficas -->
+        <div class="verified-credentials-box">
+          <div class="official-badge-row">
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-accent); font-weight: 700; flex-shrink: 0;" aria-hidden="true">§</span>
+            <div>
+              <strong>Título Oficial Universitario:</strong> Licenciatura en Acupuntura Humana y Rehabilitación por la UNEVE (Universidad Estatal del Valle de Ecatepec).
+            </div>
+          </div>
+
+          <div class="official-badge-row">
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-accent); font-weight: 700; flex-shrink: 0;" aria-hidden="true">§</span>
+            <div>
+              <strong>Cédula Profesional Federal:</strong> 15289838 expedida por la Dirección General de Profesiones de la Secretaría de Educación Pública (SEP).
+            </div>
+          </div>
+
+          <div class="official-badge-row">
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-accent); font-weight: 700; flex-shrink: 0;" aria-hidden="true">§</span>
+            <div>
+              <strong>Aviso de Publicidad Sanitaria COFEPRIS:</strong> 2609142002A00342 para difusión de servicios de salud en Ciudad de México.
+            </div>
+          </div>
+        </div>
+
+        <!-- Regla de honestidad: Bloque de prueba pendiente de testimonios -->
+        <div class="proof-banner">
+          <span class="proof-tag">ESPACIO RESERVADO PARA TUS PRUEBAS REALES</span>
+          <p style="margin-bottom: 0.5rem; color: #5C431A; font-weight: 500;">
+            Siguiendo nuestras estrictas reglas de honestidad, no inventamos reseñas ni calificaciones ficticias:
+          </p>
+          <div class="proof-placeholder">
+            ==[ aquí va tu prueba: 3 a 5 testimonios de pacientes reales con nombre, síntoma tratado y semanas de evolución ]==
+          </div>
+          <div class="proof-placeholder" style="margin-top: 0.5rem;">
+            ==[ aquí va tu prueba: fotografías de casos clínicos documentados de parálisis facial con consentimiento ]==
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. CONSULTA DE VALORACIÓN Y QUÉ INCLUYE TU ATENCIÓN
+         ========================================================================== -->
+    <section id="valoracion">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">Atención Personalizada</span>
+          <h2>Tu plan de recuperación integral</h2>
+          <p>Atención directa y dedicada, diseñada exclusivamente para tu motivo de consulta y sin compromisos forzosos.</p>
+        </div>
+
+        <div class="pricing-card-wrapper">
+          <div class="pricing-card">
+            <span class="editorial-kicker" style="margin-bottom: 0.5rem;">Consulta de Valoración y Tratamiento</span>
+            
+            <div class="plan-title-block">
+              <h3 class="plan-heading">Sesión Individualizada en Consultorio</h3>
+              <p class="plan-subtitle">
+                Atención presencial en Benito Juárez, CDMX con especialista certificada
+              </p>
+            </div>
+
+            <div class="pricing-features-list">
+              <div class="feature-item">
+                <span style="color: var(--color-accent); font-weight: 700;" aria-hidden="true">—</span>
+                <span>Consulta clínica y valoración de pulso/lengua (60 min)</span>
+              </div>
+
+              <div class="feature-item">
+                <span style="color: var(--color-accent); font-weight: 700;" aria-hidden="true">—</span>
+                <span>Aplicación de acupuntura con agujas estériles de uso único</span>
+              </div>
+
+              <div class="feature-item">
+                <span style="color: var(--color-accent); font-weight: 700;" aria-hidden="true">—</span>
+                <span>Terapia complementaria incluida según tu valoración (moxibustión / electro / ventosas)</span>
+              </div>
+
+              <div class="feature-item">
+                <span style="color: var(--color-accent); font-weight: 700;" aria-hidden="true">—</span>
+                <span>Atención privada y personalizada en consultorio Benito Juárez, CDMX</span>
+              </div>
+
+              <div class="feature-item">
+                <span style="color: var(--color-accent); font-weight: 700;" aria-hidden="true">—</span>
+                <span>Seguimiento directo vía WhatsApp para monitorear tu respuesta</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/525552520615?text=Hola,%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20valoraci%C3%B3n%20de%20acupuntura" 
+               class="btn btn-primary btn-full"
+               target="_blank" 
+               rel="noopener noreferrer">
+              Consultar disponibilidad y agendar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. GARANTÍA DE ÉTICA Y HONESTIDAD (PULL QUOTE EDITORIAL)
+         ========================================================================== -->
+    <section id="garantia">
+      <div class="container">
+        <div class="guarantee-box" style="border: 1px solid var(--color-border); background: var(--color-surface); padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem); text-align: center;">
+          <span class="editorial-kicker">Compromiso Deontológico</span>
+          <h3 style="font-family: var(--font-heading); font-size: clamp(1.6rem, 3.5vw, 2.3rem); font-style: italic; color: var(--color-primary); margin-bottom: 1rem;">
+            «Tu salud y bienestar siempre van primero»
+          </h3>
+          <p style="max-width: 620px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7; color: var(--color-text-main);">
+            Si tras tu valoración inicial determinamos que tu condición requiere atención hospitalaria urgente, estudios de imagen previos o derivación a otra especialidad médica antes de iniciar acupuntura, <strong>te lo diremos con absoluta transparencia</strong>. Jamás te propondremos sesiones innecesarias ni promesas que la medicina no pueda respaldar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. PREGUNTAS FRECUENTES
+         ========================================================================== -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="editorial-kicker">Claridad y Certeza</span>
+          <h2>Preguntas Frecuentes</h2>
+          <p>Todo lo que necesitas saber antes de tu primera visita al consultorio.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>¿Duele la colocación de las agujas de acupuntura?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>No. No tiene nada que ver con una inyección o extracción de sangre. Se emplean agujas filiformes del grosor de un cabello, de un solo uso y esterilizadas. La mayoría de los pacientes describe la sensación como un suave cosquilleo o calidez reconfortante (la llegada del <em>Qi</em>) que induce una relajación tan profunda que muchos se quedan dormidos durante la sesión.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cuántas sesiones se necesitan para notar mejoría?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>La gran mayoría de los pacientes reporta una disminución tangible del dolor o incremento en la movilidad entre la <strong>1.ª y la 3.ª sesión</strong>. Para casos agudos recientes se requieren ciclos cortos (3 a 5 sesiones); para afecciones crónicas o parálisis facial con varias semanas de evolución, se diseña un plan progresivo que se evalúa sesión con sesión.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Puedo tomar acupuntura si ya tengo medicamentos recetados?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Sí, es totalmente compatible y seguro. La acupuntura no introduce sustancias químicas en tu organismo; activa los recursos biológicos de autorregulación de tu propio cuerpo y no interfiere negativamente con ningún tratamiento farmacológico prescrito.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Dónde se encuentra el consultorio y en qué horarios atienden?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>El consultorio se ubica en la <strong>Alcaldía Benito Juárez, Ciudad de México</strong> (zona de fácil acceso cercana a Col. Del Valle, Nápoles y Narvarte). Se atiende exclusivamente con previa cita para garantizar tu privacidad: <strong>Lunes a Viernes de 9:00 a 18:00 hrs y Sábados de 9:00 a 15:00 hrs</strong>.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>¿Cómo se realiza el pago de la consulta?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Aceptamos transferencia electrónica bancaria y efectivo directamente al finalizar tu sesión en el consultorio. No se te cobra ningún anticipo para agendar tu consulta de valoración.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. CIERRE CON UNA SOLA ACCIÓN
+         ========================================================================== -->
+    <section id="cierre" class="closing-section">
+      <div class="container">
+        <div class="closing-card">
+          <span class="editorial-kicker">Tu Próximo Paso</span>
+          <h2>Da el primer paso hacia una vida sin dolor persistente</h2>
+          <p class="lead" style="margin-bottom: 2rem;">
+            No tienes que acostumbrarte a vivir con molestias diarias ni conformarte con tratamientos que no te escuchan. Escríbeme directamente para revisar tu caso y agendar tu sesión de valoración.
+          </p>
+
+          <a href="https://wa.me/525552520615?text=Hola,%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20valoraci%C3%B3n%20de%20acupuntura" 
+             class="btn btn-primary btn-full"
+             style="max-width: 440px; margin: 0 auto;"
+             target="_blank" 
+             rel="noopener noreferrer">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            Agendar valoración por WhatsApp
+          </a>
+
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 1rem; margin-bottom: 0;">
+            Te responderé personalmente para coordinar el horario más conveniente para ti.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER Y AVISOS LEGALES
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>Centro de Acupuntura QI</strong><br>
+        Licenciatura en Acupuntura Humana y Rehabilitación (UNEVE)<br>
+        Cédula Profesional Federal: 15289838 · Aviso Publicitario COFEPRIS: 2609142002A00342<br>
+        Benito Juárez, Ciudad de México · Solo WhatsApp: 55 5252 0615 (Atención exclusivamente por mensaje)
+      </p>
+      
+      <div class="footer-links">
+        <a href="#hero" class="footer-link">Inicio</a>
+        <a href="#mecanismo" class="footer-link">Método Neuro-Qi</a>
+        <a href="#incluye" class="footer-link">Qué incluye</a>
+        <a href="#faq" class="footer-link">Preguntas Frecuentes</a>
+        <span class="footer-link" style="text-decoration: none; cursor: default;">[Aviso de Privacidad]</span>
+      </div>
+
+      <p style="font-size: 0.75rem; margin-top: 1.5rem; color: #738078;">
+        Este sitio no sustituye el diagnóstico médico de urgencias. Los tratamientos se proporcionan bajo estricto consentimiento informado y con apego a las normas sanitarias vigentes en México.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BARRA FIJA INFERIOR PARA CELULAR (STICKY BOTTOM CTA)
+       ========================================================================== -->
+  <div class="mobile-sticky-bar" role="region" aria-label="Acción rápida en celular">
+    <div class="mobile-bar-info">
+      <span class="mobile-bar-title">Centro de Acupuntura QI</span>
+      <span class="mobile-bar-sub">Cédula 15289838 · Benito Juárez, CDMX</span>
+    </div>
+
+    <a href="https://wa.me/525552520615?text=Hola,%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20valoraci%C3%B3n%20de%20acupuntura" 
+       class="btn btn-primary"
+       style="padding: 0.65rem 1.15rem; font-size: 0.92rem;"
+       target="_blank" 
+       rel="noopener noreferrer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+      </svg>
+      Agendar Cita
+    </a>
+  </div>
+
+  <!-- Script de seguimiento de conversiones para todos los enlaces a WhatsApp -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var waLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]');
+      waLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          try {
+            if (typeof gtag_report_conversion === 'function') {
+              gtag_report_conversion();
+            }
+          } catch(err) {
+            console.error('Error reportando conversión:', err);
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
