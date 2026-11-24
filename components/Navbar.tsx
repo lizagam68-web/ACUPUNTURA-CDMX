@@ -84,6 +84,12 @@ export const Navbar = () => {
       icon: Smile,
     },
     {
+      name: "Fertilidad & Ciclo Hormonal",
+      desc: "Fertilidad natural, SOP, endometrio y apoyo FIV",
+      href: "/fertilidad",
+      icon: Heart,
+    },
+    {
       name: "Acupuntura Estética & Facial",
       desc: "Lifting natural, micropunción y apoyo metabólico",
       href: "/acupuntura-estetica",

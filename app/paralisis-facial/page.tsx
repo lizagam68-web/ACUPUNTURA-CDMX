@@ -1,568 +1,603 @@
 import React from "react";
 import { Metadata } from "next";
+import Link from "next/link";
 import { clinicData } from "@/data/clinic-data";
-import { 
-  HelpCircle, 
-  CheckCircle2, 
-  Zap, 
-  Activity, 
-  ShieldCheck, 
-  Clock, 
-  MapPin, 
-  Calendar, 
-  Award, 
-  Smile, 
-  MessageCircle,
-  HeartHandshake,
-  Timer,
+import {
+  ArrowDown,
+  Award,
   Check,
-  ArrowRight,
-  Flame
+  Clock,
+  FileCheck2,
+  MapPin,
+  MessageCircle,
+  Scale,
+  ShieldCheck,
+  Stethoscope,
 } from "lucide-react";
 import { JsonLd } from "@/components/JsonLd";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { FacialParalysisDiagram } from "@/components/FacialParalysisDiagram";
-import { FacialSymmetryComparison } from "@/components/FacialSymmetryComparison";
+import { ParalisisFacialTriaje } from "@/components/ParalisisFacialTriaje";
 
 export const metadata: Metadata = {
-  title: "Tratamiento para Parálisis Facial con Acupuntura en CDMX | Centro de Acupuntura",
-  description: "Recupera tu movilidad y simetría facial. Tratamiento y terapia para parálisis de Bell y nervio facial con electroacupuntura en CDMX. Atención prioritaria.",
+  title:
+    "Parálisis Facial y Parálisis de Bell con Acupuntura Clínica en CDMX | Centro de Acupuntura QI",
+  description:
+    "Recupera la movilidad y simetría de tu rostro con Acupuntura Clínica en Benito Juárez / Coyoacán, CDMX. Realiza nuestro test rápido de valoración y agenda tu consulta.",
   keywords: [
-    "acupuntura para parálisis facial",
-    "electroacupuntura para parálisis facial",
-    "tratamiento parálisis facial",
-    "terapia para parálisis facial",
-    "parálisis de Bell tratamiento",
-    "clínica especialista en parálisis facial cdmx",
     "acupuntura para parálisis facial cdmx",
-    "especialista en parálisis facial cerca de mí",
-    "tratamiento de parálisis facial precio",
-    "cómo recuperar el movimiento de la cara por parálisis",
-    "acupuntura para parálisis de Bell cuánto tarda en hacer efecto",
-    "terapias efectivas para nervio facial inflamado",
-    "electroacupuntura y terapia neural para parálisis facial",
-    "secuelas de parálisis facial tratamiento"
+    "tratamiento parálisis de bell cdmx",
+    "parálisis facial periférica acupuntura",
+    "electroacupuntura parálisis facial benito juárez",
+    "clínica parálisis facial coyoacán",
+    "centro de acupuntura qi",
+    "tratamiento parálisis facial precio cdmx",
   ],
   alternates: {
     canonical: "https://www.acupunturacdmx.com/paralisis-facial",
   },
   openGraph: {
-    title: "Tratamiento para Parálisis Facial con Acupuntura en CDMX | Centro de Acupuntura",
-    description: "Tratamiento y terapias para parálisis facial con acupuntura clínica y electroacupuntura en CDMX. Protocolos para parálisis de Bell y rehabilitación neuromuscular.",
+    title:
+      "Recupera la movilidad y simetría de tu rostro con Acupuntura Clínica | Centro de Acupuntura QI",
+    description:
+      "Atención oportuna y personalizada para Parálisis de Bell y parálisis facial periférica en Benito Juárez / Coyoacán, CDMX.",
     url: "https://www.acupunturacdmx.com/paralisis-facial",
     type: "website",
+    locale: "es_MX",
   },
 };
-
-const faqs = [
-  {
-    q: "¿Cómo recuperar el movimiento de la cara por parálisis con acupuntura?",
-    a: "Tu rostro tiene memoria neuromuscular. La electroacupuntura envía microestímulos eléctricos controlados a las ramas del nervio facial que han quedado aletargadas. Esto incrementa el flujo sanguíneo, reduce la inflamación y reeduca tus músculos para que recuperes el parpadeo natural, la simetría bucal y la capacidad de sonreír con total confianza."
-  },
-  {
-    q: "Acupuntura para parálisis de Bell: ¿cuánto tarda en hacer efecto?",
-    a: "Muchos pacientes notan una agradable disminución de pesadez y los primeros indicios de movimiento entre la 3.ª y la 6.ª sesión, especialmente si inician en las dos primeras semanas. Cada cuerpo responde a su propio ritmo, por lo que adaptamos cada sesión según tu evolución particular para acelerar tu recuperación."
-  },
-  {
-    q: "¿El tratamiento es doloroso o invasivo?",
-    a: "No. Utilizamos agujas estériles ultradelgadas (del grosor de un cabello) y la microestimulación eléctrica se regula suavemente según tu umbral de sensibilidad. La gran mayoría de pacientes experimenta una profunda relajación y alivio durante cada sesión."
-  },
-  {
-    q: "¿Cuáles son las terapias más efectivas para el nervio facial inflamado?",
-    a: "La combinación de electroacupuntura de baja frecuencia, acupuntura tradicional en canales Yang y moxibustión indirecta es de las más efectivas para desinflamar el trayecto del nervio a su salida del foramen estilomastoideo, frenando el avance del bloqueo."
-  },
-  {
-    q: "¿La electroacupuntura funciona si ya tengo varios meses con secuelas?",
-    a: "Sí. Aunque la fase temprana es ideal, pacientes con secuelas crónicas, contracturas o sincinesias (como cerrar el ojo al mover la boca) logran liberar tensiones profundas, suavizar asimetrías y reentrenar fibras latentes para mejorar significativamente su calidad de vida."
-  },
-  {
-    q: "¿Cuál es el precio de la consulta y cómo se agenda en CDMX?",
-    a: "Ofrecemos tarifas accesibles por sesión y paquetes de tratamiento continuo. Tu primera cita incluye valoración clínica detallada de tu movilidad y tu primera sesión terapéutica. Escríbenos por WhatsApp para asignarte un horario preferencial en Benito Juárez, CDMX."
-  }
-];
 
 export default function ParalisisFacialPage() {
   const treatmentSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalTherapy",
-    "name": "Tratamiento para Parálisis Facial con Acupuntura en CDMX",
-    "description": "Protocolos avanzados de acupuntura para parálisis facial y electroacupuntura en CDMX. Tratamiento para parálisis de Bell, nervio facial inflamado y rehabilitación neuromuscular.",
-    "url": "https://www.acupunturacdmx.com/paralisis-facial",
-    "relevantSpecialty": {
+    name: "Protocolo Clínico para Parálisis Facial con Acupuntura en CDMX",
+    description:
+      "Atención oportuna y personalizada para Parálisis de Bell y parálisis facial periférica con acupuntura clínica y electroacupuntura bajo enfoque de Medicina Tradicional China.",
+    url: "https://www.acupunturacdmx.com/paralisis-facial",
+    relevantSpecialty: {
       "@type": "MedicalSpecialty",
-      "name": "Acupuncture"
+      name: "Acupuncture",
     },
-    "indication": [
+    indication: [
       {
         "@type": "MedicalIndication",
-        "name": "Parálisis de Bell tratamiento"
+        name: "Parálisis de Bell",
       },
       {
         "@type": "MedicalIndication",
-        "name": "Nervio facial inflamado y pérdida de movilidad facial"
+        name: "Parálisis facial periférica",
       },
       {
         "@type": "MedicalIndication",
-        "name": "Secuelas de parálisis facial y sincinesias"
-      }
+        name: "Secuelas de parálisis facial y sincinesias",
+      },
     ],
-    "howItWorks": "Estimulación bioeléctrica con electroacupuntura en puntos motores faciales para reactivar la transmisión neuromuscular y promover la recuperación funcional del nervio facial.",
-    "provider": {
+    provider: {
       "@type": "MedicalBusiness",
-      "name": clinicData.name,
-      "alternateName": clinicData.alternateNames,
-      "telephone": clinicData.phoneFormatted,
-      "url": "https://www.acupunturacdmx.com",
-      "hasMap": clinicData.googleMapsUrl,
-      "address": {
+      name: clinicData.name,
+      alternateName: clinicData.alternateNames,
+      telephone: clinicData.phoneFormatted,
+      url: "https://www.acupunturacdmx.com",
+      hasMap: clinicData.googleMapsUrl,
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": `${clinicData.address.streetAddress}, ${clinicData.address.neighborhood}`,
-        "addressLocality": clinicData.address.addressLocality,
-        "addressRegion": clinicData.address.addressRegion,
-        "postalCode": clinicData.address.postalCode,
-        "addressCountry": clinicData.address.addressCountry
+        streetAddress: `${clinicData.address.streetAddress}, ${clinicData.address.neighborhood}`,
+        addressLocality: clinicData.address.addressLocality,
+        addressRegion: clinicData.address.addressRegion,
+        postalCode: clinicData.address.postalCode,
+        addressCountry: clinicData.address.addressCountry,
       },
-      "geo": {
+      geo: {
         "@type": "GeoCoordinates",
-        "latitude": clinicData.geo.latitude,
-        "longitude": clinicData.geo.longitude
-      }
-    }
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.a
-      }
-    }))
+        latitude: clinicData.geo.latitude,
+        longitude: clinicData.geo.longitude,
+      },
+    },
   };
 
   return (
-    <div className="pt-20 min-h-screen bg-[#fcfbfa]">
+    <div className="pt-20 min-h-screen bg-[#faf8f5] text-[#142329]">
       <JsonLd schema={treatmentSchema} />
-      <JsonLd schema={faqSchema} />
-      
-      {/* Hero Section Persuasivo & Conexión Emocional */}
-      <section className="bg-gradient-to-b from-[#f4efe6] via-[#f7f3ec] to-[#fcfbfa] py-10 md:py-14 px-4 border-b border-[#e8dfcf]">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div className="lg:col-span-7">
-              <div className="text-xs font-semibold text-[#3e685f] tracking-widest uppercase mb-3">
-                Atención Prioritaria · Tu Sonrisa Puede Recuperarse
+
+      {/* 1. HERO SECTION (Primera pantalla sin distracciones) */}
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center bg-gradient-to-b from-[#fdfcf9] via-[#f4efe6] to-[#faf8f5] py-12 sm:py-16 md:py-20 px-4 sm:px-6 border-b border-[#e5dbcb]">
+        <div className="max-w-4xl mx-auto w-full text-center">
+          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-[#3e685f] mb-4 sm:mb-5">
+            Protocolo Clínico Especializado en CDMX
+          </p>
+
+          <h1 className="text-[2rem] sm:text-5xl lg:text-[3.5rem] font-serif font-bold text-[#12242b] leading-[1.14] tracking-tight text-balance mb-5 sm:mb-6">
+            Recupera la movilidad y simetría de tu rostro con Acupuntura Clínica
+          </h1>
+
+          <p className="text-base sm:text-lg md:text-xl text-[#4a5e66] font-light leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
+            Atención oportuna y personalizada para Parálisis de Bell y parálisis
+            facial periférica. Estimulación neural segura bajo enfoque de
+            Medicina Tradicional China.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 max-w-xl sm:max-w-none mx-auto">
+            <a
+              href="#test-triaje"
+              className="min-h-[54px] bg-[#18313a] hover:bg-[#12242b] text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-md shadow-[#18313a]/15 active:scale-98 flex items-center justify-center gap-2.5 whitespace-nowrap"
+            >
+              <span>Realizar Test de Valoración Rápida</span>
+              <ArrowDown size={18} className="text-[#f4e1cb] flex-shrink-0" />
+            </a>
+
+            <WhatsAppButton
+              className="min-h-[54px] bg-white hover:bg-[#f2ece2] text-[#18313a] border border-[#cfbfab] px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition-all shadow-2xs active:scale-98 flex items-center justify-center gap-2.5 cursor-pointer whitespace-nowrap"
+              message="Hola, necesito información y quiero agendar una cita para tratamiento de parálisis facial en CDMX."
+              showIcon={false}
+            >
+              <MessageCircle size={18} className="text-[#3e685f] flex-shrink-0" />
+              <span>Agendar Cita por WhatsApp</span>
+            </WhatsAppButton>
+          </div>
+
+          <div className="mt-8 sm:mt-10 pt-6 border-t border-[#e5dbcb]/80 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-[#4a5e66]">
+            <span className="inline-flex items-center gap-1.5 font-medium text-[#18313a]">
+              <MapPin size={14} className="text-[#b86d36] flex-shrink-0" />
+              Centro de Acupuntura QI · Zona Benito Juárez / Coyoacán, CDMX
+            </span>
+            <span className="hidden sm:inline text-[#cfbfab]" aria-hidden="true">
+              ·
+            </span>
+            <span>Lic. Elizabeth Gamiño · Céd. Prof. 15289838</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. TEST INTERACTIVO DE TRIAJE (Evaluación de Ventana Terapéutica - 3 preguntas) */}
+      <section
+        id="test-triaje"
+        className="scroll-mt-24 py-14 sm:py-20 px-4 sm:px-6 bg-[#faf8f5] border-b border-[#e5dbcb]"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b86d36] mb-2">
+              Evaluación de Ventana Terapéutica
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#12242b] tracking-tight leading-snug text-balance mb-3">
+              Test de Valoración Rápida (3 preguntas)
+            </h2>
+            <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+              Responde en menos de 1 minuto para recibir una orientación inicial
+              acorde a tu tiempo de evolución y enviar tus datos directamente por
+              WhatsApp.
+            </p>
+          </div>
+
+          <ParalisisFacialTriaje />
+        </div>
+      </section>
+
+      {/* 3. ¿CÓMO FUNCIONA NUESTRO PROTOCOLO Y QUÉ INCLUYE CADA CITA? */}
+      <section className="py-14 sm:py-20 px-4 sm:px-6 bg-white border-b border-[#e5dbcb]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3e685f] mb-2">
+              Atención Clínica Estructurada
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#12242b] tracking-tight leading-snug text-balance mb-3">
+              ¿Cómo funciona nuestro protocolo y qué incluye cada cita?
+            </h2>
+            <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+              Cada consulta está diseñada para darte claridad clínica, trato
+              humano y un seguimiento ordenado de tu recuperación facial.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            {/* Bloque 1: Duración */}
+            <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#18313a] flex items-center justify-center flex-shrink-0">
+                  <Clock size={20} />
+                </div>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  Duración: 60 minutos (1 hora)
+                </h3>
               </div>
-
-              {/* H1 Principal con lenguaje de poder y esperanza */}
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3.5 font-serif tracking-tight leading-[1.18] text-[#12242b]">
-                Tratamiento y Terapias para Parálisis Facial con Acupuntura
-              </h1>
-
-              <p className="text-base sm:text-lg text-[#4a5e66] mb-3.5 leading-relaxed font-normal">
-                <strong>Sabemos la angustia y la incertidumbre que sientes al no poder mover tu rostro con normalidad.</strong> No estás solo. Con protocolos especializados de <strong>acupuntura para parálisis facial</strong> y <strong>electroacupuntura clínica</strong> en CDMX, reactivamos las conexiones neuronales dormidas para devolverte la movilidad, la simetría y la tranquilidad frente al espejo.
+              <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+                Cada consulta tiene una duración de{" "}
+                <strong className="text-[#18313a] font-semibold tabular-nums">
+                  60 minutos (1 hora)
+                </strong>{" "}
+                de atención individualizada, en consultorio privado y con
+                material 100% estéril y desechable.
               </p>
-
-              <div className="bg-white/90 rounded-2xl p-4 border border-[#e5dbcb] mb-5 shadow-2xs">
-                <p className="text-xs sm:text-sm text-[#18313a] font-medium leading-relaxed">
-                  ✓ <strong>Actúa a tiempo:</strong> En <strong>parálisis de Bell (tratamiento temprano)</strong>, cada día cuenta para despertar el nervio antes de que sufra atrofia. Te atendemos con cita prioritaria en Benito Juárez, CDMX con <strong>especialista universitaria certificada (UNEVE)</strong>.
-                </p>
-              </div>
-
-              {/* Botones de Conversión Persuasivos */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <WhatsAppButton
-                  className="bg-[#18313a] text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-[#12242b] transition-all shadow-md shadow-[#18313a]/20 active:scale-95 text-center flex items-center justify-center gap-2 cursor-pointer"
-                  message="Hola, tengo síntomas de parálisis facial y deseo agendar una valoración prioritaria para recuperar mi movilidad."
-                  showIcon={false}
-                >
-                  <Calendar size={16} />
-                  <span>Quiero Iniciar mi Recuperación Hoy</span>
-                </WhatsAppButton>
-
-                <a
-                  href="#guia-interactiva-facial"
-                  className="bg-white hover:bg-[#faf8f5] text-[#18313a] border border-[#e5dbcb] px-5 py-3.5 rounded-full font-bold text-xs sm:text-sm transition-all shadow-2xs hover:shadow-xs text-center flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <Smile size={16} className="text-[#3e685f]" />
-                  <span>Explorar Guía Facial Interactiva</span>
-                </a>
-              </div>
-              
-              <div className="flex items-center gap-1.5 text-xs text-[#3e685f] font-medium mt-3">
-                <Timer size={14} className="text-[#b86d36]" />
-                <span>Respuesta rápida y valoración personalizada en Benito Juárez, CDMX</span>
-              </div>
             </div>
 
-            {/* Tarjeta de Garantía y Confianza */}
-            <div className="lg:col-span-5">
-              <div className="bg-white p-6 sm:p-7 rounded-3xl shadow-lg border border-[#e8dfcf] relative overflow-hidden">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#b86d36] block mb-1">
-                  ¿Por Qué Elegir Nuestro Tratamiento?
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 font-serif tracking-tight text-[#12242b]">
-                  Recupera Tu Expresión Sin Temores
+            {/* Bloque 2: Primera Cita */}
+            <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#b86d36] flex items-center justify-center flex-shrink-0">
+                  <Stethoscope size={20} />
+                </div>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  Primera Cita + 1.ª Sesión (
+                  <span className="tabular-nums">$900 MXN</span>)
+                </h3>
+              </div>
+              <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+                Historia clínica completa, evaluación del grado de afectación
+                neural bajo Medicina Tradicional China y tu primera sesión
+                terapéutica aplicada en la misma visita.
+              </p>
+            </div>
+
+            {/* Bloque 3: Sesión Subsecuente */}
+            <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#3e685f] flex items-center justify-center flex-shrink-0">
+                  <ShieldCheck size={20} />
+                </div>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  Sesión Subsecuente (
+                  <span className="tabular-nums">$850 MXN</span>)
+                </h3>
+              </div>
+              <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+                Seguimiento evolutivo de movilidad facial y ajuste de puntos de
+                electroacupuntura / acupuntura clínica según los avances de
+                parpadeo, tono y sonrisa.
+              </p>
+            </div>
+
+            {/* Bloque 4: Criterio Normativo */}
+            <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#18313a] flex items-center justify-center flex-shrink-0">
+                  <FileCheck2 size={20} />
+                </div>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  Criterio Normativo (NOM-017-SSA3-2012)
+                </h3>
+              </div>
+              <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+                De acuerdo con la Norma Oficial Mexicana de Acupuntura, se
+                sugiere un mínimo de{" "}
+                <strong className="text-[#18313a] font-semibold">
+                  5 sesiones
+                </strong>{" "}
+                para conformar un ciclo de tratamiento; en parálisis facial, por
+                la demanda de regeneración neural, recomendamos nuestro protocolo
+                intensivo de{" "}
+                <strong className="text-[#18313a] font-semibold">
+                  10 sesiones
+                </strong>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. TARIFAS Y PLANES TRANSPARENTES (Tarjetas comparativas) */}
+      <section
+        id="tarifas"
+        className="py-14 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#f4efe6]/70 to-[#faf8f5] border-b border-[#e5dbcb]"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b86d36] mb-2">
+              Inversión Clara Desde el Inicio
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#12242b] tracking-tight leading-snug text-balance mb-3">
+              Tarifas y Planes Transparentes
+            </h2>
+            <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+              Precios finales en pesos mexicanos, sin cargos ocultos. Si inicias
+              con tu consulta de valoración y decides tomar un paquete, tu pago
+              inicial se toma a cuenta.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            {/* Tarjeta 1: Primera Valoración + 1.ª Sesión */}
+            <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-8 flex flex-col justify-between shadow-2xs">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#3e685f] mb-2">
+                  Inicio de tratamiento · 1 hora
+                </p>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#12242b] mb-4">
+                  Primera Valoración + 1.ª Sesión
                 </h3>
 
-                <div className="space-y-3 mb-5">
-                  {[
-                    "Vuelve a sonreír y expresarte con total seguridad y simetría",
-                    "Cierra tu párpado por completo y descansa sin irritación en el ojo",
-                    "Bebe agua y come sin dificultad ni escapes bucales molestos",
-                    "Electroacupuntura clínica suave, indolora y 100% personalizada",
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="text-[#18313a] mt-0.5 flex-shrink-0" size={17} />
-                      <span className="text-xs sm:text-sm text-[#4a5e66] font-medium leading-snug">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="p-3 rounded-xl bg-[#faf8f5] border border-[#e5dbcb]">
-                  <div className="flex items-center gap-2.5">
-                    <Award className="text-[#b86d36] flex-shrink-0" size={22} />
-                    <div className="text-left">
-                      <p className="text-[10px] uppercase font-bold text-[#18313a] tracking-wider">Responsable Sanitaria Certificada</p>
-                      <p className="text-xs text-[#18313a] font-semibold">Especialista en Acupuntura • Cédula Profesional: 15289838</p>
-                      <p className="text-[11px] text-[#3e685f] font-medium mt-0.5">Aviso de Publicidad COFEPRIS: 2609142002A00342</p>
-                    </div>
+                <div className="pb-5 mb-5 border-b border-[#f2ece2]">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-serif font-bold text-[#18313a] tabular-nums">
+                      $900
+                    </span>
+                    <span className="text-sm font-semibold text-[#4a5e66]">
+                      MXN
+                    </span>
                   </div>
+                  <p className="text-xs text-[#4a5e66] mt-1">
+                    Consulta de 60 minutos · Sesión subsecuente individual{" "}
+                    <span className="tabular-nums font-medium">$850 MXN</span>
+                  </p>
                 </div>
+
+                <ul className="space-y-3 text-sm text-[#4a5e66] mb-8">
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Historia clínica completa y valoración integral</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Diagnóstico bajo Medicina Tradicional China</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Primera sesión terapéutica incluida</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      Tomable a cuenta si decides adquirir un paquete ese día
+                    </span>
+                  </li>
+                </ul>
               </div>
+
+              <WhatsAppButton
+                className="w-full min-h-[48px] bg-[#faf8f5] hover:bg-[#f2ece2] text-[#18313a] border border-[#cfbfab] font-bold text-sm px-5 py-3.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer"
+                message="Hola, quiero agendar mi Primera Valoración + 1.ª Sesión ($900 MXN) para parálisis facial."
+                showIcon={false}
+              >
+                <MessageCircle size={17} className="text-[#3e685f]" />
+                <span>Agendar Valoración ($900)</span>
+              </WhatsAppButton>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* BLOQUE PERSUASIVO: 3 Razones para no posponer tu tratamiento */}
-      <section className="py-10 px-4 bg-white border-b border-[#e5dbcb]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#b86d36] block mb-1">
-              Tu Ventana de Oportunidad
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-[#12242b] tracking-tight leading-snug mb-2">
-              3 Razones Decisivas para Actuar de Inmediato
-            </h2>
-            <div className="w-16 h-1 bg-[#b86d36] mx-auto rounded-full mb-3" />
-            <p className="text-xs sm:text-sm text-[#4a5e66] font-light">
-              El nervio facial es extraordinariamente reactivo en las primeras semanas. Esperar semanas sin estímulo especializado reduce la velocidad de regeneración.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="bg-[#fcfbfa] p-5 rounded-2xl border border-[#e5dbcb] hover:border-[#18313a] transition-all">
-              <div className="w-10 h-10 rounded-xl bg-[#18313a] text-white flex items-center justify-center mb-3">
-                <Timer size={20} />
-              </div>
-              <h3 className="font-bold text-sm sm:text-base text-[#12242b] font-serif mb-1.5">
-                1. La Ventana Biológica de Oro
-              </h3>
-              <p className="text-xs text-[#4a5e66] font-light leading-relaxed">
-                Durante los primeros 14 días el nervio conserva su mayor potencial de recuperación espontánea. Estimularlo con electroacupuntura acelera la reparación axónica hasta un 70%.
-              </p>
-            </div>
-
-            <div className="bg-[#fcfbfa] p-5 rounded-2xl border border-[#e5dbcb] hover:border-[#b86d36] transition-all">
-              <div className="w-10 h-10 rounded-xl bg-[#b86d36] text-white flex items-center justify-center mb-3">
-                <ShieldCheck size={20} />
-              </div>
-              <h3 className="font-bold text-sm sm:text-base text-[#12242b] font-serif mb-1.5">
-                2. Evita Secuelas Permanentes
-              </h3>
-              <p className="text-xs text-[#4a5e66] font-light leading-relaxed">
-                Sin un tratamiento adecuado, el rostro puede desarrollar sincinesias (cerrar el ojo al mover la boca) o contracturas rígidas. La acupuntura reeduca las conexiones correctas.
-              </p>
-            </div>
-
-            <div className="bg-[#fcfbfa] p-5 rounded-2xl border border-[#e5dbcb] hover:border-[#2b4c3a] transition-all">
-              <div className="w-10 h-10 rounded-xl bg-[#2b4c3a] text-white flex items-center justify-center mb-3">
-                <HeartHandshake size={20} />
-              </div>
-              <h3 className="font-bold text-sm sm:text-base text-[#12242b] font-serif mb-1.5">
-                3. Acompañamiento Profesional y Seguro
-              </h3>
-              <p className="text-xs text-[#4a5e66] font-light leading-relaxed">
-                Atención directa por especialista universitaria en Acupuntura y Rehabilitación (Cédula Profesional: 15289838, UNEVE). Cumplimiento y Aviso de Publicidad COFEPRIS: 2609142002A00342. Tu salud en manos éticas y certificadas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Diagrama Clínico de Rostro Dividido y Valoración de Síntomas */}
-      <FacialParalysisDiagram />
-
-      {/* Carrusel Clínico de Simetría Facial con Imágenes Semi-Realistas */}
-      <FacialSymmetryComparison />
-
-      {/* SECCIÓN 1 (H2): ¿Cómo ayuda la electroacupuntura en la parálisis de Bell? */}
-      <section className="py-12 md:py-16 px-4 bg-[#faf8f5] border-b border-[#e5dbcb]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#b86d36] block mb-1">
-              Ciencia y Evidencia Clínica
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#12242b] tracking-tight leading-snug mb-3">
-              ¿Cómo ayuda la electroacupuntura en la parálisis de Bell?
-            </h2>
-            <div className="w-16 h-1 bg-[#b86d36] mx-auto rounded-full mb-4" />
-            <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-              La <strong>electroacupuntura para parálisis facial</strong> no es magia: es bioelectricidad neurofuncional y clínica aplicada. Con microcorrientes calibradas despertamos los receptores motores para enseñarle de nuevo a tu nervio <strong>cómo recuperar el movimiento de la cara por parálisis</strong>.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-[#e5dbcb] hover:border-[#d4c7b2] transition-all shadow-2xs">
-              <div className="w-11 h-11 bg-[#18313a] text-white rounded-xl flex items-center justify-center mb-4 shadow-2xs">
-                <Zap size={22} />
-              </div>
-              <h3 className="text-lg font-bold text-[#12242b] font-serif mb-2">Despierta Fibras Inactivas</h3>
-              <p className="text-xs text-[#4a5e66] font-light leading-relaxed">
-                Envía impulsos continuos que mantienen la vitalidad del músculo, impidiendo que pierda volumen o fuerza mientras el nervio se regenera.
-              </p>
-            </div>
-
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-[#e5dbcb] hover:border-[#d4c7b2] transition-all shadow-2xs">
-              <div className="w-11 h-11 bg-[#b86d36] text-white rounded-xl flex items-center justify-center mb-4 shadow-2xs">
-                <Activity size={22} />
-              </div>
-              <h3 className="text-lg font-bold text-[#12242b] font-serif mb-2">Alivia la Inflamación Profunda</h3>
-              <p className="text-xs text-[#4a5e66] font-light leading-relaxed">
-                Multiplica la microcirculación de sangre y oxígeno en el canal de salida del nervio, desinflamándolo de manera natural y sin fármacos agresivos.
-              </p>
-            </div>
-
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-[#e5dbcb] hover:border-[#d4c7b2] transition-all shadow-2xs">
-              <div className="w-11 h-11 bg-[#2b4c3a] text-white rounded-xl flex items-center justify-center mb-4 shadow-2xs">
-                <Smile size={22} />
-              </div>
-              <h3 className="text-lg font-bold text-[#12242b] font-serif mb-2">Devuelve Tu Sonrisa Auténtica</h3>
-              <p className="text-xs text-[#4a5e66] font-light leading-relaxed">
-                Ayuda al cerebro a reconectar las órdenes motoras: sonreír sin esfuerzo, parpadear simétricamente y volver a hablar con soltura.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-white border border-[#e8dfcf] flex flex-col sm:flex-row items-center justify-between gap-3 shadow-2xs">
-            <div className="text-xs text-[#4a5e66]">
-              <strong>Electroacupuntura y terapia neural para parálisis facial:</strong> sesión relajante, sin efectos adversos y monitoreada en todo momento.
-            </div>
-            <WhatsAppButton
-              className="bg-[#18313a] text-white px-5 py-2.5 rounded-full font-bold text-xs hover:bg-[#12242b] transition-all whitespace-nowrap shadow-xs cursor-pointer"
-              message="Hola, quisiera consultar cómo me ayudaría la electroacupuntura en mi caso particular."
-              showIcon={false}
-            >
-              Consultar Mi Caso por WhatsApp
-            </WhatsAppButton>
-          </div>
-        </div>
-      </section>
-
-      {/* SECCIÓN 2 (H2): Beneficios de la terapia de acupuntura para el nervio facial */}
-      <section className="py-12 md:py-16 px-4 bg-white border-b border-[#e5dbcb]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#b86d36] block mb-1">
-              Resultados Reales
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#12242b] tracking-tight leading-snug mb-3">
-              Beneficios de la terapia de acupuntura para el nervio facial
-            </h2>
-            <div className="w-16 h-1 bg-[#b86d36] mx-auto rounded-full mb-4" />
-            <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-              La <strong>acupuntura para parálisis facial CDMX</strong> no solo trabaja en la superficie de la piel; regula tu sistema nervioso autónomo para reducir el estrés y la tensión acumulada que frenan la curación.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="bg-[#faf8f5] p-5 sm:p-6 rounded-2xl border border-[#e5dbcb] shadow-2xs">
-              <h3 className="text-base sm:text-lg font-bold text-[#12242b] font-serif mb-2.5 flex items-center gap-2">
-                <CheckCircle2 className="text-[#18313a]" size={20} />
-                <span>Terapias efectivas para nervio facial inflamado</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4a5e66] font-light leading-relaxed mb-3">
-                Liberamos el atrapamiento del nervio a su salida del foramen óseo, propiciando que los impulsos eléctricos vuelvan a fluir libremente hacia tus facciones.
-              </p>
-              <ul className="space-y-1.5 text-xs text-[#3e685f]">
-                <li>✓ Disminución rápida del dolor o molestia detrás de la oreja.</li>
-                <li>✓ Cierre palpebral hermético que previene infecciones y ardor ocular.</li>
-                <li>✓ Recuperación del tono muscular y deglución confortable.</li>
-              </ul>
-            </div>
-
-            <div className="bg-[#faf8f5] p-5 sm:p-6 rounded-2xl border border-[#e5dbcb] shadow-2xs">
-              <h3 className="text-base sm:text-lg font-bold text-[#12242b] font-serif mb-2.5 flex items-center gap-2">
-                <ShieldCheck className="text-[#b86d36]" size={20} />
-                <span>Secuelas de parálisis facial: tratamiento y prevención</span>
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4a5e66] font-light leading-relaxed mb-3">
-                Protegemos la armonía de tu rostro evitando que los músculos del lado sano se sobrecarguen o que se creen conexiones nerviosas cruzadas no deseadas.
-              </p>
-              <ul className="space-y-1.5 text-xs text-[#3e685f]">
-                <li>✓ Relajación de contracturas en cuello y mandíbula.</li>
-                <li>✓ Reeducación motriz para que el ojo no se cierre al sonreír.</li>
-                <li>✓ Retorno de la seguridad personal en tu vida social y laboral.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECCIÓN 3 (H2): ¿Cuántas sesiones se necesitan para notar mejoría? */}
-      <section className="py-12 md:py-16 px-4 bg-[#faf8f5] border-b border-[#e5dbcb]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#b86d36] block mb-1">
-              Transparencia y Tiempos
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[#12242b] tracking-tight leading-snug mb-3">
-              ¿Cuántas sesiones se necesitan para notar mejoría?
-            </h2>
-            <div className="w-16 h-1 bg-[#b86d36] mx-auto rounded-full mb-4" />
-            <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-              Respondemos con honestidad clínica a <em>«acupuntura para parálisis de Bell cuánto tarda en hacer efecto»</em>. Tu pronóstico mejora sustancialmente cuando comenzamos en las primeras semanas:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-[#e8dfcf] shadow-2xs">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-[#b86d36] mb-1">Fase 1 (Días 1 a 14)</div>
-              <h3 className="text-base sm:text-lg font-bold text-[#12242b] font-serif mb-2">Fase Aguda (El Momento Clave)</h3>
-              <p className="text-xs text-[#4a5e66] font-semibold mb-2">
-                2 a 3 sesiones/semana (8 a 12 sesiones sugeridas).
-              </p>
-              <p className="text-xs text-[#3e685f] leading-relaxed">
-                La mayor tasa de éxito. Frenamos el daño, desinflamamos el canal y reactivamos el tono antes de que el músculo pierda memoria.
-              </p>
-            </div>
-
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-[#e8dfcf] shadow-2xs">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-[#18313a] mb-1">Fase 2 (Semanas 3 a 8)</div>
-              <h3 className="text-base sm:text-lg font-bold text-[#12242b] font-serif mb-2">Fase Subaguda (Consolidación)</h3>
-              <p className="text-xs text-[#4a5e66] font-semibold mb-2">
-                2 sesiones/semana (12 a 18 sesiones sugeridas).
-              </p>
-              <p className="text-xs text-[#3e685f] leading-relaxed">
-                Foco en reeducación muscular activa: oclusión ocular completa, fuerza en mejillas y sonrisa equilibrada sin desviaciones.
-              </p>
-            </div>
-
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-[#e8dfcf] shadow-2xs">
-              <div className="text-[10px] font-bold uppercase tracking-wider text-[#aa5833] mb-1">Fase 3 (&gt; 2 meses)</div>
-              <h3 className="text-base sm:text-lg font-bold text-[#12242b] font-serif mb-2">Fase Crónica (Secuelas Tardías)</h3>
-              <p className="text-xs text-[#4a5e66] font-semibold mb-2">
-                1 a 2 sesiones/semana (15 a 25 sesiones sugeridas).
-              </p>
-              <p className="text-xs text-[#3e685f] leading-relaxed">
-                Tratamiento enfocado en suavizar contracturas, balancear asimetrías y reactivar fibras remanentes para recuperar armonía.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECCIÓN 4 (H2): Agenda tu valoración con especialistas en acupuntura */}
-      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-[#faf8f5] via-[#f7f2ea] to-[#f4efe6] border-b border-[#e8dfcf]">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-1.5 bg-white text-[#18313a] text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-3.5 border border-[#e5dbcb] shadow-2xs">
-            <MapPin size={13} className="text-[#b86d36]" />
-            <span>Consultorio en Benito Juárez, CDMX</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 font-serif tracking-tight leading-snug text-[#12242b]">
-            Agenda tu valoración con especialistas en acupuntura
-          </h2>
-          <div className="w-16 h-1 bg-[#b86d36] mx-auto rounded-full mb-4" />
-
-          <p className="text-sm sm:text-base text-[#4a5e66] mb-6 leading-relaxed font-normal max-w-2xl mx-auto">
-            Si buscas un <strong>especialista en parálisis facial cerca de mí</strong> en la Ciudad de México y quieres conocer el <strong>tratamiento de parálisis facial precio / consulta</strong>, estás a un solo mensaje de dar el paso más importante hacia tu bienestar. Te atenderemos con calidez, respeto y absoluto rigor profesional y clínico.
-          </p>
-
-          <div className="bg-white p-5 sm:p-7 rounded-2xl shadow-md border border-[#e8dfcf] mb-6 text-left">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="text-[#b86d36] mt-0.5 flex-shrink-0" size={18} />
-                <div>
-                  <h4 className="font-bold text-xs text-[#12242b] font-serif">Ubicación Accesible</h4>
-                  <p className="text-[11px] text-[#3e685f] font-medium mt-0.5">{clinicData.location}</p>
+            {/* Tarjeta 2 (Destacada - Más elegida): Protocolo Intensivo Parálisis Facial */}
+            <div className="bg-[#18313a] text-white rounded-3xl border-2 border-[#b86d36] p-6 sm:p-8 flex flex-col justify-between shadow-warm relative">
+              <div>
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#f4e1cb]">
+                    Más elegida · 10 sesiones
+                  </p>
+                  <Award size={18} className="text-[#f4e1cb] flex-shrink-0" />
                 </div>
-              </div>
 
-              <div className="flex items-start gap-2.5">
-                <Clock className="text-[#b86d36] mt-0.5 flex-shrink-0" size={18} />
-                <div>
-                  <h4 className="font-bold text-xs text-[#12242b] font-serif">Horarios Flexibles</h4>
-                  <p className="text-[11px] text-[#3e685f] font-medium mt-0.5">Lun - Vie: 9:00 - 18:00 | Sáb: 9:00 - 15:00</p>
-                </div>
-              </div>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mb-4">
+                  Protocolo Intensivo Parálisis Facial
+                </h3>
 
-              <div className="flex items-start gap-2.5">
-                <Award className="text-[#b86d36] mt-0.5 flex-shrink-0" size={18} />
-                <div>
-                  <h4 className="font-bold text-xs text-[#12242b] font-serif">Certificación y Normativa</h4>
-                  <p className="text-[11px] text-[#12242b] font-semibold mt-0.5">Especialista Certificada (UNEVE)</p>
-                  <p className="text-[11px] text-[#3e685f] font-medium">Cédula Profesional: 15289838</p>
-                  <p className="text-[10px] text-[#b86d36] font-semibold mt-0.5">Aviso COFEPRIS: 2609142002A00342</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <WhatsAppButton
-              className="w-full sm:w-auto bg-[#18313a] text-white px-8 py-3.5 rounded-full font-bold text-sm hover:bg-[#12242b] transition-all shadow-lg shadow-[#18313a]/20 active:scale-95 text-center flex items-center justify-center gap-2 cursor-pointer"
-              message="Hola, deseo agendar mi cita de valoración prioritaria para tratamiento de parálisis facial en CDMX."
-              showIcon={false}
-            >
-              <MessageCircle size={16} />
-              <span>Agendar por WhatsApp (Solo Mensajes)</span>
-            </WhatsAppButton>
-          </div>
-          <p className="text-[11px] text-[#3e685f] mt-3">
-            Sin compromiso • Atención cálida y confidencial • Citas disponibles esta semana
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Section Persuasiva */}
-      <section className="py-12 md:py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8">
-            <span className="text-[11px] font-bold uppercase tracking-widest text-[#b86d36] block mb-1">
-              Despeja Tus Dudas
-            </span>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2.5 font-serif tracking-tight text-[#12242b]">
-              Preguntas Frecuentes sobre el Tratamiento
-            </h3>
-            <div className="w-16 h-1 bg-[#b86d36] mx-auto rounded-full mb-3" />
-            <p className="text-sm text-[#4a5e66] font-light max-w-xl mx-auto">
-              Queremos que asistas con total tranquilidad. Estas son las inquietudes más comunes de quienes inician su recuperación con nosotros.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-[#faf8f5] p-5 rounded-2xl border border-[#e5dbcb] hover:border-[#d4c7b2] transition-all">
-                <div className="flex items-start gap-3">
-                  <HelpCircle className="text-[#b86d36] flex-shrink-0 mt-0.5" size={20} />
-                  <div>
-                    <h4 className="font-bold text-sm mb-1.5 leading-snug text-[#12242b] font-serif">{faq.q}</h4>
-                    <p className="text-xs text-[#4a5e66] leading-relaxed font-light">{faq.a}</p>
+                <div className="pb-5 mb-5 border-b border-[#2c4955]">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-serif font-bold text-white tabular-nums">
+                      $4,900
+                    </span>
+                    <span className="text-sm font-semibold text-[#d6ccbe]">
+                      MXN
+                    </span>
                   </div>
+                  <p className="text-sm text-[#f4e1cb] font-semibold mt-1.5 tabular-nums">
+                    $490 MXN por sesión — Ahorras $3,650 MXN
+                  </p>
+                  <p className="text-xs text-[#d6ccbe] mt-1">
+                    Respecto a iniciar pagando 10 sesiones individuales
+                  </p>
+                </div>
+
+                <ul className="space-y-3 text-sm text-[#e5dbcb] mb-6">
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#f4e1cb] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      Ciclo completo de{" "}
+                      <strong className="text-white">10 sesiones</strong> de 1
+                      hora c/u
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#f4e1cb] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      Acupuntura clínica y electroacupuntura adaptada a tu
+                      evolución
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#f4e1cb] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Vigencia de 90 días para completar tu protocolo</span>
+                  </li>
+                </ul>
+
+                <div className="rounded-2xl bg-[#12242b] border border-[#2c4955] p-3.5 mb-7 text-xs sm:text-sm text-[#f4e1cb] leading-relaxed">
+                  Si inicias con tu consulta de{" "}
+                  <strong className="text-white tabular-nums">$900 MXN</strong>{" "}
+                  y decides tomar el protocolo,{" "}
+                  <strong className="text-white">se te toma a cuenta</strong>.
                 </div>
               </div>
-            ))}
+
+              <WhatsAppButton
+                className="w-full min-h-[50px] bg-[#15803d] hover:bg-[#166534] text-white font-bold text-sm sm:text-base px-5 py-3.5 rounded-full shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                message="Hola, me interesa agendar mi valoración para el Protocolo Intensivo de Parálisis Facial (10 sesiones por $4,900 MXN)."
+                showIcon={false}
+              >
+                <MessageCircle size={18} />
+                <span>Elegir Protocolo de 10 Sesiones</span>
+              </WhatsAppButton>
+            </div>
+
+            {/* Tarjeta 3: Paquete Acupuntura General */}
+            <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-8 flex flex-col justify-between shadow-2xs">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#b86d36] mb-2">
+                  Ciclo mínimo sugerido · 5 sesiones
+                </p>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#12242b] mb-4">
+                  Paquete Acupuntura General
+                </h3>
+
+                <div className="pb-5 mb-5 border-b border-[#f2ece2]">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-serif font-bold text-[#18313a] tabular-nums">
+                      $3,900
+                    </span>
+                    <span className="text-sm font-semibold text-[#4a5e66]">
+                      MXN
+                    </span>
+                  </div>
+                  <p className="text-sm text-[#3e685f] font-semibold mt-1.5 tabular-nums">
+                    $780 MXN por sesión — Ahorras $400 MXN
+                  </p>
+                  <p className="text-xs text-[#4a5e66] mt-1">
+                    Ciclo base sugerido conforme a la NOM-017-SSA3-2012
+                  </p>
+                </div>
+
+                <ul className="space-y-3 text-sm text-[#4a5e66] mb-8">
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      <strong className="text-[#18313a]">5 sesiones</strong>{" "}
+                      individuales de 60 minutos
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Seguimiento clínico en cada consulta</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Vigencia de 60 días para utilizar tus sesiones</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      Tu consulta inicial de{" "}
+                      <span className="tabular-nums">$900 MXN</span> también se
+                      toma a cuenta
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <WhatsAppButton
+                className="w-full min-h-[48px] bg-[#18313a] hover:bg-[#12242b] text-white font-bold text-sm px-5 py-3.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer"
+                message="Hola, me interesa agendar mi valoración y tomar el Paquete de Acupuntura General (5 sesiones por $3,900 MXN)."
+                showIcon={false}
+              >
+                <MessageCircle size={17} className="text-[#f4e1cb]" />
+                <span>Elegir Paquete de 5 Sesiones</span>
+              </WhatsAppButton>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* 5. NOTA LEGAL, COMERCIAL Y SANITARIA */}
+      <section className="py-10 sm:py-12 px-4 sm:px-6 bg-[#f4efe6] text-[#4a5e66]">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white/80 rounded-2xl border border-[#e5dbcb] p-5 sm:p-7 space-y-4">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#18313a]">
+              <Scale size={15} className="text-[#b86d36] flex-shrink-0" />
+              <span>Información Comercial y Sanitaria</span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-xs leading-relaxed">
+              <p>
+                <strong className="text-[#18313a]">
+                  Transparencia comercial (PROFECO):
+                </strong>{" "}
+                Todos los precios están expresados en pesos mexicanos (MXN) y
+                son precios finales netos al paciente. Los paquetes prepagados
+                son personales e intransferibles (vigencia de 90 días para
+                protocolos de 10 sesiones y 60 días para paquetes de 5
+                sesiones). El ahorro calculado toma como base el costo de inicio
+                de tratamiento ($900 MXN primera vez + $850 MXN subsecuentes).
+              </p>
+
+              <p>
+                <strong className="text-[#18313a]">Aviso sanitario:</strong> La
+                acupuntura es una práctica terapéutica regulada conforme a la
+                NOM-017-SSA3-2012. Los tiempos de evolución dependen del estado
+                clínico y apego de cada paciente, sin prometer curas
+                garantizadas.
+              </p>
+            </div>
+
+            <div className="pt-3 border-t border-[#e5dbcb] flex flex-wrap items-center justify-between gap-3 text-[11px] text-[#5a6e75]">
+              <span>
+                Centro de Acupuntura QI ·{" "}
+                <strong className="text-[#18313a]">
+                  {clinicData.practitioner.formalName}
+                </strong>{" "}
+                ({clinicData.practitioner.university}) ·{" "}
+                {clinicData.practitioner.license} ·{" "}
+                {clinicData.practitioner.advertisingPermit}
+              </span>
+
+              <nav
+                aria-label="Navegación rápida de especialidades"
+                className="flex items-center gap-3 font-medium text-[#18313a]"
+              >
+                <Link
+                  href="/"
+                  className="hover:text-[#3e685f] underline underline-offset-4"
+                >
+                  Inicio
+                </Link>
+                <span aria-hidden="true" className="text-[#cfbfab]">
+                  ·
+                </span>
+                <Link
+                  href="/paralisis-facial"
+                  className="text-[#3e685f] underline underline-offset-4"
+                >
+                  Parálisis Facial
+                </Link>
+                <span aria-hidden="true" className="text-[#cfbfab]">
+                  ·
+                </span>
+                <Link
+                  href="/fertilidad"
+                  className="hover:text-[#3e685f] underline underline-offset-4"
+                >
+                  Fertilidad
+                </Link>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

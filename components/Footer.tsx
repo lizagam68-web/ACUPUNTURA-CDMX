@@ -73,6 +73,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6 font-serif text-[#faf8f5]">Tratamientos</h4>
             <ul className="space-y-3 text-[#d6ccbe] text-sm sm:text-base">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">
+                  Inicio
+                </Link>
+              </li>
               {clinicData.specialties.map((spec) => (
                 <li key={spec.id}>
                   <Link href={`/${spec.id}`} className="hover:text-white transition-colors">
@@ -80,6 +85,11 @@ export const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/fertilidad" className="hover:text-white transition-colors">
+                  Fertilidad &amp; Equilibrio Hormonal
+                </Link>
+              </li>
               <li>
                 <Link href="/diplomado" className="hover:text-white transition-colors text-[#f4e1cb] font-medium">
                   Diplomado en MTCh (Inscripciones)
