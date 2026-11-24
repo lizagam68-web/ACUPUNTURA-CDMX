@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "¿Dónde está ubicado el consultorio y cómo agendar?",
-    a: "Nos encontramos en Benito Juárez, Ciudad de México. Atendemos en consultorio privado de lunes a viernes de 9 a 18 hrs y sábados de 9 a 15 hrs, previa cita vía WhatsApp."
+    a: "Nos encontramos en Benito Juárez / Coyoacán, Ciudad de México. Atendemos exclusivamente 1 paciente por hora en consultorio privado los días Lunes, Martes, Jueves y Viernes de 9:00 a 18:00 hrs (cerrado miércoles, sábado y domingo), previa cita vía WhatsApp."
   }
 ];
 

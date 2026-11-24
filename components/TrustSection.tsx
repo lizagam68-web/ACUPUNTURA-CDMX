@@ -48,18 +48,18 @@ export const TrustSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center">
           <div>
             <span className="text-[#f4e1cb] font-bold uppercase tracking-widest text-xs block mb-3">
-              Cuidado Humano &amp; Excelencia
+              Metodología Clínica &amp; Atención Exclusiva
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-[1.15] font-serif tracking-tight text-white">
               ¿Por qué elegir mi <span className="text-[#f4e1cb] italic font-serif">consulta de Acupuntura</span> en CDMX?
             </h2>
             <div className="space-y-4 sm:space-y-5">
               {[
-                "Te atiendo personalmente en cada sesión: soy especialista titulada con cédula profesional y aviso de publicidad.",
-                "Utilizo agujas filiformes estériles y desechables de alta calidad para una sesión suave, confortable y segura.",
-                "Diseño un tratamiento enfocado en el origen de tu dolor o desbalance para devolverte la movilidad y el bienestar.",
-                "Te recibo en un consultorio privado con citas puntuales, atención sin prisas y un ambiente de calma.",
-                "Consultorio con ubicación céntrica y segura en la Alcaldía Benito Juárez, CDMX, con fácil acceso.",
+                "Primera Cita de Valoración + 1.ª Sesión ($900 MXN · 1 hora): realizamos una medición objetiva con el método diagnóstico japonés Ryodoraku para evaluar el estado energético y neurovegetativo de tus meridianos y diseñar un protocolo 100% personalizado desde el inicio, sin aplicar puntos genéricos.",
+                "Atención exclusiva a 1 paciente por hora (sin cubículos simultáneos): consultas privadas y puntuales los Lunes, Martes, Jueves y Viernes (cerrado miércoles, sábado y domingo).",
+                "Te atiendo personalmente en cada sesión: soy especialista titulada (UNEVE) con Cédula Profesional 15289838 y Aviso de Publicidad COFEPRIS.",
+                "Utilizo agujas filiformes 100% estériles y desechables de alta calidad bajo apego a la NOM-017-SSA3-2012 para una sesión confortable y segura.",
+                "Consultorio privado con ubicación céntrica en la Alcaldía Benito Juárez / Coyoacán, CDMX (Av. Insurgentes Sur 1409, Despacho 5).",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3.5">
                   <CheckCircle2 className="text-[#f4e1cb] mt-1 flex-shrink-0" size={20} />

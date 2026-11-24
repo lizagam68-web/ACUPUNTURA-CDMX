@@ -58,12 +58,12 @@ export const FAQ_KNOWLEDGE_BASE: FaqItem[] = [
     category: "citas",
     categoryLabel: "Citas y Contacto",
     question: "¿Cómo agendo mi primera cita y qué horarios tienen?",
-    shortAnswer: "Puedes agendar directo por WhatsApp al 55 5252 0615. Atendemos de lunes a viernes de 9 a 18 hrs y sábados de 9 a 15 hrs.",
-    detailedAnswer: "Agendar es muy fácil y rápido:\n1. Escríbenos directamente por WhatsApp al 55 5252 0615 indicando tu motivo de consulta (dolor, parálisis facial, salud femenina o estrés).\n2. Te asignamos un horario preferencial en nuestro consultorio en Benito Juárez, CDMX.\n\nHorarios de atención:\n• Lunes a Viernes: 09:00 a 18:00 hrs.\n• Sábados: 09:00 a 15:00 hrs.\n(Todas las consultas se atienden con previa cita para garantizar tu privacidad y puntualidad).",
+    shortAnswer: "Puedes agendar directo por WhatsApp al 55 5252 0615. Atendemos exclusivamente 1 paciente por hora en Lunes, Martes, Jueves y Viernes de 9:00 a 18:00 hrs.",
+    detailedAnswer: "Agendar es muy fácil y rápido:\n1. Escríbenos directamente por WhatsApp al 55 5252 0615 indicando tu motivo de consulta (dolor, parálisis facial, fertilidad, salud femenina o estrés).\n2. Te asignamos un horario individual en nuestro consultorio privado en Benito Juárez, CDMX.\n\nHorarios de atención (1 paciente por hora, sin cubículos simultáneos):\n• Lunes, Martes, Jueves y Viernes: 09:00 a 18:00 hrs.\n• Miércoles, Sábado y Domingo: Cerrado.\n(Todas las consultas duran 60 minutos y se atienden con previa cita).",
     keyPoints: [
-      "Atención personalizada con previa cita.",
+      "Atención exclusiva a 1 paciente por hora (sin cubículos simultáneos).",
       "WhatsApp directo: 55 5252 0615.",
-      "Lunes a Viernes 9:00 - 18:00 | Sábados 9:00 - 15:00."
+      "Lunes, Martes, Jueves y Viernes (9:00 - 18:00 hrs) | Cerrado Miércoles, Sábado y Domingo."
     ],
     keywords: ["agendar", "cita", "citas", "horario", "horarios", "telefono", "whatsapp", "contacto", "reservar", "cuando"],
     suggestedFollowUps: ["donde-estan-ubicados", "precio-consulta"]
@@ -73,14 +73,14 @@ export const FAQ_KNOWLEDGE_BASE: FaqItem[] = [
     category: "citas",
     categoryLabel: "Citas y Ubicación",
     question: "¿Dónde se ubica el consultorio en la Ciudad de México?",
-    shortAnswer: "Estamos en la Alcaldía Benito Juárez, CDMX, con fácil acceso desde Col. Del Valle, Nápoles, Narvarte y Coyoacán.",
-    detailedAnswer: "Nuestro consultorio está ubicado en la Alcaldía Benito Juárez, Ciudad de México (zona céntrica con excelente conectividad cerca de vías principales como Insurgentes Sur, Eje 4, Eje 5 y División del Norte). Consultorio privado, tranquilo y con todas las normas de bioseguridad sanitaria.",
+    shortAnswer: "Estamos en la Alcaldía Benito Juárez (zona Benito Juárez / Coyoacán), CDMX, con fácil acceso desde Col. Del Valle, Nápoles, Narvarte y Mixcoac.",
+    detailedAnswer: "Nuestro consultorio está ubicado en Av. Insurgentes Sur 1409, Despacho 5, Insurgentes Mixcoac, Alcaldía Benito Juárez, Ciudad de México (zona Benito Juárez / Coyoacán). Consultorio privado, tranquilo y con todas las normas de bioseguridad sanitaria.",
     keyPoints: [
-      "Ubicación céntrica en Benito Juárez, CDMX.",
+      "Ubicación céntrica en Benito Juárez / Coyoacán, CDMX.",
       "Fácil acceso desde Nápoles, Del Valle, Narvarte y Coyoacán.",
-      "Instalaciones privadas, limpias y confortables."
+      "Instalaciones privadas, limpias y confortables (1 paciente por hora)."
     ],
-    keywords: ["donde", "ubicacion", "direccion", "llegar", "metro", "alcaldia", "benito juarez", "del valle", "napoles", "cdmx", "zona"],
+    keywords: ["donde", "ubicacion", "direccion", "llegar", "metro", "alcaldia", "benito juarez", "del valle", "napoles", "cdmx", "zona", "coyoacan"],
     suggestedFollowUps: ["como-agendar-cita", "quien-atiende-cedula"]
   },
   {
@@ -88,14 +88,14 @@ export const FAQ_KNOWLEDGE_BASE: FaqItem[] = [
     category: "citas",
     categoryLabel: "Citas y Tarifas",
     question: "¿Cuál es el costo de la consulta y qué incluye?",
-    shortAnswer: "Ofrecemos tarifas accesibles por sesión y paquetes de seguimiento. Tu primera cita incluye valoración clínica completa y tratamiento.",
-    detailedAnswer: "Manejamos costos muy justos y accesibles pensados en la continuidad del paciente. Tu primera sesión incluye:\n1. Historia clínica y valoración integral de tu estado (pulso, lengua, palpación de canales y evaluación neuromuscular).\n2. Tu primera sesión de tratamiento (acupuntura con agujas estériles, y según tu caso: electroacupuntura, moxibustión clínica o ventosas).\n3. Recomendaciones y ejercicios para casa.\n\nEscríbenos por WhatsApp para brindarte la tarifa exacta de tu tratamiento y promociones de paquetes activos.",
+    shortAnswer: "Primera Valoración con Diagnóstico Ryodoraku + 1.ª Sesión: $900 MXN (60 min). Sesión subsecuente: $850 MXN. Contamos con paquetes de 5 y 10 sesiones.",
+    detailedAnswer: "Manejamos precios finales netos en MXN y consultas individuales de 60 minutos (1 paciente por hora):\n• Primera Valoración con Diagnóstico Japonés Ryodoraku + 1.ª Sesión: $900 MXN.\n• Sesión Subsecuente Individual: $850 MXN.\n• Paquete Acupuntura General (5 sesiones): $3,900 MXN ($780 c/u — ahorras $400 MXN).\n• Tratamiento Completo General / Fertilidad (10 sesiones): $6,900 MXN ($690 c/u — ahorras $1,650 MXN).\n• Protocolo Intensivo Parálisis Facial (10 sesiones): $4,900 MXN ($490 c/u — ahorras $3,650 MXN).\n\nSi inicias con tu consulta de $900 MXN y decides adquirir un paquete ese mismo día, se toma a cuenta.",
     keyPoints: [
-      "Valoración clínica + sesión de tratamiento en tu primera cita.",
-      "Tarifas transparentes y paquetes de continuidad con descuento.",
-      "Sin costos ocultos ni fármacos innecesarios."
+      "Valoración objetiva con método japonés Ryodoraku + 1.ª sesión ($900 MXN, 60 min).",
+      "Si adquieres un paquete ese mismo día, tu valoración de $900 MXN se toma a cuenta.",
+      "Criterio NOM-017-SSA3-2012: mínimo sugerido de 5 sesiones por ciclo."
     ],
-    keywords: ["precio", "costo", "cuanto cuesta", "tarifa", "promocion", "paquetes", "pago", "cuanto vale"],
+    keywords: ["precio", "costo", "cuanto cuesta", "tarifa", "promocion", "paquetes", "pago", "cuanto vale", "ryodoraku"],
     suggestedFollowUps: ["como-agendar-cita", "quien-atiende-cedula"]
   },
   {

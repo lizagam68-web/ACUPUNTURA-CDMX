@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   ArrowLeft,
   ArrowRight,
@@ -292,10 +293,21 @@ export const ParalisisFacialTriaje = () => {
                   <span>Enviar mis Respuestas y Agendar por WhatsApp</span>
                 </WhatsAppButton>
 
+                <p className="text-center text-[11px] sm:text-xs text-[#5a6e75] leading-relaxed">
+                  Al continuar aceptas nuestro{" "}
+                  <Link
+                    href="/aviso-de-privacidad"
+                    className="text-[#3e685f] hover:text-[#18313a] underline underline-offset-4 font-medium"
+                  >
+                    Aviso de Privacidad
+                  </Link>
+                  . Tu información clínica es estrictamente confidencial.
+                </p>
+
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#4a5e66] pt-1">
                   <span className="inline-flex items-center gap-1.5">
                     <Clock size={14} className="text-[#b86d36]" />
-                    Valoración inicial + 1.ª sesión (1 hora) ·{" "}
+                    Valoración Ryodoraku + 1.ª sesión (1 hora) ·{" "}
                     <strong className="text-[#18313a] tabular-nums">
                       $900 MXN
                     </strong>

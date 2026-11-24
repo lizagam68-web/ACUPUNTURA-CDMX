@@ -56,15 +56,9 @@ export default function ContactoPage() {
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          dayOfWeek: ['Monday', 'Tuesday', 'Thursday', 'Friday'],
           opens: '09:00',
           closes: '18:00'
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Saturday',
-          opens: '09:00',
-          closes: '15:00'
         }
       ]
     }
@@ -219,19 +213,25 @@ export default function ContactoPage() {
                   Horarios de Atención
                 </h3>
                 <div className="space-y-6">
-                  {clinicData.openingHours.map((oh, idx) => (
-                    <div key={idx} className="flex justify-between items-center border-b border-primary-50 pb-4 last:border-0 last:pb-0">
-                      <span className="text-lg font-medium text-primary-900/80">
-                        {oh.days.length > 1 ? `Lunes a Viernes` : `Sábado`}
-                      </span>
-                      <span className="text-lg font-serif italic text-primary-600 font-bold">
-                        {oh.opens} - {oh.closes}
-                      </span>
-                    </div>
-                  ))}
+                  <div className="flex justify-between items-center border-b border-primary-50 pb-4">
+                    <span className="text-lg font-medium text-primary-900/80">
+                      Lunes, Martes, Jueves y Viernes
+                    </span>
+                    <span className="text-lg font-serif italic text-primary-600 font-bold tabular-nums">
+                      09:00 - 18:00
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-lg font-medium text-primary-900/60">
+                      Miércoles, Sábado y Domingo
+                    </span>
+                    <span className="text-base font-serif italic text-primary-600/70 font-semibold">
+                      Cerrado
+                    </span>
+                  </div>
                 </div>
                 <p className="mt-8 text-brand-text font-light italic text-sm">
-                  * Las citas se programan exclusivamente vía mensaje de WhatsApp para brindar atención dedicada y personalizada a cada paciente.
+                  * Atención exclusiva a 1 paciente por hora (sin cubículos simultáneos), previa cita por WhatsApp.
                 </p>
 
                 <div className="mt-6 pt-6 border-t border-primary-50">

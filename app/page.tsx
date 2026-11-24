@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "¿En qué zona de la Ciudad de México se encuentran?",
-    a: `Mi consultorio está ubicado en Av. Insurgentes Sur 1409, Despacho 5, Col. Insurgentes Mixcoac, C.P. 03900, Benito Juárez, CDMX (a unos pasos de Río Churubusco y Parque Hundido, con fácil acceso vía Metrobús y Metro Mixcoac/Insurgentes Sur). Atiendo de lunes a viernes de 9 a 18 hrs y sábados de 9 a 15 hrs previa cita.`
+    a: `Mi consultorio está ubicado en Av. Insurgentes Sur 1409, Despacho 5, Col. Insurgentes Mixcoac, C.P. 03900, Benito Juárez, CDMX (zona Benito Juárez / Coyoacán, a pasos de Río Churubusco y Parque Hundido). Atiendo exclusivamente 1 paciente por hora en Lunes, Martes, Jueves y Viernes de 9:00 a 18:00 hrs (cerrado miércoles, sábado y domingo), con previa cita.`
   }
 ];
 
@@ -86,15 +86,9 @@ export default function HomePage() {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"],
         "opens": "09:00",
         "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "15:00"
       }
     ],
     "medicalSpecialty": ["Acupuncture"],

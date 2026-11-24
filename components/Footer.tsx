@@ -91,6 +91,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/aviso-de-privacidad" className="hover:text-white transition-colors">
+                  Aviso de Privacidad (LFPDPPP)
+                </Link>
+              </li>
+              <li>
                 <Link href="/diplomado" className="hover:text-white transition-colors text-[#f4e1cb] font-medium">
                   Diplomado en MTCh (Inscripciones)
                 </Link>
@@ -182,53 +187,109 @@ export const Footer = () => {
           {/* Opening Hours Column */}
           <div>
             <h4 className="font-bold text-lg mb-6 font-serif text-[#faf8f5]">Horarios de Atención</h4>
-            <ul className="space-y-2 text-[#d6ccbe] text-sm sm:text-base">
-              <li>Lunes - Viernes: 9:00 - 18:00</li>
-              <li>Sábado: 9:00 - 15:00</li>
-              <li>Domingo: Cerrado</li>
+            <ul className="space-y-2.5 text-[#d6ccbe] text-sm sm:text-base">
+              <li>
+                <span className="font-medium text-white block">Lunes, Martes, Jueves y Viernes:</span>
+                <span className="tabular-nums text-[#f4e1cb]">09:00 - 18:00 hrs</span>
+              </li>
+              <li className="text-xs sm:text-sm text-[#d6ccbe]/80">
+                Miércoles, Sábado y Domingo: Cerrado
+              </li>
             </ul>
-            <div className="mt-4 p-3 bg-[#18313a] rounded-xl border border-[#2c4955] text-xs text-[#d6ccbe]/90">
-              <span className="text-[#f4e1cb] font-semibold block mb-0.5">Atención con previa cita</span>
-              Sesiones individuales y privadas en Benito Juárez, CDMX.
+            <div className="mt-4 p-3.5 bg-[#18313a] rounded-xl border border-[#2c4955] text-xs text-[#d6ccbe]/90 leading-relaxed">
+              <span className="text-[#f4e1cb] font-semibold block mb-1">
+                Atención exclusiva: 1 paciente por hora
+              </span>
+              Consultorio privado sin cubículos simultáneos en Benito Juárez / Coyoacán, CDMX. Previa cita.
             </div>
           </div>
         </div>
 
-        {/* Professional Badges & Legal Notice */}
-        <div className="border-t border-[#1e3943] mt-16 pt-8 text-center text-[#d6ccbe]/70 text-sm">
-          <div className="mb-5 inline-flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs text-[#d6ccbe] bg-[#18313a]/90 px-6 py-3 rounded-2xl border border-[#2c4955] shadow-sm">
+        {/* Legal, COFEPRIS, PROFECO & Sanitary Compliance */}
+        <div className="border-t border-[#1e3943] mt-14 pt-8 space-y-6 text-[#d6ccbe]/80 text-sm">
+          {/* Credentials */}
+          <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-xs text-[#d6ccbe] bg-[#18313a]/90 px-6 py-3.5 rounded-2xl border border-[#2c4955] shadow-sm text-center">
             <span className="font-semibold text-white flex items-center gap-1.5">
               <Award size={15} className="text-[#b86d36]" />
               Lic. {clinicData.practitioner.name}
             </span>
-            <span className="hidden sm:inline opacity-40">•</span>
+            <span className="hidden sm:inline opacity-40">·</span>
             <span>{clinicData.practitioner.degree} (UNEVE)</span>
-            <span className="hidden sm:inline opacity-40">•</span>
+            <span className="hidden sm:inline opacity-40">·</span>
             <span className="text-[#f4e1cb] font-semibold">{clinicData.practitioner.license}</span>
-            <span className="hidden sm:inline opacity-40">•</span>
-            <span className="text-[#f4e1cb] font-semibold bg-[#0a151a] px-3 py-1 rounded-full border border-[#2c4955]">
+            <span className="hidden sm:inline opacity-40">·</span>
+            <span className="text-[#f4e1cb] font-semibold">
               {clinicData.practitioner.advertisingPermit}
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs text-[#d6ccbe]/60 mt-2">
-            <span suppressHydrationWarning>© {new Date().getFullYear()} Liz Gamiño Acupuntura · Centro de Acupuntura QI. Todos los derechos reservados.</span>
-            <span className="hidden sm:inline opacity-40">·</span>
-            <Link 
-              href="/admin/subir-foto" 
-              className="hover:text-[#f4e1cb] transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-[#f4e1cb] text-[11px]"
-              title="Panel para actualizar la fotografía de la Lic. Elizabeth Gamiño"
+          {/* PROFECO & Aviso Sanitario */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 bg-[#0f1f25] border border-[#1e3943] rounded-2xl p-5 sm:p-6 text-xs text-[#d6ccbe]/85 leading-relaxed">
+            <p>
+              <strong className="text-[#f4e1cb] block mb-1 uppercase tracking-wider text-[11px]">
+                Aviso de Transparencia Comercial (PROFECO)
+              </strong>
+              Precios finales netos expresados en pesos mexicanos (MXN). Cada
+              consulta tiene una duración de 60 minutos. Los paquetes de 5 y 10
+              sesiones son prepagados, personales e intransferibles, con vigencia
+              de 60 días (paquete de 5) y 90 días (paquete de 10) a partir de la
+              primera sesión. Si inicias con tu valoración de $900 MXN y decides
+              adquirir un paquete ese mismo día, se toma a cuenta.
+            </p>
+            <p>
+              <strong className="text-[#f4e1cb] block mb-1 uppercase tracking-wider text-[11px]">
+                Aviso Sanitario
+              </strong>
+              Práctica terapéutica regulada conforme a la NOM-017-SSA3-2012.
+              Los resultados y tiempos de evolución varían según el estado
+              clínico y apego de cada paciente, sin prometer curas garantizadas.
+            </p>
+          </div>
+
+          {/* Quick Legal & Specialty Links + Copyright */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#d6ccbe]/70 pt-2">
+            <nav
+              aria-label="Enlaces principales y legales"
+              className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[#f4e1cb] font-medium"
             >
-              Administración: Actualizar Fotografía
-            </Link>
-            <span className="hidden sm:inline opacity-40">·</span>
-            <Link 
-              href="/admin/github-sync" 
-              className="hover:text-[#f4e1cb] transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-[#f4e1cb] text-[11px]"
-              title="Guía y comandos para conectar y sincronizar este proyecto con GitHub"
-            >
-              Conectar GitHub
-            </Link>
+              <Link href="/" className="hover:text-white underline underline-offset-4">
+                Inicio
+              </Link>
+              <span aria-hidden="true" className="opacity-40">·</span>
+              <Link href="/paralisis-facial" className="hover:text-white underline underline-offset-4">
+                Parálisis Facial
+              </Link>
+              <span aria-hidden="true" className="opacity-40">·</span>
+              <Link href="/fertilidad" className="hover:text-white underline underline-offset-4">
+                Fertilidad
+              </Link>
+              <span aria-hidden="true" className="opacity-40">·</span>
+              <Link href="/aviso-de-privacidad" className="hover:text-white underline underline-offset-4">
+                Aviso de Privacidad
+              </Link>
+            </nav>
+
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-center">
+              <span suppressHydrationWarning>
+                © {new Date().getFullYear()} Centro de Acupuntura QI · Liz Gamiño Acupuntura. Todos los derechos reservados.
+              </span>
+              <span className="hidden sm:inline opacity-40">·</span>
+              <Link 
+                href="/admin/subir-foto" 
+                className="hover:text-[#f4e1cb] transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-[#f4e1cb] text-[11px]"
+                title="Panel para actualizar la fotografía de la Lic. Elizabeth Gamiño"
+              >
+                Actualizar Fotografía
+              </Link>
+              <span className="hidden sm:inline opacity-40">·</span>
+              <Link 
+                href="/admin/github-sync" 
+                className="hover:text-[#f4e1cb] transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-[#f4e1cb] text-[11px]"
+                title="Guía y comandos para conectar y sincronizar este proyecto con GitHub"
+              >
+                Conectar GitHub
+              </Link>
+            </div>
           </div>
         </div>
       </div>

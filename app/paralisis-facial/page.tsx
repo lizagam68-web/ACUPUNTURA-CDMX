@@ -177,39 +177,26 @@ export default function ParalisisFacialPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#3e685f] mb-2">
-              Atención Clínica Estructurada
+              Método Diagnóstico Japonés Ryodoraku &amp; Atención Exclusiva
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#12242b] tracking-tight leading-snug text-balance mb-3">
               ¿Cómo funciona nuestro protocolo y qué incluye cada cita?
             </h2>
             <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-              Cada consulta está diseñada para darte claridad clínica, trato
-              humano y un seguimiento ordenado de tu recuperación facial.
+              Atendemos exclusivamente{" "}
+              <strong className="text-[#18313a] font-semibold">
+                1 paciente por hora
+              </strong>{" "}
+              (sin cubículos simultáneos) los días{" "}
+              <strong className="text-[#18313a] font-semibold">
+                Lunes, Martes, Jueves y Viernes
+              </strong>{" "}
+              (cerrado miércoles, sábado y domingo).
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-            {/* Bloque 1: Duración */}
-            <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#18313a] flex items-center justify-center flex-shrink-0">
-                  <Clock size={20} />
-                </div>
-                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
-                  Duración: 60 minutos (1 hora)
-                </h3>
-              </div>
-              <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-                Cada consulta tiene una duración de{" "}
-                <strong className="text-[#18313a] font-semibold tabular-nums">
-                  60 minutos (1 hora)
-                </strong>{" "}
-                de atención individualizada, en consultorio privado y con
-                material 100% estéril y desechable.
-              </p>
-            </div>
-
-            {/* Bloque 2: Primera Cita */}
+            {/* Bloque 1: Primera Cita + Ryodoraku */}
             <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#b86d36] flex items-center justify-center flex-shrink-0">
@@ -217,13 +204,46 @@ export default function ParalisisFacialPage() {
                 </div>
                 <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
                   Primera Cita + 1.ª Sesión (
-                  <span className="tabular-nums">$900 MXN</span>)
+                  <span className="tabular-nums">$900 MXN · 1 hora</span>)
                 </h3>
               </div>
               <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-                Historia clínica completa, evaluación del grado de afectación
-                neural bajo Medicina Tradicional China y tu primera sesión
-                terapéutica aplicada en la misma visita.
+                Incluye historia clínica completa y una evaluación objetiva
+                mediante el{" "}
+                <strong className="text-[#18313a] font-semibold">
+                  método diagnóstico japonés Ryodoraku
+                </strong>
+                , que mide el estado energético y neurovegetativo de los
+                meridianos para diseñar un protocolo{" "}
+                <strong className="text-[#18313a] font-semibold">
+                  100% personalizado desde el inicio
+                </strong>{" "}
+                (en lugar de aplicar puntos genéricos), más tu primera sesión
+                terapéutica.
+              </p>
+            </div>
+
+            {/* Bloque 2: Duración y Exclusividad */}
+            <div className="bg-[#faf8f5] p-6 sm:p-7 rounded-3xl border border-[#e5dbcb]">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#f2ece2] text-[#18313a] flex items-center justify-center flex-shrink-0">
+                  <Clock size={20} />
+                </div>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  1 Paciente por Hora · Sin Cubículos Simultáneos
+                </h3>
+              </div>
+              <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
+                Cada consulta tiene una duración de{" "}
+                <strong className="text-[#18313a] font-semibold tabular-nums">
+                  60 minutos (1 hora)
+                </strong>{" "}
+                de atención clínica dedicada exclusivamente a ti, con material
+                100% estéril y desechable en horario de{" "}
+                <strong className="text-[#18313a] font-semibold">
+                  Lunes, Martes, Jueves y Viernes
+                </strong>{" "}
+                (cerrado miércoles, sábado y domingo).
               </p>
             </div>
 
@@ -234,14 +254,17 @@ export default function ParalisisFacialPage() {
                   <ShieldCheck size={20} />
                 </div>
                 <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
-                  Sesión Subsecuente (
+                  Sesión Subsecuente Individual (
                   <span className="tabular-nums">$850 MXN</span>)
                 </h3>
               </div>
               <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-                Seguimiento evolutivo de movilidad facial y ajuste de puntos de
-                electroacupuntura / acupuntura clínica según los avances de
-                parpadeo, tono y sonrisa.
+                Seguimiento evolutivo de movilidad facial de{" "}
+                <strong className="text-[#18313a] font-semibold tabular-nums">
+                  60 minutos
+                </strong>{" "}
+                y ajuste de puntos de acupuntura y electroacupuntura según tus
+                avances en parpadeo, tono muscular y simetría de sonrisa.
               </p>
             </div>
 
@@ -256,14 +279,14 @@ export default function ParalisisFacialPage() {
                 </h3>
               </div>
               <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-                De acuerdo con la Norma Oficial Mexicana de Acupuntura, se
-                sugiere un mínimo de{" "}
+                De acuerdo con la Norma Oficial Mexicana de Acupuntura
+                (NOM-017-SSA3-2012), se sugiere un mínimo de{" "}
                 <strong className="text-[#18313a] font-semibold">
                   5 sesiones
                 </strong>{" "}
-                para conformar un ciclo de tratamiento; en parálisis facial, por
-                la demanda de regeneración neural, recomendamos nuestro protocolo
-                intensivo de{" "}
+                para conformar un ciclo completo de tratamiento y valorar la
+                respuesta clínica del organismo. En parálisis facial recomendamos
+                el protocolo intensivo de{" "}
                 <strong className="text-[#18313a] font-semibold">
                   10 sesiones
                 </strong>
@@ -274,13 +297,13 @@ export default function ParalisisFacialPage() {
         </div>
       </section>
 
-      {/* 4. TARIFAS Y PLANES TRANSPARENTES (Tarjetas comparativas) */}
+      {/* 4. TARIFAS Y PLANES TRANSPARENTES */}
       <section
         id="tarifas"
         className="py-14 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#f4efe6]/70 to-[#faf8f5] border-b border-[#e5dbcb]"
       >
         <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#b86d36] mb-2">
               Inversión Clara Desde el Inicio
             </p>
@@ -288,88 +311,97 @@ export default function ParalisisFacialPage() {
               Tarifas y Planes Transparentes
             </h2>
             <p className="text-sm sm:text-base text-[#4a5e66] font-light leading-relaxed">
-              Precios finales en pesos mexicanos, sin cargos ocultos. Si inicias
-              con tu consulta de valoración y decides tomar un paquete, tu pago
-              inicial se toma a cuenta.
+              Precios finales netos en pesos mexicanos (MXN) con consultas de{" "}
+              <span className="tabular-nums font-medium text-[#18313a]">
+                60 minutos
+              </span>
+              . Si inicias con tu consulta inicial de{" "}
+              <span className="tabular-nums font-medium text-[#18313a]">
+                $900 MXN
+              </span>{" "}
+              y decides adquirir un paquete ese mismo día, se toma a cuenta.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-            {/* Tarjeta 1: Primera Valoración + 1.ª Sesión */}
-            <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-8 flex flex-col justify-between shadow-2xs">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#3e685f] mb-2">
-                  Inicio de tratamiento · 1 hora
+          {/* Consultas Individuales */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 mb-6">
+            <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-2xs">
+              <div className="space-y-1.5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#3e685f]">
+                  Duración: 60 minutos · Inicio de tratamiento
                 </p>
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#12242b] mb-4">
-                  Primera Valoración + 1.ª Sesión
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  Primera Valoración con Diagnóstico Ryodoraku + 1.ª Sesión
                 </h3>
-
-                <div className="pb-5 mb-5 border-b border-[#f2ece2]">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl sm:text-4xl font-serif font-bold text-[#18313a] tabular-nums">
-                      $900
-                    </span>
-                    <span className="text-sm font-semibold text-[#4a5e66]">
-                      MXN
-                    </span>
-                  </div>
-                  <p className="text-xs text-[#4a5e66] mt-1">
-                    Consulta de 60 minutos · Sesión subsecuente individual{" "}
-                    <span className="tabular-nums font-medium">$850 MXN</span>
-                  </p>
-                </div>
-
-                <ul className="space-y-3 text-sm text-[#4a5e66] mb-8">
-                  <li className="flex items-start gap-2.5">
-                    <Check
-                      size={17}
-                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
-                    />
-                    <span>Historia clínica completa y valoración integral</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check
-                      size={17}
-                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
-                    />
-                    <span>Diagnóstico bajo Medicina Tradicional China</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check
-                      size={17}
-                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
-                    />
-                    <span>Primera sesión terapéutica incluida</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check
-                      size={17}
-                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
-                    />
-                    <span>
-                      Tomable a cuenta si decides adquirir un paquete ese día
-                    </span>
-                  </li>
-                </ul>
+                <p className="text-xs sm:text-sm text-[#4a5e66] font-light">
+                  Historia clínica, medición neurovegetativa Ryodoraku, diseño
+                  personalizado y 1.ª sesión. Tomable a cuenta si tomas paquete
+                  ese día.
+                </p>
               </div>
-
-              <WhatsAppButton
-                className="w-full min-h-[48px] bg-[#faf8f5] hover:bg-[#f2ece2] text-[#18313a] border border-[#cfbfab] font-bold text-sm px-5 py-3.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer"
-                message="Hola, quiero agendar mi Primera Valoración + 1.ª Sesión ($900 MXN) para parálisis facial."
-                showIcon={false}
-              >
-                <MessageCircle size={17} className="text-[#3e685f]" />
-                <span>Agendar Valoración ($900)</span>
-              </WhatsAppButton>
+              <div className="flex sm:flex-col items-baseline sm:items-end justify-between gap-3 flex-shrink-0 border-t sm:border-t-0 pt-3 sm:pt-0 border-[#f2ece2]">
+                <div className="text-right">
+                  <span className="text-3xl font-serif font-bold text-[#18313a] tabular-nums">
+                    $900
+                  </span>{" "}
+                  <span className="text-xs font-semibold text-[#4a5e66]">
+                    MXN
+                  </span>
+                </div>
+                <WhatsAppButton
+                  className="min-h-[44px] bg-[#faf8f5] hover:bg-[#f2ece2] text-[#18313a] border border-[#cfbfab] font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap"
+                  message="Hola, quiero agendar mi Primera Valoración con Diagnóstico Ryodoraku + 1.ª Sesión ($900 MXN) para parálisis facial."
+                  showIcon={false}
+                >
+                  <MessageCircle size={16} className="text-[#3e685f]" />
+                  <span>Agendar Valoración</span>
+                </WhatsAppButton>
+              </div>
             </div>
 
-            {/* Tarjeta 2 (Destacada - Más elegida): Protocolo Intensivo Parálisis Facial */}
+            <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-2xs">
+              <div className="space-y-1.5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#4a5e66]">
+                  Duración: 60 minutos · Seguimiento clínico
+                </p>
+                <h3 className="text-lg sm:text-xl font-serif font-bold text-[#12242b]">
+                  Sesión Subsecuente Individual
+                </h3>
+                <p className="text-xs sm:text-sm text-[#4a5e66] font-light">
+                  Atención individualizada (1 paciente por hora) con ajuste de
+                  puntos de acupuntura y electroacupuntura conforme a tu
+                  evolución.
+                </p>
+              </div>
+              <div className="flex sm:flex-col items-baseline sm:items-end justify-between gap-3 flex-shrink-0 border-t sm:border-t-0 pt-3 sm:pt-0 border-[#f2ece2]">
+                <div className="text-right">
+                  <span className="text-3xl font-serif font-bold text-[#18313a] tabular-nums">
+                    $850
+                  </span>{" "}
+                  <span className="text-xs font-semibold text-[#4a5e66]">
+                    MXN
+                  </span>
+                </div>
+                <WhatsAppButton
+                  className="min-h-[44px] bg-[#faf8f5] hover:bg-[#f2ece2] text-[#18313a] border border-[#cfbfab] font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap"
+                  message="Hola, quiero agendar una Sesión Subsecuente Individual ($850 MXN)."
+                  showIcon={false}
+                >
+                  <MessageCircle size={16} className="text-[#3e685f]" />
+                  <span>Agendar Sesión</span>
+                </WhatsAppButton>
+              </div>
+            </div>
+          </div>
+
+          {/* Paquetes de Tratamiento (3 tarjetas comparativas) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+            {/* Tarjeta 1 (Destacada - Más elegida): Protocolo Intensivo Parálisis Facial */}
             <div className="bg-[#18313a] text-white rounded-3xl border-2 border-[#b86d36] p-6 sm:p-8 flex flex-col justify-between shadow-warm relative">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <p className="text-xs font-semibold uppercase tracking-wider text-[#f4e1cb]">
-                    Más elegida · 10 sesiones
+                    Recomendado · 10 sesiones
                   </p>
                   <Award size={18} className="text-[#f4e1cb] flex-shrink-0" />
                 </div>
@@ -391,7 +423,7 @@ export default function ParalisisFacialPage() {
                     $490 MXN por sesión — Ahorras $3,650 MXN
                   </p>
                   <p className="text-xs text-[#d6ccbe] mt-1">
-                    Respecto a iniciar pagando 10 sesiones individuales
+                    Calculado sobre inicio de tratamiento ($900 + 9 × $850)
                   </p>
                 </div>
 
@@ -403,8 +435,8 @@ export default function ParalisisFacialPage() {
                     />
                     <span>
                       Ciclo completo de{" "}
-                      <strong className="text-white">10 sesiones</strong> de 1
-                      hora c/u
+                      <strong className="text-white">10 sesiones</strong> de 60
+                      minutos c/u
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -413,8 +445,8 @@ export default function ParalisisFacialPage() {
                       className="text-[#f4e1cb] mt-0.5 flex-shrink-0"
                     />
                     <span>
-                      Acupuntura clínica y electroacupuntura adaptada a tu
-                      evolución
+                      Diagnóstico Ryodoraku inicial + electroacupuntura facial
+                      personalizada
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -427,16 +459,16 @@ export default function ParalisisFacialPage() {
                 </ul>
 
                 <div className="rounded-2xl bg-[#12242b] border border-[#2c4955] p-3.5 mb-7 text-xs sm:text-sm text-[#f4e1cb] leading-relaxed">
-                  Si inicias con tu consulta de{" "}
+                  Si inicias con tu valoración de{" "}
                   <strong className="text-white tabular-nums">$900 MXN</strong>{" "}
-                  y decides tomar el protocolo,{" "}
-                  <strong className="text-white">se te toma a cuenta</strong>.
+                  y adquieres el protocolo ese día,{" "}
+                  <strong className="text-white">se toma a cuenta</strong>.
                 </div>
               </div>
 
               <WhatsAppButton
                 className="w-full min-h-[50px] bg-[#15803d] hover:bg-[#166534] text-white font-bold text-sm sm:text-base px-5 py-3.5 rounded-full shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
-                message="Hola, me interesa agendar mi valoración para el Protocolo Intensivo de Parálisis Facial (10 sesiones por $4,900 MXN)."
+                message="Hola, me interesa agendar mi valoración para el Protocolo Intensivo Parálisis Facial (10 sesiones por $4,900 MXN)."
                 showIcon={false}
               >
                 <MessageCircle size={18} />
@@ -444,7 +476,7 @@ export default function ParalisisFacialPage() {
               </WhatsAppButton>
             </div>
 
-            {/* Tarjeta 3: Paquete Acupuntura General */}
+            {/* Tarjeta 2: Paquete Acupuntura General (5 sesiones) */}
             <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-8 flex flex-col justify-between shadow-2xs">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-[#b86d36] mb-2">
@@ -467,7 +499,7 @@ export default function ParalisisFacialPage() {
                     $780 MXN por sesión — Ahorras $400 MXN
                   </p>
                   <p className="text-xs text-[#4a5e66] mt-1">
-                    Ciclo base sugerido conforme a la NOM-017-SSA3-2012
+                    Calculado sobre inicio de tratamiento ($900 + 4 × $850)
                   </p>
                 </div>
 
@@ -479,7 +511,7 @@ export default function ParalisisFacialPage() {
                     />
                     <span>
                       <strong className="text-[#18313a]">5 sesiones</strong>{" "}
-                      individuales de 60 minutos
+                      individuales de 60 minutos (1 paciente por hora)
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -487,14 +519,16 @@ export default function ParalisisFacialPage() {
                       size={17}
                       className="text-[#3e685f] mt-0.5 flex-shrink-0"
                     />
-                    <span>Seguimiento clínico en cada consulta</span>
+                    <span>
+                      Diagnóstico japonés Ryodoraku y seguimiento en cada cita
+                    </span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <Check
                       size={17}
                       className="text-[#3e685f] mt-0.5 flex-shrink-0"
                     />
-                    <span>Vigencia de 60 días para utilizar tus sesiones</span>
+                    <span>Vigencia de 60 días desde la primera sesión</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <Check
@@ -503,8 +537,8 @@ export default function ParalisisFacialPage() {
                     />
                     <span>
                       Tu consulta inicial de{" "}
-                      <span className="tabular-nums">$900 MXN</span> también se
-                      toma a cuenta
+                      <span className="tabular-nums">$900 MXN</span> se toma a
+                      cuenta
                     </span>
                   </li>
                 </ul>
@@ -512,14 +546,99 @@ export default function ParalisisFacialPage() {
 
               <WhatsAppButton
                 className="w-full min-h-[48px] bg-[#18313a] hover:bg-[#12242b] text-white font-bold text-sm px-5 py-3.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer"
-                message="Hola, me interesa agendar mi valoración y tomar el Paquete de Acupuntura General (5 sesiones por $3,900 MXN)."
+                message="Hola, me interesa agendar mi valoración y tomar el Paquete Acupuntura General (5 sesiones por $3,900 MXN)."
                 showIcon={false}
               >
                 <MessageCircle size={17} className="text-[#f4e1cb]" />
                 <span>Elegir Paquete de 5 Sesiones</span>
               </WhatsAppButton>
             </div>
+
+            {/* Tarjeta 3: Tratamiento Completo General / Fertilidad (10 sesiones) */}
+            <div className="bg-white rounded-3xl border border-[#e5dbcb] p-6 sm:p-8 flex flex-col justify-between shadow-2xs">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-[#3e685f] mb-2">
+                  Seguimiento integral · 10 sesiones
+                </p>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#12242b] mb-4">
+                  Tratamiento Completo General / Fertilidad
+                </h3>
+
+                <div className="pb-5 mb-5 border-b border-[#f2ece2]">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-serif font-bold text-[#18313a] tabular-nums">
+                      $6,900
+                    </span>
+                    <span className="text-sm font-semibold text-[#4a5e66]">
+                      MXN
+                    </span>
+                  </div>
+                  <p className="text-sm text-[#3e685f] font-semibold mt-1.5 tabular-nums">
+                    $690 MXN por sesión — Ahorras $1,650 MXN
+                  </p>
+                  <p className="text-xs text-[#4a5e66] mt-1">
+                    Calculado sobre inicio de tratamiento ($900 + 9 × $850)
+                  </p>
+                </div>
+
+                <ul className="space-y-3 text-sm text-[#4a5e66] mb-8">
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      <strong className="text-[#18313a]">10 sesiones</strong> de
+                      60 minutos para cuadros crónicos o salud reproductiva
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      Evaluación Ryodoraku y ajuste continuo por evolución
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>Vigencia de 90 días desde la primera sesión</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <Check
+                      size={17}
+                      className="text-[#3e685f] mt-0.5 flex-shrink-0"
+                    />
+                    <span>
+                      Tu consulta inicial de{" "}
+                      <span className="tabular-nums">$900 MXN</span> se toma a
+                      cuenta
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <WhatsAppButton
+                className="w-full min-h-[48px] bg-[#faf8f5] hover:bg-[#f2ece2] text-[#18313a] border border-[#cfbfab] font-bold text-sm px-5 py-3.5 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer"
+                message="Hola, me interesa información sobre el Tratamiento Completo General / Fertilidad (10 sesiones por $6,900 MXN)."
+                showIcon={false}
+              >
+                <MessageCircle size={17} className="text-[#3e685f]" />
+                <span>Elegir Plan Completo (10)</span>
+              </WhatsAppButton>
+            </div>
           </div>
+
+          <p className="mt-8 text-center text-xs sm:text-sm text-[#4a5e66] max-w-3xl mx-auto leading-relaxed">
+            De acuerdo con la Norma Oficial Mexicana de Acupuntura
+            (NOM-017-SSA3-2012), se sugiere un mínimo de 5 sesiones para
+            conformar un ciclo completo de tratamiento y valorar la respuesta
+            clínica del organismo.
+          </p>
         </div>
       </section>
 
@@ -537,18 +656,19 @@ export default function ParalisisFacialPage() {
                 <strong className="text-[#18313a]">
                   Transparencia comercial (PROFECO):
                 </strong>{" "}
-                Todos los precios están expresados en pesos mexicanos (MXN) y
-                son precios finales netos al paciente. Los paquetes prepagados
-                son personales e intransferibles (vigencia de 90 días para
-                protocolos de 10 sesiones y 60 días para paquetes de 5
-                sesiones). El ahorro calculado toma como base el costo de inicio
-                de tratamiento ($900 MXN primera vez + $850 MXN subsecuentes).
+                Precios finales netos expresados en pesos mexicanos (MXN). Cada
+                consulta tiene una duración de 60 minutos. Los paquetes de 5 y
+                10 sesiones son prepagados, personales e intransferibles, con
+                vigencia de 60 días (paquete de 5) y 90 días (paquete de 10) a
+                partir de la primera sesión. Si inicias con tu valoración de
+                $900 MXN y decides adquirir un paquete ese mismo día, se toma a
+                cuenta.
               </p>
 
               <p>
-                <strong className="text-[#18313a]">Aviso sanitario:</strong> La
-                acupuntura es una práctica terapéutica regulada conforme a la
-                NOM-017-SSA3-2012. Los tiempos de evolución dependen del estado
+                <strong className="text-[#18313a]">Aviso sanitario:</strong>{" "}
+                Práctica terapéutica regulada conforme a la NOM-017-SSA3-2012.
+                Los resultados y tiempos de evolución varían según el estado
                 clínico y apego de cada paciente, sin prometer curas
                 garantizadas.
               </p>
@@ -567,7 +687,7 @@ export default function ParalisisFacialPage() {
 
               <nav
                 aria-label="Navegación rápida de especialidades"
-                className="flex items-center gap-3 font-medium text-[#18313a]"
+                className="flex flex-wrap items-center gap-3 font-medium text-[#18313a]"
               >
                 <Link
                   href="/"
@@ -592,6 +712,15 @@ export default function ParalisisFacialPage() {
                   className="hover:text-[#3e685f] underline underline-offset-4"
                 >
                   Fertilidad
+                </Link>
+                <span aria-hidden="true" className="text-[#cfbfab]">
+                  ·
+                </span>
+                <Link
+                  href="/aviso-de-privacidad"
+                  className="hover:text-[#3e685f] underline underline-offset-4"
+                >
+                  Aviso de Privacidad
                 </Link>
               </nav>
             </div>

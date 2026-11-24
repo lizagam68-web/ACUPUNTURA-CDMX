@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "¿Dónde está la clínica?",
-    a: "Estamos en Av. Insurgentes Sur 1409, Despacho 5, Insurgentes Mixcoac, Benito Juárez, C.P. 03900, CDMX. Atendemos con previa cita de lunes a viernes de 9 a 18 hrs y sábados de 9 a 15 hrs."
+    a: "Estamos en Av. Insurgentes Sur 1409, Despacho 5, Insurgentes Mixcoac, Benito Juárez, C.P. 03900, CDMX. Atendemos exclusivamente 1 paciente por hora con previa cita los días Lunes, Martes, Jueves y Viernes de 9:00 a 18:00 hrs (cerrado miércoles, sábado y domingo)."
   }
 ];
 

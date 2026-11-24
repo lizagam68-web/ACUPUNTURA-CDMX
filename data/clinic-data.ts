@@ -45,9 +45,9 @@ export const clinicData = {
     longitude: "-99.1811",
   },
   openingHours: [
-    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
-    { days: ["Saturday"], opens: "09:00", closes: "15:00" }
+    { days: ["Monday", "Tuesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" }
   ],
+  scheduleSummary: "Lunes, Martes, Jueves y Viernes de 9:00 a 18:00 hrs (1 paciente por hora, sin cubículos simultáneos). Cerrado miércoles, sábado y domingo.",
   paymentInfo: {
     clabe: "722969020307771486",
     beneficiary: "Elizabeth Gamiño Calderon",
@@ -89,11 +89,11 @@ export const clinicData = {
     },
     {
       question: "¿Cuántas sesiones necesito?",
-      answer: "La mayoría de las personas siente un cambio y relajación notable desde la primera a la tercera sesión. El plan se personaliza evaluando el pulso, la lengua y tu balance energético general.",
+      answer: "De acuerdo con la NOM-017-SSA3-2012 se sugiere un mínimo de 5 sesiones para conformar un ciclo completo, aunque la mayoría siente alivio desde la 1.ª a la 3.ª sesión. Desde tu Primera Valoración ($900 MXN, 1 hora) realizamos una evaluación con el método diagnóstico japonés Ryodoraku para personalizar tu protocolo.",
     },
     {
       question: "¿Dónde está ubicado el consultorio?",
-      answer: "En Av. Insurgentes Sur 1409, Despacho 5, Colonia Insurgentes Mixcoac, C.P. 03900, Benito Juárez, CDMX. A pasos de Río Churubusco y Parque Hundido, con fácil acceso vía Metrobús y Metro.",
+      answer: "En Av. Insurgentes Sur 1409, Despacho 5, Colonia Insurgentes Mixcoac, C.P. 03900, Benito Juárez, CDMX. Atendemos 1 paciente por hora en lunes, martes, jueves y viernes (cerrado miércoles, sábado y domingo) con previa cita.",
     },
   ],
 };
@@ -129,15 +129,9 @@ export const getMedicalBusinessSchema = () => ({
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "18:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "15:00"
     }
   ],
   "medicalSpecialty": ["Acupuncture"],

@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "¿Dónde se ubica la clínica y cómo solicito una cita?",
-    a: "Estamos ubicados en Benito Juárez, Ciudad de México. Las consultas se realizan en consultorio privado previa cita a través de WhatsApp, de lunes a viernes de 9 a 18 hrs y sábados de 9 a 15 hrs."
+    a: "Estamos ubicados en Benito Juárez / Coyoacán, Ciudad de México. Atendemos exclusivamente 1 paciente por hora (sin cubículos simultáneos), previa cita a través de WhatsApp, los días Lunes, Martes, Jueves y Viernes de 9:00 a 18:00 hrs (cerrado miércoles, sábado y domingo)."
   }
 ];
 
